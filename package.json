@@ -10,6 +10,7 @@
     "@types/react-dom": "16.9.3",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
+    "antd": "^3.24.3",
     "babel-eslint": "10.0.3",
     "babel-loader": "8.0.6",
     "babel-plugin-named-asset-import": "^0.3.4",
@@ -63,7 +64,8 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx",
-    "lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src/"
+    "lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src/",
+    "server": "http-server -p 8088 ./build"
   },
   "eslintConfig": {
     "extends": [
@@ -86,9 +88,20 @@
   "babel": {
     "presets": [
       "react-app"
+    ],
+    "plugins": [
+      [
+        "import",
+        {
+          "libraryName": "antd",
+          "libraryDirectory": "es",
+          "style": true
+        }
+      ]
     ]
   },
   "devDependencies": {
+    "babel-plugin-import": "^1.12.2",
     "eslint-config-prettier": "^6.5.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.9",
@@ -96,6 +109,7 @@
     "less-loader": "^5.0.0",
     "lint-staged": "^9.4.2",
     "prettier": "^1.18.2",
+    "ts-import-plugin": "^1.6.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1"
   },
