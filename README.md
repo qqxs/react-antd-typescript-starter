@@ -20,6 +20,6 @@ yarn server
 
 [How to setup ESLint and Prettier for your React apps](https://thomlom.dev/setup-eslint-prettier-react/)
 
-## antd theme
+## Antd Theme
 
 `config/theme.js` and `src/theme/index.less`, Update both files at the same time
