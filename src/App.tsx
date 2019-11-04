@@ -2,6 +2,7 @@ import React from 'react'
 import logo from './logo.svg'
 import './App.less'
 import { Button } from 'antd'
+import Router from './Router'
 
 const App: React.FC = () => {
   console.log(window['helloWorld'])
@@ -10,6 +11,9 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Button>antd button</Button>
+      <main>
+        <Router />
+      </main>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
