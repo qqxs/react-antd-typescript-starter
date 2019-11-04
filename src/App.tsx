@@ -4,6 +4,9 @@ import './App.css'
 import { Button } from 'antd'
 
 const App: React.FC = () => {
+  console.log(window['helloWorld'])
+  console.log(window.location)
+
   return (
     <div className="App">
       <Button>antd button</Button>
