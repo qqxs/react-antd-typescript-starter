@@ -1,7 +1,7 @@
 import React, { memo } from 'react'
 import logo from './logo.svg'
 import './App.less'
-import { Button } from 'antd'
+// import { Button } from 'antd'
 import Router from './Router'
 
 const App: React.FC = () => {
@@ -10,11 +10,7 @@ const App: React.FC = () => {
 
   return (
     <div className="App">
-      <Button>antd button</Button>
-      <main>
-        <Router />
-      </main>
-      <header className="App-header">
+      <main className="App-main">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -27,7 +23,9 @@ const App: React.FC = () => {
         >
           Learn Reactss
         </a>
-      </header>
+        {/* <Button>antd button</Button> */}
+        <Router />
+      </main>
     </div>
   )
 }
