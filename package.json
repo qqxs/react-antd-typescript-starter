@@ -124,7 +124,7 @@
   },
   "lint-staged": {
     "*.+(ts|tsx|js|jsx)": [
-      "eslint --fix",
+      "yarn run fix",
       "git add"
     ],
     "*.+(json|css|md)": [
