@@ -63,7 +63,7 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx",
+    "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx --fix src/**/*.js --fix  src/**/*.jsx",
     "lint": "eslint --ext .js --ext .jsx --ext .ts --ext .tsx src/",
     "server": "http-server -p 8088 ./build"
   },
