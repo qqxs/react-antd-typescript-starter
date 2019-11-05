@@ -45,4 +45,9 @@ function RouteWithSubRoutes(route: NewRouteProps) {
   )
 }
 
-export default memo(RouteWithSubRoutes)
+export default memo(
+  RouteWithSubRoutes,
+  (prevProps: NewRouteProps, nextProps: NewRouteProps) => {
+    return prevProps.author === nextProps.author
+  }
+)
