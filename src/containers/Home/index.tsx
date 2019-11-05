@@ -1,12 +1,18 @@
 import React from 'react'
-interface IProps {
+import { renderRoutes, RouteConfig } from 'react-router-config'
+
+interface IProps extends RouteConfig {
   children?: any
 }
-const Home = (props: IProps) => (
-  <div>
-    Home
-    {props.children}
-  </div>
-)
+
+const Home = (props: IProps) => {
+  console.log(props.route.routes)
+  return (
+    <div>
+      Home
+      {renderRoutes(props.route.routes)}
+    </div>
+  )
+}
 
 export default Home

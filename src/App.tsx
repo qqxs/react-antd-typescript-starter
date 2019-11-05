@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import logo from './logo.svg'
 import './App.less'
 import { Button } from 'antd'
@@ -32,4 +32,4 @@ const App: React.FC = () => {
   )
 }
 
-export default App
+export default memo(App)

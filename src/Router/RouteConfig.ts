@@ -14,42 +14,27 @@ const routes = [
     exact: true
   },
   {
-    path: '/home',
     component: Home,
+    path: '/home',
     routes: [
       {
         path: '/home/list',
         component: HomeList,
-        auth: 1
-        // routes: [
-        //   {
-        //     path: '/home/bus/ss',
-        //     component: Profile
-        //   }
-        // ]
+        routes: []
       },
       {
         path: '/home/list/:id',
-        component: HomeList,
-        auth: 2
-        // routes: [
-        //   {
-        //     path: '/home/list/:id/:num',
-        //     component: HomeList
-        //   }
-        // ]
+        component: HomeList
       },
       {
         path: '/home/detail',
-        component: HomeDetail,
-        auth: [1, 2, 3]
+        component: HomeDetail
       }
     ]
   },
   {
     path: '/profile',
-    component: Profile,
-    private: 0
+    component: Profile
   },
   {
     path: '*',
