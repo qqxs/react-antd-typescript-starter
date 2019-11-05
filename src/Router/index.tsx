@@ -16,7 +16,7 @@ const Router = () => (
         <Link to="/home/list">HOME LIST</Link>
       </li>
       <li>
-        <Link to="/home/list/100">HOME LIST 100</Link>
+        <Link to="/home/detail/100">HOME DETAIL 100</Link>
       </li>
       <li>
         <Link to="/home/detail">HOME DETAIL</Link>

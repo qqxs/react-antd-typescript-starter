@@ -23,8 +23,8 @@ const routes = [
         routes: []
       },
       {
-        path: '/home/list/:id',
-        component: HomeList
+        path: '/home/detail/:id',
+        component: HomeDetail
       },
       {
         path: '/home/detail',
