@@ -1,0 +1,19 @@
+@import '../../style/theme.scss';
+
+.#{$class-prefix}_layout {
+  min-height: 100vh;
+
+  &-sider {
+    &-logo {
+      display: flex;
+      height: $layout-header-height;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        color: #fff;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

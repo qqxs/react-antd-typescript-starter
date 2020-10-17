@@ -1,0 +1,5 @@
+@import '../../var.scss';
+
+.#{$class-prefix}_sider_menu {
+  height: calc(100vh - #{$headerH});
+}

@@ -1,0 +1,7 @@
+@import '../../var.scss';
+
+.#{$class-prefix}_layout-renderpage {
+  height: calc(100vh - #{$headerH});
+  max-height: calc(100vh - #{$headerH});
+  background-color: #fff !important;
+}
