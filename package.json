@@ -4,6 +4,7 @@
   "private": false,
   "description": "React antd typescript template",
   "author": "shineshao <xiaoshaoqq@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "@ant-design/icons": "^4.2.2",
     "@testing-library/jest-dom": "^4.2.4",
