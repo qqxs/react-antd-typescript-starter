@@ -1,11 +1,11 @@
-import React from "react";
-import { classPrefix } from "src/const";
-import logo from "../../logo.svg";
-import { Button } from "antd";
+import React from 'react'
+import { classPrefix } from 'src/const'
+import logo from '../../logo.svg'
+import { Button } from 'antd'
 
 const Home = () => {
   return (
-    <div className={`${classPrefix}_home`}>
+    <div className={`${classPrefix}_home`} style={{ display: 'flex', flex: 1 }}>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -24,7 +24,7 @@ const Home = () => {
         </header>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Home;
+export default Home

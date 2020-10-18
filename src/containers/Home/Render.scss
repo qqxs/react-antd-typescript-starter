@@ -10,10 +10,27 @@
       justify-content: center;
       align-items: center;
 
-      h1 {
-        color: #fff;
-        margin-bottom: 0;
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
       }
     }
   }
+}
+
+.#{$class-prefix}_right-layout-header {
+  background-color: #fff;
+  box-shadow: 1px 1px 5px #eee;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  padding: 0 10px;
+}
+
+.#{$class-prefix}_right-layout-content {
+  background-color: rgba($color: #fff, $alpha: 0);
+  display: flex;
+  flex: 1;
+  padding: 10px;
 }
