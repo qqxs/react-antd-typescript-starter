@@ -1,12 +1,26 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
+import { useHistory } from 'react-router-dom'
 import 'particles.js'
-import { Form, Input, Button, Row, Col } from 'antd'
+import { Form, Input, Button, Row, Col, message } from 'antd'
 import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
+import { postLogin, getCaptcha } from 'src/model/login'
 import { classPrefix } from 'src/const'
 import FE from 'src/assets/images/FE.png'
 import './Login.scss'
+import { setToken } from 'src/utils/auth'
+
+export type LoginParams = {
+  email: string
+  password: string
+  captcha: string
+}
 
 const Login = () => {
+  const history = useHistory()
+  const [loading, setLoading] = useState(false)
+  const [codeImg, setCodeImg] = useState('')
+  const [captchaID, setCaptchaID] = useState('')
+
   useEffect(() => {
     window.particlesJS('particles-js', {
       particles: {
@@ -73,9 +87,44 @@ const Login = () => {
     })
   }, [])
 
-  const onFinish = (values: any) => {
-    console.log('Received values of form: ', values)
-  }
+  useEffect(() => {
+    handleCaptcha()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  const handleCaptcha = useCallback(() => {
+    getCaptcha().then(res => {
+      console.log(res.data)
+      setCodeImg('http://localhost:8080' + res.data.imageUrl)
+      setCaptchaID(res.data.captchaId)
+    })
+  }, [])
+
+  const onFinish = useCallback(
+    (values: any) => {
+      console.log(values)
+      setLoading(true)
+      values['captchaID'] = captchaID
+
+      postLogin(values)
+        .then(res => {
+          console.log(res.data)
+          if (res.data.code === 0) {
+            setToken(res.data.data.token)
+            history.push('/')
+          } else {
+            message.error(res.data.msg || '')
+            setLoading(false)
+            handleCaptcha()
+          }
+        })
+        .catch(error => {
+          console.log(error.response)
+          setLoading(false)
+        })
+    },
+    [history, captchaID, handleCaptcha]
+  )
 
   return (
     <div className={`${classPrefix}_login`} id="particles-js">
@@ -91,12 +140,15 @@ const Login = () => {
             onFinish={onFinish}
           >
             <Form.Item
-              name="username"
-              rules={[{ required: true, message: '请输入用户名!' }]}
+              name="email"
+              rules={[
+                { required: true, message: '请输入邮箱!' },
+                { type: 'email', message: '请输入有效邮箱!' }
+              ]}
             >
               <Input
                 prefix={<UserOutlined className="site-form-item-icon" />}
-                placeholder="用户名"
+                placeholder="邮箱"
                 size="large"
               />
             </Form.Item>
@@ -110,7 +162,7 @@ const Login = () => {
                 placeholder="密码"
               />
             </Form.Item>
-            <Form.Item>
+            <Form.Item className="captcha">
               <Row justify="space-between">
                 <Col span={14}>
                   <Form.Item
@@ -131,7 +183,8 @@ const Login = () => {
                   </Form.Item>
                 </Col>
                 <Col>
-                  <Button size="large">captcha</Button>
+                  {/* <Button size="large">captcha</Button> */}
+                  <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
                 </Col>
               </Row>
             </Form.Item>
@@ -143,6 +196,7 @@ const Login = () => {
                 className="login-form-button"
                 size="large"
                 block
+                loading={loading}
               >
                 登录
               </Button>

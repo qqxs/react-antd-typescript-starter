@@ -3,6 +3,7 @@
  * 请求拦截、相应拦截、错误统一处理
  */
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import { getToken, removeToken } from 'src/utils/auth'
 
 // 请求超时时间
 const instance = axios.create({
@@ -13,7 +14,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
   async (config: AxiosRequestConfig) => {
     const noToken = (config.headers || {}).noToken === false
-    const token = ''
+    const token = getToken() || ''
     if (token && !noToken) {
       config.headers['Authorization'] = 'Bearer ' + token // token
     }
@@ -36,6 +37,7 @@ instance.interceptors.response.use(
       switch (response.status) {
         // 401: 未登录
         case 401:
+          removeToken()
           // window.location.href = '/login'
           break
         // 其他错误，直接抛出错误提示

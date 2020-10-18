@@ -1,4 +1,4 @@
-import Request from "../Request";
+import Request from 'src/utils/Request'
 /**
  *
  * @desc me信息
@@ -10,9 +10,9 @@ import Request from "../Request";
  */
 export const getMe = () => {
   return Request({
-    url: "/api/v1/me",
-  });
-};
+    url: '/api/v1/me'
+  })
+}
 
 /**
  *
@@ -25,6 +25,6 @@ export const getMe = () => {
  */
 export const getGlobal = () => {
   return Request({
-    url: "/api/v1/global",
-  });
-};
+    url: '/api/v1/global'
+  })
+}
