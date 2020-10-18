@@ -11,7 +11,7 @@ const antdTheme = require('../antd-theme')
 function antdThemejs2Scss() {
   // 把antd-theme.js 中内容转化为 antd-theme.scss 中的值
   console.log(
-    colors.bgBlue('把antd-theme.js 中内容转化为 antd-theme.scss 中的值')
+    colors.green('把antd-theme.js 中内容转化为 antd-theme.scss 中的值')
   )
 
   return new Promise((resolve, reject) => {
@@ -34,7 +34,8 @@ function antdThemejs2Scss() {
         console.log(colors.red.underline('\n antd-theme.scss 文件创建失败\n'))
         reject(error)
       }
-      console.log('antd-theme.scss 写入成功')
+      console.log(colors.green('antd-theme.scss 写入成功'))
+
       resolve()
     })
   })

@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense } from 'react'
+import zhCN from 'antd/es/locale/zh_CN'
+import { ConfigProvider } from 'antd'
+import { Provider } from 'react-redux'
+import configureStore from 'src/store/index'
+import Router from 'src/router'
+
+import './App.scss'
+
+const store = configureStore()
+
+const FallbackLoading = () => (
+  <div
+    style={{
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      height: '100vh'
+    }}
+  ></div>
+)
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ConfigProvider locale={zhCN}>
+      <Provider store={store}>
+        <Suspense fallback={<FallbackLoading />}>
+          <Router />
+        </Suspense>
+      </Provider>
+    </ConfigProvider>
+  )
 }
 
-export default App;
+export default App

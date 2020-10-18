@@ -3,7 +3,6 @@
  * 请求拦截、相应拦截、错误统一处理
  */
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
-import { getTokenStorage } from 'src/utils/util'
 
 // 请求超时时间
 const instance = axios.create({
@@ -14,7 +13,7 @@ const instance = axios.create({
 instance.interceptors.request.use(
   async (config: AxiosRequestConfig) => {
     const noToken = (config.headers || {}).noToken === false
-    const token = getTokenStorage()
+    const token = ''
     if (token && !noToken) {
       config.headers['Authorization'] = 'Bearer ' + token // token
     }
