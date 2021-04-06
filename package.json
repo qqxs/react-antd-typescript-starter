@@ -1,38 +1,36 @@
 {
   "name": "react-antd-typescript-starter",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": false,
   "description": "React antd typescript template",
   "author": "shineshao <xiaoshaoqq@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "@ant-design/icons": "^4.2.2",
+    "@ant-design/icons": "^4.6.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/jest": "^24.0.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
-    "@types/react-dom": "^16.9.0",
-    "antd": "^4.7.0",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "antd": "^4.15.0",
     "js-cookie": "^2.2.1",
     "particles.js": "^2.0.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3",
-    "typescript": "~3.7.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.2.3"
   },
   "scripts": {
     "start": "craco start",
     "dll": "webpack -p --progress --config webpack.config.dll.js",
     "dev": "npm run start",
     "build": "cross-env GENERATE_SOURCEMAP=false craco build",
-    "prebuild": "npm run jstoless",
     "test": "craco test",
     "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx --fix src/**/*.js --fix  src/**/*.jsx",
     "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx src/",
-    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,less}\"",
-    "jstoless": "node scripts/antd.theme.js"
+    "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,less}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -51,7 +49,7 @@
   },
   "devDependencies": {
     "@babel/polyfill": "^7.10.4",
-    "@craco/craco": "^5.6.4",
+    "@craco/craco": "^5.9.0",
     "@types/axios": "^0.14.0",
     "@types/classnames": "^2.2.10",
     "@types/js-cookie": "^2.2.6",
