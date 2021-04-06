@@ -24,7 +24,6 @@
   },
   "scripts": {
     "start": "craco start",
-    "prestart": "npm run jstoless",
     "dll": "webpack -p --progress --config webpack.config.dll.js",
     "dev": "npm run start",
     "build": "cross-env GENERATE_SOURCEMAP=false craco build",
@@ -85,6 +84,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "sass-vars-to-json2": "^0.0.3",
     "shelljs": "^0.8.4",
     "webpack-cli": "^3.3.12"
   },

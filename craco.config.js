@@ -1,7 +1,7 @@
 const CracoLessPlugin = require('craco-less')
+const { extractSync } = require('sass-vars-to-json2')
 // inject webpack config
 // https://www.npmjs.com/package/@craco/craco
-const antdTheme = require('./antd-theme')
 const webpack = require('webpack')
 const path = require('path')
 const fs = require('fs')
@@ -11,6 +11,12 @@ const appDirectory = fs.realpathSync(process.cwd())
 
 const vendorPath = path.resolve(appDirectory, 'public/static/js')
 const PUBLIC_URL = process.env.PUBLIC_URL || '/'
+
+const antdThemeVariables = {}
+const sassJson = extractSync('./src/styles/antd-theme.scss')
+Object.keys(sassJson).map(key => {
+  antdThemeVariables[key.replace('$', '@')] = sassJson[key]
+})
 
 module.exports = {
   babel: {
@@ -48,7 +54,7 @@ module.exports = {
       options: {
         lessLoaderOptions: {
           lessOptions: {
-            modifyVars: antdTheme,
+            modifyVars: antdThemeVariables,
             javascriptEnabled: true
           }
         }

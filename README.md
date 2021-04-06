@@ -61,6 +61,10 @@ npm run test
 
 ## [craco](https://github.com/gsoft-inc/craco)
 
+## 主题
+
+如果需要 antd 主题，请更改`[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)`文件， 更改后请重新启动 （最好不要添加和 antd 注意不相关的变量）
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
