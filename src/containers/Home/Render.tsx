@@ -14,8 +14,9 @@ import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import * as MeActions from 'src/store/actions/me'
 
-import { siderMenu, ISiderMenu } from 'src/router/menu'
-import { IRoutes } from 'src/router/routes'
+// import { siderMenu, ISiderMenu } from 'src/router/menu'
+import { siderMenu } from 'src/router/menu'
+// import { IRoutes } from 'src/router/routes'
 import './Render.scss'
 import FE from 'src/assets/images/FE.png'
 
@@ -37,12 +38,13 @@ const FallbackLoading = () => (
 )
 
 const Home: React.FC<IProps> = (props: IProps) => {
-  const [user, setUser] = useState({})
+  // const [user, setUser] = useState({})
   const [collapsed, setCollapsed] = useState(false)
   const [loading, setLoading] = useState(true)
-
-  const [routes, setRoutes] = useState<IRoutes[]>(props.route.routes)
-  const [menus, setMenus] = useState<ISiderMenu[]>(siderMenu)
+  const routes = props.route.routes
+  const menus = siderMenu
+  // const [routes, setRoutes] = useState<IRoutes[]>(props.route.routes)
+  // const [menus, setMenus] = useState<ISiderMenu[]>(siderMenu)
 
   useEffect(() => {
     const getMe = getMeModel()
@@ -51,8 +53,8 @@ const Home: React.FC<IProps> = (props: IProps) => {
     Promise.all([getMe, getGlobal])
       .then(function (values) {
         if (values[0].data.code === 200 && values[1].data.code === 200) {
-          const user = values[0].data.data.user
-          setUser(user)
+          // const user = values[0].data.data.user
+          // setUser(user)
           // store me
           props.actions.setMe(values[0].data.data.user)
           setTimeout(() => setLoading(false), 50)
