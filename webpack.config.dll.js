@@ -11,7 +11,6 @@ module.exports = {
   entry: {
     // 需要提取的库文件
     vendor: [
-      '@babel/polyfill',
       'react',
       'react-dom',
       'react-router-dom',

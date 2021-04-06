@@ -48,8 +48,7 @@
     ]
   },
   "devDependencies": {
-    "@babel/polyfill": "^7.10.4",
-    "@craco/craco": "^5.9.0",
+    "@craco/craco": "^6.1.1",
     "@types/axios": "^0.14.0",
     "@types/classnames": "^2.2.10",
     "@types/js-cookie": "^2.2.6",
