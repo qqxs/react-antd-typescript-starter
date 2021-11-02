@@ -46,6 +46,21 @@ module.exports = {
         BUILD_ENV: process.env.BUILD_ENV || webpackConfig.mode
       }
       return webpackConfig
+    },
+    alias: {
+      // 文件路径别名
+      '@': path.resolve(__dirname, 'src'),
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@containers': path.resolve(__dirname, 'src/containers'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@store': path.resolve(__dirname, 'src/store'),
+      '@models': path.resolve(__dirname, 'src/models'),
+      '@services': path.resolve(__dirname, 'src/models/services'),
+      '@actions': path.resolve(__dirname, './src/store/actions'),
+      '@reducers': path.resolve(__dirname, './src/store/reducers'),
+      '@constant': path.resolve(__dirname, './src/constant')
     }
   },
   plugins: [

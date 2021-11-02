@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom'
 import { Layout } from 'antd'
 import { renderRoutes, matchRoutes } from 'react-router-config'
 import { IRoutes } from 'src/router/routes'
-import { classPrefix } from 'src/const/index'
+import { classPrefix } from '@constant/index'
 
 import './RenderPage.scss'
 

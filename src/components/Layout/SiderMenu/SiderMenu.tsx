@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { Menu } from 'antd'
 import { ISiderMenu } from 'src/router/menu'
 import classnames from 'classnames'
-import { classPrefix } from 'src/const'
+import { classPrefix } from '@constant'
 import './SiderMenu.scss'
 
 const { SubMenu } = Menu

@@ -3,7 +3,7 @@
  * 请求拦截、相应拦截、错误统一处理
  */
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
-import { getToken, removeToken } from 'src/utils/auth'
+import { getToken, removeToken } from '@utils/auth'
 
 // 请求超时时间
 const instance = axios.create({

@@ -1,6 +1,6 @@
 import React from 'react'
-import { classPrefix } from 'src/const'
-import RenderPager from 'src/components/Layout/RenderPage/RenderPage'
+import { classPrefix } from '@constant'
+import RenderPager from '@components/Layout/RenderPage/RenderPage'
 
 const Cus = (props: any) => {
   console.log(props.route)

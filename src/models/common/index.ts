@@ -1,4 +1,4 @@
-import Request from 'src/utils/Request'
+import Request from '@utils/Request'
 /**
  *
  * @desc me信息

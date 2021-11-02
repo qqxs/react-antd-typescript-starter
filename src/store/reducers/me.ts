@@ -1,4 +1,4 @@
-import { IMe, TYPESETME } from 'src/store/actions/me'
+import { IMe, TYPESETME } from '@actions/me'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default function (state = {}, action: { type: string; data: IMe }) {

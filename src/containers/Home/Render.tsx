@@ -2,23 +2,23 @@ import React, { useState, useEffect, useCallback, Suspense } from 'react'
 import { Layout } from 'antd'
 import { Link } from 'react-router-dom'
 import { renderRoutes, RouteConfig } from 'react-router-config'
-import { SiderMenu, Header, Image } from 'src/components'
-import { classPrefix } from 'src/const'
+import { SiderMenu, Header, Image } from '@components'
+import { classPrefix } from '@constant'
 
 import {
   getMe as getMeModel,
   getGlobal as getGlobalModel
-} from 'src/model/common'
+} from '@models/common'
 
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import * as MeActions from 'src/store/actions/me'
+import * as MeActions from '@actions/me'
 
 // import { siderMenu, ISiderMenu } from 'src/router/menu'
 import { siderMenu } from 'src/router/menu'
 // import { IRoutes } from 'src/router/routes'
 import './Render.scss'
-import FE from 'src/assets/images/FE.png'
+import FE from '@assets/images/FE.png'
 
 const { Sider } = Layout
 

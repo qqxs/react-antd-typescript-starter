@@ -3,11 +3,11 @@ import { useHistory } from 'react-router-dom'
 import 'particles.js'
 import { Form, Input, Button, Row, Col, message } from 'antd'
 import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
-import { postLogin, getCaptcha } from 'src/model/login'
-import { classPrefix } from 'src/const'
-import FE from 'src/assets/images/FE.png'
+import { postLogin, getCaptcha } from '@models/login'
+import { classPrefix } from '@constant'
+import FE from '@assets/images/FE.png'
 import './Login.scss'
-import { setToken } from 'src/utils/auth'
+import { setToken } from '@utils/auth'
 
 export type LoginParams = {
   email: string

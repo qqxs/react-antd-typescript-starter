@@ -1,5 +1,5 @@
 import React from 'react'
-import { classPrefix } from 'src/const'
+import { classPrefix } from '@constant'
 
 const NotFound = () => {
   return <div className={`${classPrefix}_notfound`}>notfound</div>

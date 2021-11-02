@@ -9,7 +9,7 @@ import {
 import classnames from 'classnames'
 import { Link } from 'react-router-dom'
 import { Layout } from 'antd'
-import { classPrefix } from 'src/const'
+import { classPrefix } from '@constant'
 import './Header.scss'
 
 interface IHeaderProps {

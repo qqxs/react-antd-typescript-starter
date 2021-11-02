@@ -1,5 +1,5 @@
 import React from 'react'
-import { classPrefix } from 'src/const'
+import { classPrefix } from '@constant'
 import logo from '../../logo.svg'
 import { Button } from 'antd'
 

@@ -1,5 +1,5 @@
-import Request from 'src/utils/Request'
-import { LoginParams } from 'src/containers/Login/Login'
+import Request from '@utils/Request'
+import { LoginParams } from '@containers/Login/Login'
 /**
  *
  * @desc 登录

@@ -1,5 +1,5 @@
 import React from 'react'
-import { classPrefix } from 'src/const'
+import { classPrefix } from '@constant'
 
 const Register = () => {
   return <div className={`${classPrefix}_register`}>register</div>
