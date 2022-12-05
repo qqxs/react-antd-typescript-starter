@@ -57,9 +57,9 @@ docker-compose up -d
 
 ## 库
 
-- [react@16.14.x](https://zh-hans.reactjs.org/)
+- [react@18.x](https://zh-hans.reactjs.org/)
 
-- [antd@4.x](https://ant.design/index-cn)
+- [antd@5.x](https://ant.design/index-cn)
 
   - antd 单独的图标库 [@ant-design/icons](https://ant.design/components/icon-cn/) （如需使用请安装）
 
@@ -67,7 +67,7 @@ docker-compose up -d
 
 ## 主题
 
-如果需要 antd 主题，请更改`[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)`文件， 更改后请重新启动 （最好不要添加和 antd 注意不相关的变量）
+如果需要 [antd 主题](https://ant.design/docs/react/customize-theme-cn)，请更改`[src/App.tsx](./src/App.tsx)`文件
 
 ## Learn More
 

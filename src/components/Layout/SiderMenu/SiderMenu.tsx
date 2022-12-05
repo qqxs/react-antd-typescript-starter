@@ -15,7 +15,7 @@ interface ISiderMenuProps {
 
 const renderMenu = (menus: ISiderMenu[]) => {
   return menus.map((menu: ISiderMenu, index: number) => {
-    if (!!!menu.items || menu.items.length === 0) {
+    if (!!!menu.children || menu.children.length === 0) {
       return (
         <Menu.Item key={menu.path}>
           <Link to={menu.path || '/'}>
@@ -24,10 +24,10 @@ const renderMenu = (menus: ISiderMenu[]) => {
           </Link>
         </Menu.Item>
       )
-    } else if (menu.items && menu.items.length) {
+    } else if (menu.children && menu.children.length) {
       return (
         <SubMenu
-          key={'/' + menu.name}
+          key={'/' + menu.label}
           title={
             <span>
               {/* <Icon type={menu.icon} /> */}
@@ -35,7 +35,7 @@ const renderMenu = (menus: ISiderMenu[]) => {
             </span>
           }
         >
-          {renderMenu(menu.items)}
+          {renderMenu(menu.children)}
         </SubMenu>
       )
     } else {

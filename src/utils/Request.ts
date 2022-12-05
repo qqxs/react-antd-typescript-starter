@@ -15,8 +15,8 @@ instance.interceptors.request.use(
   async (config: AxiosRequestConfig) => {
     const noToken = (config.headers || {}).noToken === false
     const token = getToken() || ''
-    if (token && !noToken) {
-      config.headers['Authorization'] = 'Bearer ' + token // token
+    if (token && !noToken && config.headers) {
+      config.headers['authorization'] = 'Bearer ' + token // token
     }
     return config
   },

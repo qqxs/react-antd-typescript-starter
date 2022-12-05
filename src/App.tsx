@@ -22,7 +22,14 @@ const FallbackLoading = () => (
 
 function App() {
   return (
-    <ConfigProvider locale={zhCN}>
+    <ConfigProvider
+      locale={zhCN}
+      theme={{
+        token: {
+          colorPrimary: '#00b96b'
+        }
+      }}
+    >
       <Provider store={store}>
         <Suspense fallback={<FallbackLoading />}>
           <Router />

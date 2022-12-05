@@ -8,11 +8,5 @@
   "arrowParens": "avoid",
   "endOfLine": "auto",
   "tabWidth": 2,
-  "printWidth": 80,
-  "overrides": [
-    {
-      "files": ".prettierrc",
-      "options": { "parser": "json" }
-    }
-  ]
+  "printWidth": 80
 }
