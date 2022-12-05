@@ -26,7 +26,7 @@
     "start": "craco start",
     "dll": "webpack -p --progress --config webpack.config.dll.js",
     "dev": "npm run start",
-    "build": "cross-env GENERATE_SOURCEMAP=false craco build",
+    "build": "cross-env GENERATE_SOURCEMAP=false CI=false craco build",
     "test": "craco test",
     "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx --fix src/**/*.js --fix  src/**/*.jsx",
     "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx src/",
