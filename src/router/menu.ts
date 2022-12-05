@@ -3,7 +3,7 @@ export interface ISiderMenu {
   path?: string // 链接跳转
   title: string
   icon?: string
-  children?: ISiderMenu[]
+  items?: ISiderMenu[]
   auth?: number[]
   show?: boolean //当有auth时 是否显示其他路由和是否显示当前auth的路由
 }
@@ -19,7 +19,7 @@ export const siderMenu: ISiderMenu[] = [
     name: 'cus',
     title: '客户管理',
     icon: 'dashboard',
-    children: [
+    items: [
       {
         name: 'list',
         title: '列表',

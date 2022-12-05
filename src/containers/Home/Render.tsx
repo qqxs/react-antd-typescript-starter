@@ -17,8 +17,9 @@ import * as MeActions from '@actions/me'
 // import { siderMenu, ISiderMenu } from 'src/router/menu'
 import { siderMenu } from 'src/router/menu'
 // import { IRoutes } from 'src/router/routes'
-import './Render.scss'
 import FE from '@assets/images/FE.png'
+
+import './Render.scss'
 
 const { Sider } = Layout
 
@@ -60,10 +61,9 @@ const Home: React.FC<IProps> = (props: IProps) => {
           setTimeout(() => setLoading(false), 50)
         }
       })
-      .catch(() => {
+      .finally(() => {
         setLoading(false)
       })
-    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.actions, props.route.routes])
 
   const handleCollapse = useCallback((collapsed: boolean) => {
@@ -74,6 +74,7 @@ const Home: React.FC<IProps> = (props: IProps) => {
     setCollapsed(!collapsed)
   }, [])
 
+  console.log('loading', loading)
   if (loading) {
     return (
       <div

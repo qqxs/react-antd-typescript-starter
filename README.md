@@ -45,6 +45,10 @@ npm run format
 
 # test env
 npm run test
+
+# docker nginx deploy
+# http://localhost:8000
+docker-compose up -d
 ```
 
 ## 自定义组件
