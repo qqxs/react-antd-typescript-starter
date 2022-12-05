@@ -32,7 +32,7 @@ const RenderPage = (props: IRenderPageProps) => {
       {MatchRoute.length ? (
         renderRoutes(route.routes, { defaultRoute })
       ) : (
-        <Route component={defaultRoute.component} />
+        <Route component={defaultRoute?.component} />
       )}
     </Layout.Content>
   )
