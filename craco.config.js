@@ -58,9 +58,9 @@ module.exports = {
       '@store': path.resolve(__dirname, 'src/store'),
       '@models': path.resolve(__dirname, 'src/models'),
       '@services': path.resolve(__dirname, 'src/models/services'),
-      '@actions': path.resolve(__dirname, './src/store/actions'),
-      '@reducers': path.resolve(__dirname, './src/store/reducers'),
-      '@constant': path.resolve(__dirname, './src/constant')
+      '@actions': path.resolve(__dirname, 'src/store/actions'),
+      '@reducers': path.resolve(__dirname, 'src/store/reducers'),
+      '@constant': path.resolve(__dirname, 'src/constant')
     }
   },
   plugins: [
