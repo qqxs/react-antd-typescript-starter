@@ -164,7 +164,7 @@ const Login = () => {
             </Form.Item>
             <Form.Item className="captcha">
               <Row justify="space-between">
-                <Col span={14}>
+                <Col span={17}>
                   <Form.Item
                     name="captcha"
                     noStyle
@@ -182,9 +182,10 @@ const Login = () => {
                     />
                   </Form.Item>
                 </Col>
-                <Col>
-                  {/* <Button size="large">captcha</Button> */}
-                  <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
+                <Col span={6}>
+                  <div style={{ height: '40px', backgroundColor: '#FFF' }}>
+                    <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
+                  </div>
                 </Col>
               </Row>
             </Form.Item>
