@@ -1,13 +1,13 @@
 import fs from 'fs'
 
+import sassVars from 'get-sass-vars'
+
 function toCamel(name) {
   // eslint-disable-next-line no-useless-escape
   return name.replace(/\-(\w)/g, function (all, letter) {
     return letter.toUpperCase()
   })
 }
-
-const RAW_VAR_REGEX = /\$([a-z][a-z0-9-]*):\s*([^;]*);/gi
 
 /**
  * sass 变量转成 json 格式
@@ -19,16 +19,14 @@ const RAW_VAR_REGEX = /\$([a-z][a-z0-9-]*):\s*([^;]*);/gi
  * @returns Object
  */
 function sassVar2JSON() {
-  const content = fs.readFileSync('./src/styles/antd-theme.scss').toString()
+  const css = fs.readFileSync('./src/styles/antd-theme.scss', 'utf-8')
 
-  const variables = {}
-  let match
+  const result = sassVars.sync(css)
 
-  while ((match = RAW_VAR_REGEX.exec(content)) !== null) {
-    const [, variable, value] = match
-    variables[toCamel(variable as string)] = value.trim()
-  }
-  return variables
+  return Object.keys(result).reduce((pre, cur) => {
+    pre[toCamel(cur.replace('$', ''))] = result[cur]
+    return pre
+  }, {})
 }
 
 export default sassVar2JSON

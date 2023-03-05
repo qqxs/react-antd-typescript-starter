@@ -39,6 +39,7 @@
     "eslint-plugin-n": "^15.0.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.32.2",
+    "get-sass-vars": "^3.4.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
     "pretty-quick": "^3.1.3",
