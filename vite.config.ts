@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react'
 
 import path from 'path'
 
-import Sass2JSON from './scripts/sass-to-json'
+import sassVar2JSON from './scripts/sass-to-json'
 
-const theme = Sass2JSON()
+const theme = sassVar2JSON()
 
 // https://vitejs.dev/config/
 export default defineConfig({
