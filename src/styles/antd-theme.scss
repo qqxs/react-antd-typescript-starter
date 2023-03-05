@@ -1,6 +1,15 @@
 // https://ant.design/docs/react/customize-theme-cn
 
-// token
-
-$color-primary: #00b96b;
-$border-radius: 2px;
+// 在运行前 node 会加载这个文件转成小驼峰对象定义，然后挂载到window上(在vite的define配置__THEME__变量)
+//
+// @example
+// $color-primary: #00b96b
+// $border-radius: 2px;
+//          |
+//          | sass to json
+//          V
+// {"colorPrimary": "#00b96b", "borderRadius": "2px"}
+//
+// antd theme  token
+$color-primary: #00b96b; // ->  colorPrimary: #00b96b
+$border-radius: 2px; //  ->  borderRadius: 2px
