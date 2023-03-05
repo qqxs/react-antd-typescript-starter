@@ -10,9 +10,6 @@ export interface IBread {
 const lazyComponent: (componentPath: string) => React.ComponentType = (
   componentPath: string
 ) => {
-  if (/src\//.test(componentPath)) {
-    return lazy(() => import(componentPath))
-  }
   return lazy(() => import(`src/containers/${componentPath}`))
 }
 

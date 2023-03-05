@@ -2,7 +2,7 @@
  * axios封装
  * 请求拦截、相应拦截、错误统一处理
  */
-import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { getToken, removeToken } from '@utils/auth'
 
 // 请求超时时间
@@ -12,7 +12,7 @@ const instance = axios.create({
 
 // 请求拦截器
 instance.interceptors.request.use(
-  async (config: AxiosRequestConfig) => {
+  async config => {
     const noToken = (config.headers || {}).noToken === false
     const token = getToken() || ''
     if (token && !noToken && config.headers) {
