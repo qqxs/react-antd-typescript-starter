@@ -1,11 +1,11 @@
 import React from 'react'
-
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import Home from './page/home'
-
-import Hello from './page/hello'
-
-import Login from './page/login/login'
+import { ConfigProvider } from 'antd'
+// page
+import Home from '@/page/home'
+import Hello from '@/page/hello'
+import Login from '@/page/login/login'
+// end page
 
 export const router = createBrowserRouter([
   {
@@ -14,16 +14,28 @@ export const router = createBrowserRouter([
   },
   {
     path: '/hello',
-    element: <Hello /> // React.lazy(() => import("./routes/hello"))
+    element: <Hello />
   },
   {
     path: '/login',
-    element: <Login /> // React.lazy(() => import("./routes/hello"))
+    element: <Login />
   }
 ])
 
 function Router() {
-  return <RouterProvider router={router} />
+  return (
+    <ConfigProvider
+      theme={{
+        token: window.__THEME__ // vite global
+      }}
+    >
+      <div className="_page_">
+        <React.Suspense fallback={<>...</>}>
+          <RouterProvider router={router} />
+        </React.Suspense>
+      </div>
+    </ConfigProvider>
+  )
 }
 
 export default Router

@@ -1,4 +1,3 @@
-import { type Request, type Response } from '@/typings'
 import Axios from '@/utils/Axios'
 
 /**
@@ -27,8 +26,8 @@ export async function postLogin(data: Request.LoginParams) {
  *
  * @return {Promise} 请求返回
  */
-export function postLogout<T>(): any {
-  return Axios<T>({
+export function postLogout(): any {
+  return Axios({
     url: '/api/v1/login_out',
     method: 'post'
   })

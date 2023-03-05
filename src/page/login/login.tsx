@@ -22,6 +22,7 @@ const Login = () => {
     getCaptcha()
       .then(res => {
         console.log(res.data)
+        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         setCodeImg(`http://localhost:8080 ${res.data.data.imageUrl}`)
         setCaptchaID(res.data.data.captchaId)
       })

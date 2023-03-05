@@ -1,6 +1,5 @@
 ## react-antd-typescript-starter (react 模版)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### 项目使用
 
@@ -16,16 +15,7 @@ npm install
 
 # development environment
 # 开启开发环境react 编译
-npm run start
-
-# development environment
-# 开启开发环境react 编译
 npm run dev
-
-
-# 开始编译测试或生产环境 的dll 文件
-# 打包一次就可以了
-npm run dll
 
 # 开始编译测试或生产环境
 npm run build
@@ -41,10 +31,7 @@ npm run lint
 
 # prettier format code
 # 使用prettier 代码进行格式化
-npm run format
-
-# test env
-npm run test
+npm run fmt
 
 # docker nginx deploy
 # http://localhost:8000
@@ -55,24 +42,10 @@ docker-compose up -d
 
 自定义组件放在`src/components`下 ，希望在每个组件同级目录下都添加一个 example
 
-## 库
-
-- [react@18.x](https://zh-hans.reactjs.org/)
-
-- [antd@5.x](https://ant.design/index-cn)
-
-  - antd 单独的图标库 [@ant-design/icons](https://ant.design/components/icon-cn/) （如需使用请安装）
-
-## [craco](https://github.com/gsoft-inc/craco)
 
 ## 主题
 
-如果需要 [antd 主题](https://ant.design/docs/react/customize-theme-cn)，请更改`[src/App.tsx](./src/App.tsx)`文件
+如果需要 [antd 主题](https://ant.design/docs/react/customize-theme-cn)，请更改`[src/styles/theme.ts](./src/styles/theme.ts)`文件
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
 
 **请不要让项目 面向 any 编程 谢谢 🙏**

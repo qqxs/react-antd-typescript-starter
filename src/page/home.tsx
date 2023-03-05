@@ -4,6 +4,8 @@ import reactLogo from '@/assets/react.svg'
 const Home = () => {
   const [count, setCount] = useState(0)
 
+  console.log(window.__THEME__)
+
   return (
     <>
       <div>
