@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ConfigProvider } from 'antd'
 // page
-import Home from '@/page/home'
+import Home from '@/page/home/home'
 import Hello from '@/page/hello'
 import Login from '@/page/login/login'
 // end page
