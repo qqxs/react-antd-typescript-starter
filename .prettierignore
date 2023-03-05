@@ -1,0 +1,7 @@
+.DS_Store
+.setting/
+node_modules/
+.idea/
+dist/
+resources/
+build/
