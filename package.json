@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx --fix src/**/*.js --fix  src/**/*.jsx",
+    "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx",
     "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx ./src",
     "fmt": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,less}\"",
     "prepare": "husky install"
