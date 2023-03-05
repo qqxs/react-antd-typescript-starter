@@ -1,4 +1,4 @@
-## react-antd-typescript-starter (react 模版)
+## react-antd-typescript-starter (vite + react + ts 模版)
 
 
 ### 项目使用
@@ -38,6 +38,36 @@ npm run fmt
 docker-compose up -d
 ```
 
+## src 目录
+
+```bash
+.
+├── assets
+│   ├── FE.png
+│   └── react.svg
+├── components
+├── constant
+│   └── index.ts
+├── hooks
+├── index.scss
+├── main.tsx          # 入口
+├── models            # 接口
+│   ├── auth
+│   └── common
+├── page              # 页面
+│   ├── home
+│   └── login
+├── router.tsx        # 路由
+├── styles
+│   ├── antd-theme.scss  # antd 主题
+│   └── theme.scss      # 项目自定义主题
+├── utils
+│   ├── Axios.ts      # axios
+│   └── auth.ts
+└── vite-env.d.ts    
+
+```
+
 ## 自定义组件
 
 自定义组件放在`src/components`下 ，希望在每个组件同级目录下都添加一个 example
@@ -45,7 +75,7 @@ docker-compose up -d
 
 ## 主题
 
-如果需要 [antd 主题](https://ant.design/docs/react/customize-theme-cn)，请更改`[src/styles/theme.ts](./src/styles/theme.ts)`文件
+如果需要 [antd 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
 
 
 **请不要让项目 面向 any 编程 谢谢 🙏**
