@@ -33,6 +33,7 @@ npm run lint
 # 使用prettier 代码进行格式化
 npm run fmt
 
+# 首先要安装nginx镜像
 # docker nginx deploy
 # http://localhost:8000
 docker-compose up -d
