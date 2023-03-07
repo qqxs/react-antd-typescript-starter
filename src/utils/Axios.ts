@@ -58,6 +58,12 @@ instance.interceptors.response.use(
   }
 )
 
+/**
+ * axios 封装
+ *
+ * @param configParam axios config param
+ * @returns Promise
+ */
 async function Axios<T = unknown>(
   configParam: AxiosRequestConfig
 ): Promise<Response.Common<T>> {
