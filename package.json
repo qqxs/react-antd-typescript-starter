@@ -19,6 +19,7 @@
     "antd": "^5.2.3",
     "axios": "^1.3.4",
     "js-cookie": "^3.0.1",
+    "normalize.css": "^8.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.2"
