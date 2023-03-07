@@ -1,4 +1,4 @@
-import Request from '@/utils/Axios'
+import Axios from '@/utils/Axios'
 /**
  *
  * @desc me信息
@@ -9,7 +9,7 @@ import Request from '@/utils/Axios'
  * @return {Promise} 请求返回
  */
 export const getMe = async () => {
-  return await Request({
+  return await Axios({
     url: '/api/v1/me'
   })
 }
@@ -24,7 +24,7 @@ export const getMe = async () => {
  * @return {Promise} 请求返回
  */
 export const getGlobal = async () => {
-  return await Request({
+  return await Axios({
     url: '/api/v1/global'
   })
 }

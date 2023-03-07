@@ -21,10 +21,10 @@ const Login = () => {
   const handleCaptcha = useCallback(() => {
     getCaptcha()
       .then(res => {
-        console.log(res.data)
+        console.log('res.data', res.data)
         // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-        setCodeImg(`http://localhost:8080 ${res.data.data.imageUrl}`)
-        setCaptchaID(res.data.data.captchaId)
+        setCodeImg(res.data.image_url)
+        setCaptchaID(res.data.captcha_id)
       })
       .catch(error => {
         console.log(error.response)
@@ -36,17 +36,15 @@ const Login = () => {
     (values: any) => {
       console.log(values)
       setLoading(true)
-      values.captchaID = captchaID
+      values.captcha_id = captchaID
 
       postLogin(values)
         .then(res => {
-          console.log(res)
-          const data = res.data
-          if (data.code === 0) {
-            setToken(data.data.token)
-            // history.push("/");
+          if (res.code === 0) {
+            setToken(res.data)
+            location.href = '/'
           } else {
-            void message.error(data.msg)
+            void message.error(res.msg)
             setLoading(false)
             handleCaptcha()
           }
@@ -54,6 +52,7 @@ const Login = () => {
         .catch(error => {
           console.log(error.response)
           setLoading(false)
+          handleCaptcha()
         })
     },
     [captchaID, handleCaptcha]
@@ -97,9 +96,9 @@ const Login = () => {
             </Form.Item>
             <Form.Item className="captcha">
               <Row justify="space-between">
-                <Col span={17}>
+                <Col span={15}>
                   <Form.Item
-                    name="captcha"
+                    name="code"
                     noStyle
                     rules={[
                       {
@@ -115,9 +114,17 @@ const Login = () => {
                     />
                   </Form.Item>
                 </Col>
-                <Col span={6}>
-                  <div style={{ height: '40px', backgroundColor: '#FFF' }}>
-                    <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
+                <Col span={7}>
+                  <div
+                    style={{
+                      width: '100px',
+                      height: '40px',
+                      backgroundColor: '#FFF'
+                    }}
+                  >
+                    {!!codeImg && (
+                      <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
+                    )}
                   </div>
                 </Col>
               </Row>

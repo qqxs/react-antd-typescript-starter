@@ -10,8 +10,8 @@ import Axios from '@/utils/Axios'
  * @return {Promise} 请求返回
  */
 export async function postLogin(data: Request.LoginParams) {
-  return await Axios<Response.Common<{ token: string }>>({
-    url: '/api/v1/login',
+  return await Axios<string>({
+    url: '/api/login',
     method: 'post',
     data
   })
@@ -28,14 +28,14 @@ export async function postLogin(data: Request.LoginParams) {
  */
 export function postLogout(): any {
   return Axios({
-    url: '/api/v1/login_out',
+    url: '/api/login_out',
     method: 'post'
   })
 }
 
 interface ResponseCaptcha {
-  imageUrl: string
-  captchaId: string
+  image_url: string
+  captcha_id: string
 }
 /**
  *
@@ -47,7 +47,7 @@ interface ResponseCaptcha {
  * @return {Promise} 请求返回
  */
 export async function getCaptcha() {
-  return await Axios<Response.Common<ResponseCaptcha>>({
-    url: '/api/v1/captcha'
+  return await Axios<ResponseCaptcha>({
+    url: '/api/captcha'
   })
 }
