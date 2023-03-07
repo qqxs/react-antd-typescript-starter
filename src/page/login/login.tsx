@@ -21,7 +21,7 @@ const Login = () => {
   const handleCaptcha = useCallback(() => {
     getCaptcha()
       .then(res => {
-        console.log('res.data', res.data)
+        // console.log('res.data', res.data)
         // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         setCodeImg(res.data.image_url)
         setCaptchaID(res.data.captcha_id)
@@ -34,7 +34,7 @@ const Login = () => {
 
   const onFinish = useCallback(
     (values: any) => {
-      console.log(values)
+      // console.log(values)
       setLoading(true)
       values.captcha_id = captchaID
 

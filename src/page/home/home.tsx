@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import { Link } from 'react-router-dom'
 import reactLogo from '@/assets/react.svg'
 
 import './home.scss'
@@ -39,6 +40,7 @@ const Home = () => {
       <p className="read-the-docs">
         Click on the Vite、React and Ts logos to learn more
       </p>{' '}
+      {/* <Link to="/login">login</Link> */}
     </div>
   )
 }
