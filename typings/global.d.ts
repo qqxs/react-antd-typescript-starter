@@ -10,7 +10,8 @@ declare namespace Request {
   export interface LoginParams {
     email: string
     password: string
-    captcha: string
+    code: string
+    captcha_id: string
   }
 }
 
