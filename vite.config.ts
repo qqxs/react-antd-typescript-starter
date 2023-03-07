@@ -8,6 +8,8 @@ import sassVar2JSON from './scripts/sass-to-json'
 
 const theme = sassVar2JSON()
 
+console.log('sassVar2JSON', theme)
+
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -38,7 +40,7 @@ export default defineConfig({
     }
   },
   define: {
-    __THEME__: theme // antd theme
+    $__THEME__$: theme // antd theme
   },
   plugins: [react()]
 })

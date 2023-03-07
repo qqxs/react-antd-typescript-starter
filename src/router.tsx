@@ -26,7 +26,7 @@ function Router() {
   return (
     <ConfigProvider
       theme={{
-        token: window.__THEME__ // vite global
+        token: $__THEME__$ // vite global
       }}
     >
       <div className="_page_">
