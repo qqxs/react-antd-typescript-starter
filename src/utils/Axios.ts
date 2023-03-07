@@ -33,7 +33,7 @@ instance.interceptors.request.use(
 // 响应拦截器
 instance.interceptors.response.use(
   async (response: AxiosResponse) => {
-    return await Promise.resolve(response.data)
+    return await Promise.resolve(response)
   },
   // 服务器状态码不是200的情况
   async error => {
@@ -43,7 +43,7 @@ instance.interceptors.response.use(
         // 401: 未登录
         case 401:
           removeToken()
-          // window.location.href = '/login'
+          window.location.href = '/login'
           break
         // 其他错误，直接抛出错误提示
         default:
@@ -58,8 +58,12 @@ instance.interceptors.response.use(
   }
 )
 
-async function Axios<T = unknown>(configParam: AxiosRequestConfig) {
-  return await instance.request<T, AxiosResponse<T>>(configParam)
+async function Axios<T = unknown>(
+  configParam: AxiosRequestConfig
+): Promise<Response.Common<T>> {
+  return await instance
+    .request<Response.Common<T>, AxiosResponse<Response.Common<T>>>(configParam)
+    .then(res => res.data)
 }
 
 export default Axios
