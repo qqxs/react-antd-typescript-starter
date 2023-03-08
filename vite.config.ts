@@ -8,7 +8,7 @@ import sassVar2JSON from './scripts/sass-to-json'
 
 const theme = sassVar2JSON()
 
-console.log('sassVar2JSON', theme)
+// console.log('sassVar2JSON', theme)
 
 // https://vitejs.dev/config/
 export default defineConfig({
