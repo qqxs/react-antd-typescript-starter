@@ -2,6 +2,8 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { ConfigProvider } from 'antd'
 import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
+import { Provider } from 'react-redux'
+import { store } from './store'
 
 // page
 import Home from '@/page/home/home'
@@ -48,17 +50,19 @@ function Router() {
         // reset the state of your app so the error doesn't happen again
       }}
     >
-      <ConfigProvider
-        theme={{
-          token: $__THEME__$ // vite global
-        }}
-      >
-        <div className="_page_">
-          <React.Suspense fallback={<>...</>}>
-            <RouterProvider router={router} />
-          </React.Suspense>
-        </div>
-      </ConfigProvider>
+      <Provider store={store}>
+        <ConfigProvider
+          theme={{
+            token: $__THEME__$ // vite global
+          }}
+        >
+          <div className="_page_">
+            <React.Suspense fallback={<>...</>}>
+              <RouterProvider router={router} />
+            </React.Suspense>
+          </div>
+        </ConfigProvider>
+      </Provider>
     </ErrorBoundary>
   )
 }
