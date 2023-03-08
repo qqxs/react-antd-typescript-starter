@@ -1,4 +1,9 @@
 
+## 0.3.1
+
+- Fix deploy bug
+- Fix production theme
+
 ## 0.3.0
 
 - vite
