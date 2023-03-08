@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react'
 // import { useHistory } from "react-router-dom";
-import { Form, Input, Button, Row, Col, message } from 'antd'
+import { Form, Input, Button, Row, message } from 'antd'
 import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
 import { postLogin, getCaptcha } from '@/models/auth'
 import { classPrefix } from '@/constant'
@@ -96,37 +96,27 @@ const Login = () => {
             </Form.Item>
             <Form.Item className="captcha">
               <Row justify="space-between">
-                <Col span={15}>
-                  <Form.Item
-                    name="code"
-                    noStyle
-                    rules={[
-                      {
-                        required: true,
-                        message: '请输入验证码!'
-                      }
-                    ]}
-                  >
-                    <Input
-                      size="large"
-                      placeholder="验证码"
-                      prefix={<SafetyOutlined />}
-                    />
-                  </Form.Item>
-                </Col>
-                <Col span={7}>
-                  <div
-                    style={{
-                      width: '100px',
-                      height: '40px',
-                      backgroundColor: '#FFF'
-                    }}
-                  >
-                    {!!codeImg && (
-                      <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
-                    )}
-                  </div>
-                </Col>
+                <Form.Item
+                  name="code"
+                  noStyle
+                  rules={[
+                    {
+                      required: true,
+                      message: '请输入验证码!'
+                    }
+                  ]}
+                >
+                  <Input
+                    size="large"
+                    placeholder="验证码"
+                    prefix={<SafetyOutlined />}
+                  />
+                </Form.Item>
+                <div className="codeWrapper">
+                  {!!codeImg && (
+                    <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
+                  )}
+                </div>
               </Row>
             </Form.Item>
 

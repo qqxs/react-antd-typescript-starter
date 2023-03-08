@@ -44,8 +44,20 @@
         color: #000;
       }
 
-      .captcha img {
-        height: 40px;
+      .captcha {
+        position: relative;
+
+        .ant-input-affix-wrapper {
+          padding-right: 130px;
+        }
+      }
+
+      .codeWrapper img {
+        position: absolute;
+        z-index: 100;
+        top: 1px;
+        right: 1px;
+        height: 38px;
         background-color: #fff;
       }
     }
