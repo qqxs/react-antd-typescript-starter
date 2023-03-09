@@ -19,6 +19,21 @@ export async function postLogin(data: Request.LoginParams) {
 
 /**
  *
+ * @desc 回去当前用户基本信息
+ * @link
+ *
+ * @method GET
+ *
+ * @return {Promise} 请求返回
+ */
+export async function getMe() {
+  return await Axios<Response.Me>({
+    url: '/api/me'
+  })
+}
+
+/**
+ *
  * @desc 退出登录
  * @link
  *

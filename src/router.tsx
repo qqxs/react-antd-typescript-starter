@@ -1,70 +1,43 @@
 import React from 'react'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { ConfigProvider } from 'antd'
-import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
-import { Provider } from 'react-redux'
-import { store } from './store'
+import { createBrowserRouter } from 'react-router-dom'
+
+import Auth from '@/components/Auth/auth'
 
 // page
 import Home from '@/page/home/home'
-import Hello from '@/page/hello'
+// import Hello from '@/page/hello'
 import Login from '@/page/login/login'
+import Register from '@/page/register/register'
 
 import Error404 from '@/page/error/404'
 // end page
 
-function ErrorFallback(props: FallbackProps) {
-  return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre>{props.error.message}</pre>
-      <button onClick={props.resetErrorBoundary}>Try again</button>
-    </div>
-  )
-}
-
-export const router = createBrowserRouter([
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/login',
+      element: <Login />
+    },
+    {
+      path: '/register',
+      element: <Register />
+    },
+    {
+      path: '/',
+      element: <Auth />,
+      children: [
+        {
+          index: true,
+          element: <Home />
+        }
+      ]
+    },
+    {
+      path: '*',
+      element: <Error404 />
+    }
+  ],
   {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/hello',
-    element: <Hello />
-  },
-  {
-    path: '/login',
-    element: <Login />
-  },
-  {
-    path: '/404',
-    element: <Error404 />
+    basename: '/'
   }
-])
-
-function Router() {
-  return (
-    <ErrorBoundary
-      FallbackComponent={ErrorFallback}
-      onReset={() => {
-        // reset the state of your app so the error doesn't happen again
-      }}
-    >
-      <Provider store={store}>
-        <ConfigProvider
-          theme={{
-            token: $__THEME__$ // vite global
-          }}
-        >
-          <div className="_page_">
-            <React.Suspense fallback={<>...</>}>
-              <RouterProvider router={router} />
-            </React.Suspense>
-          </div>
-        </ConfigProvider>
-      </Provider>
-    </ErrorBoundary>
-  )
-}
-
-export default Router
+)

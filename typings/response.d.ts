@@ -4,4 +4,8 @@ declare namespace Response {
     data: T
     msg?: string
   }
+
+  export interface Me {
+    email: string
+  }
 }

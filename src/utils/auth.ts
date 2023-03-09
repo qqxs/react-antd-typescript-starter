@@ -18,7 +18,7 @@ export function getToken(): string | undefined {
  * @returns {string | undefined}
  */
 export function setToken(token: string): string | undefined {
-  return Cookies.set(TokenKey, `Bearer ${token}`)
+  return Cookies.set(TokenKey, `${token}`)
 }
 
 /**

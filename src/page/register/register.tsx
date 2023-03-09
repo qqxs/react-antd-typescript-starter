@@ -7,7 +7,7 @@ import { classPrefix } from '@/constant'
 import FE from '@/assets/FE.png'
 import { setToken } from '@/utils/auth'
 
-import './login.scss'
+import './register.scss'
 
 const Login = () => {
   //   const history = useHistory();

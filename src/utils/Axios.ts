@@ -19,9 +19,10 @@ instance.interceptors.request.use(
   async (config: InternalAxiosRequestConfig) => {
     const noToken = (config.headers ?? { noToken: false }).noToken === false
     const token = getToken()
+    console.log(token)
     if (Boolean(token) && !noToken && Boolean(config.headers)) {
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-      config.headers.authorization = `Bearer ${token}` // token
+      config.headers.Authorization = `Bearer ${token}` // token
     }
     return config
   },
@@ -43,7 +44,9 @@ instance.interceptors.response.use(
         // 401: 未登录
         case 401:
           removeToken()
-          window.location.href = '/login'
+          if (!['/login', '/register'].includes(location.pathname)) {
+            window.location.href = '/login'
+          }
           break
         // 其他错误，直接抛出错误提示
         default:
