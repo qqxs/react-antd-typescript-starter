@@ -19,7 +19,6 @@ instance.interceptors.request.use(
   async (config: InternalAxiosRequestConfig) => {
     const noToken = (config.headers ?? { noToken: false }).noToken === false
     const token = getToken()
-    console.log(token)
     if (Boolean(token) && !noToken && Boolean(config.headers)) {
       // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
       config.headers.Authorization = `Bearer ${token}` // token
@@ -39,14 +38,17 @@ instance.interceptors.response.use(
   // 服务器状态码不是200的情况
   async error => {
     const response = error.response
+
     if (response?.status) {
       switch (response.status) {
         // 401: 未登录
         case 401:
           removeToken()
-          if (!['/login', '/register'].includes(location.pathname)) {
+
+          if (!['/api/me'].includes(response?.config?.url)) {
             window.location.href = '/login'
           }
+
           break
         // 其他错误，直接抛出错误提示
         default:

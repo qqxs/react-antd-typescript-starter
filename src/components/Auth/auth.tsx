@@ -1,35 +1,14 @@
-import React, { useState, useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
-import { getMe } from '@/models/auth'
+import React from 'react'
+import { Outlet, Navigate } from 'react-router-dom'
+import { useAppSelector } from '@/hooks/redux'
+
+import { selectMe } from '@/store/reducer/me-reducer'
 
 const Auth = () => {
-  const [loading, setLoading] = useState(false)
+  const me = useAppSelector(selectMe)
 
-  useEffect(() => {
-    getMe()
-      .then(res => {
-        if (res.code === 0) {
-          setLoading(false)
-        }
-      })
-      .catch(() => {})
-  }, [])
-
-  if (loading) {
-    return (
-      <div
-        style={{
-          height: '100vh',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          fontSize: '20px',
-          color: '#fff'
-        }}
-      >
-        Loading
-      </div>
-    )
+  if (!me.id) {
+    return <Navigate to="/login" state={{ from: location }} />
   }
 
   return <Outlet />

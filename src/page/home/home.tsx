@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 // import { useSelector } from 'react-redux'
 // import { Link } from 'react-router-dom'
 import reactLogo from '@/assets/react.svg'
+import { useAppDispatch } from '@/hooks/redux'
+import { increment } from '@/store/reducer/counter-reducer'
 
 import './home.scss'
 
 const Home = () => {
   const [count, setCount] = useState(0)
+
+  const dispatch = useAppDispatch()
 
   return (
     <div className="_page-home">
@@ -31,7 +35,12 @@ const Home = () => {
       </div>
       <h1>Vite + React + Ts</h1>
       <div className="card">
-        <button onClick={() => setCount(count => count + 1)}>
+        <button
+          onClick={() => {
+            setCount(count => count + 1)
+            dispatch(increment(count + 1))
+          }}
+        >
           count is {count}
         </button>
         <p>
