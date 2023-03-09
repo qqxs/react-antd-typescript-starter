@@ -16,10 +16,12 @@ const Layout = () => {
       .then(res => {
         if (res.code === 0) {
           dispatch(setMe(res.data))
-          setLoading(false)
         }
+        setLoading(false)
       })
-      .catch(() => {})
+      .catch(() => {
+        setLoading(false)
+      })
   }, [])
 
   if (loading) {
