@@ -11,7 +11,7 @@
     "preview": "vite preview",
     "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx",
     "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx ./src",
-    "fmt": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss,less}\"",
+    "fmt": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss}\"",
     "prepare": "husky install"
   },
   "dependencies": {
