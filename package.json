@@ -50,5 +50,15 @@
     "sass": "^1.58.3",
     "typescript": "*",
     "vite": "^4.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/qqxs/react-antd-typescript-starter/issues"
+  },
+  "homepage": "https://github.com/qqxs/react-antd-typescript-starter",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/qqxs/react-antd-typescript-starter.git",
+    "branch": "main",
+    "platform": "github"
   }
 }
