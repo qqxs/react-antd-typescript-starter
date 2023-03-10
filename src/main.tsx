@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ConfigProvider } from 'antd'
 import { RouterProvider } from 'react-router-dom'
-import { ErrorBoundary, type FallbackProps } from 'react-error-boundary'
 import { Provider } from 'react-redux'
+import ErrorBoundary from '@/components/ErrorBoundary'
 import { store } from './store'
 import { router } from './router'
 
@@ -11,24 +11,9 @@ import 'normalize.css'
 
 import './index.scss'
 
-function ErrorFallback(props: FallbackProps) {
-  return (
-    <div role="alert">
-      <p>Something went wrong:</p>
-      <pre>{props.error.message}</pre>
-      <button onClick={props.resetErrorBoundary}>Try again</button>
-    </div>
-  )
-}
-
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>
-  <ErrorBoundary
-    FallbackComponent={ErrorFallback}
-    onReset={() => {
-      // reset the state of your app so the error doesn't happen again
-    }}
-  >
+  <ErrorBoundary>
     <Provider store={store}>
       <ConfigProvider
         theme={{
