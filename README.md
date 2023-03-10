@@ -26,7 +26,7 @@ npm run build
 # 注意⚠️: 不是所有的错误都会修复，部分还是要手动修复
 npm run fix
 
-# elist lint code
+# eslint lint code
 # 进行eslint语法检查, 如果有错会在控制中指出
 npm run lint
 
