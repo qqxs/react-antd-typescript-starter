@@ -34,7 +34,16 @@ export default defineConfig({
          * 将 lodash 模块打包成一个 chunk，名称是 lodash
          */
         manualChunks: {
-          dll: ['react', 'react-dom', 'react-router-dom', 'axios']
+          dll: [
+            'react',
+            'react-dom',
+            'react-router-dom',
+            'axios',
+            'redux',
+            'react-redux',
+            '@reduxjs/toolkit',
+            'classnames'
+          ]
         }
       }
     }
