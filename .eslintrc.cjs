@@ -8,7 +8,13 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['tsconfig.json', 'tsconfig.node.json']
+    project: [
+      'tsconfig.json',
+      'tsconfig.node.json',
+      'jest.config.ts',
+      'vite.config.ts',
+      'vitest.setup.ts'
+    ]
   },
   plugins: ['react'],
   rules: {
@@ -17,6 +23,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 'off',
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
-    '@typescript-eslint/indent': 'off'
+    '@typescript-eslint/indent': 'off',
+    '@typescript-eslint/await-thenable': 'off'
   }
 }
