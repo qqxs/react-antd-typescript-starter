@@ -1,5 +1,6 @@
 ## react-antd-typescript-starter (vite + react + ts 模版)
 
+![build](https://github.com/qqxs/react-antd-typescript-starter/workflows/build/badge.svg)
 
 ### 项目使用
 
