@@ -83,6 +83,8 @@ docker-compose up -d
 
 [gin_serve api](https://github.com/freeshineit/gin_serve)
 
+## sentry
 
+在[vite.config.ts](./vite.config.ts)中开启sentry, 并在[src/sentry.tsx](./src/sentry.ts) 中配置。
 
 **请不要让项目 面向 any 编程 谢谢 🙏**

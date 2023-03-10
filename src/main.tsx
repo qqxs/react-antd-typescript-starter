@@ -3,13 +3,20 @@ import ReactDOM from 'react-dom/client'
 import { ConfigProvider } from 'antd'
 import { RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
+
 import ErrorBoundary from '@/components/ErrorBoundary'
+
 import { store } from './store'
 import { router } from './router'
+
+import InitSentry from './Sentry'
 
 import 'normalize.css'
 
 import './index.scss'
+
+// 初始化Sentry
+InitSentry()
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>

@@ -49,7 +49,8 @@ export default defineConfig({
     }
   },
   define: {
-    $__THEME__$: theme // antd theme
+    $__THEME__$: theme, // antd theme
+    $__SENTRY__$: false // process.env.NODE_ENV === 'production' // open sentry
   },
   plugins: [react()]
 })
