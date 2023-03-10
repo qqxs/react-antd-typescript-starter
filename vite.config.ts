@@ -1,7 +1,5 @@
 import { defineConfig } from 'vite'
-
 import react from '@vitejs/plugin-react'
-
 import path from 'path'
 
 import sassVar2JSON from './scripts/sass-to-json'
@@ -10,6 +8,7 @@ const theme = sassVar2JSON()
 
 // console.log('sassVar2JSON', theme)
 
+const OPEN_SENTRY: boolean = false // process.env.NODE_ENV === 'production' // open sentry
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -30,8 +29,8 @@ export default defineConfig({
     rollupOptions: {
       output: {
         /**
-         * 1.以对象的方式使用
-         * 将 lodash 模块打包成一个 chunk，名称是 lodash
+         * 以对象的方式使用
+         * 例如 lodash 模块打包成一个 chunk，名称是 lodash
          */
         manualChunks: {
           dll: [
@@ -43,14 +42,15 @@ export default defineConfig({
             'react-redux',
             '@reduxjs/toolkit',
             'classnames'
-          ]
+          ],
+          sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : []
         }
       }
     }
   },
   define: {
     $__THEME__$: theme, // antd theme
-    $__SENTRY__$: false // process.env.NODE_ENV === 'production' // open sentry
+    $__SENTRY__$: OPEN_SENTRY // process.env.NODE_ENV === 'production' // open sentry
   },
   plugins: [react()]
 })
