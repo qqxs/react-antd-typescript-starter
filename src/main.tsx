@@ -9,7 +9,7 @@ import ErrorBoundary from '@/components/ErrorBoundary'
 import { store } from './store'
 import { router } from './router'
 
-import InitSentry from './Sentry'
+import InitSentry from './sentry'
 
 import 'normalize.css'
 
