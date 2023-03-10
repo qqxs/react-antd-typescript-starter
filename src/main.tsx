@@ -15,8 +15,10 @@ import 'normalize.css'
 
 import './index.scss'
 
-// 初始化Sentry
-InitSentry()
+if ($__SENTRY__$) {
+  // 初始化Sentry
+  InitSentry()
+}
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>
