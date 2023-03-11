@@ -32,8 +32,15 @@ const Home = () => {
             alt="typescript logo"
           />
         </a>
+        <a href="https://react-redux.js.org/" target="_blank" rel="noreferrer">
+          <img
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
+            className="logo redux"
+            alt="redux logo"
+          />
+        </a>
       </div>
-      <h1>Vite + React + Ts</h1>
+      <h1>Vite + React + Ts + Redux</h1>
       <div className="card">
         <button
           onClick={() => {
