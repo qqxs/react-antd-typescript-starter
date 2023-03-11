@@ -24,6 +24,7 @@ module.exports = {
     '@typescript-eslint/no-confusing-void-expression': 'off',
     '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/indent': 'off',
-    '@typescript-eslint/await-thenable': 'off'
+    '@typescript-eslint/await-thenable': 'off',
+    'multiline-ternary': 'off'
   }
 }
