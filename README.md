@@ -44,30 +44,35 @@ docker-compose up -d
 
 ```bash
 .
-├── assets
+├── assets      # @/assets/xxx
 │   ├── FE.png
 │   └── react.svg
-├── components
-├── constant
-│   └── index.ts
-├── hooks
-├── index.scss
-├── main.tsx          # 入口
-├── models            # 接口
-│   ├── auth
-│   └── common
-├── page              # 页面
-│   ├── home
-│   └── login
-├── router.tsx        # 路由
-├── styles
-│   ├── antd-theme.scss  # antd 主题
-│   └── theme.scss      # 项目自定义主题
+├── components  # @/components 公共组件
+│   ├── Auth    # 需要权限
+│   ├── ErrorBoundary  # ErrorBoundary
+│   └── Layout  # `/`路由的element
+├── constant    # @/constant 全局变量
+├── hooks       # @/hooks
+│   └── redux.ts # redux 相关hook
+├── main.tsx    # 入口
+├── models      # @/models  api 接口 
+├── page        # 页面
+│   ├── error   # 错误页
+│   ├── home    # 首页
+│   ├── login   # 登录页
+│   └── register
+├── router.tsx  # 路由
+├── sentry.ts   # sentry config
+├── store       # redux store
+│   ├── index.ts
+│   └── reducer
+├── styles 
+│   ├── antd-theme.scss #antd 主题
+│   └── theme.scss  # 项目自定义主题
 ├── utils
-│   ├── Axios.ts      # axios
+│   ├── Axios.ts   # axios封装
 │   └── auth.ts
-└── vite-env.d.ts    
-
+└── vite-env.d.ts
 ```
 
 ## 自定义组件
