@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react'
-// import { useHistory } from "react-router-dom";
+import { Link } from 'react-router-dom'
 import { Form, Input, Button, Row, message } from 'antd'
 import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
 import { postLogin, getCaptcha } from '@/models/auth'
@@ -60,7 +60,7 @@ const Login = () => {
   )
 
   return (
-    <div className={`${classPrefix}_login`} id="particles-js">
+    <div className={`${classPrefix}_login`}>
       <div className={`${classPrefix}_login-content`}>
         <div className={`${classPrefix}_login-content-left`}>
           <img src={FE} alt="fe" className="logo" />
@@ -121,6 +121,9 @@ const Login = () => {
               </Row>
             </Form.Item>
 
+            <div style={{ textAlign: 'right', paddingBottom: '10px' }}>
+              <Link to="/register">register</Link>
+            </div>
             <Form.Item>
               <Button
                 type="primary"
