@@ -9,9 +9,26 @@ import Axios from '@/utils/Axios'
  *
  * @return {Promise} 请求返回
  */
-export async function postLogin(data: Request.LoginParams) {
+export async function postLogin(data: Request.LoginBody) {
   return await Axios<string>({
     url: '/api/login',
+    method: 'post',
+    data
+  })
+}
+
+/**
+ *
+ * @desc 注册
+ * @link
+ *
+ * @method POST
+ *
+ * @return {Promise} 请求返回
+ */
+export async function postRegister(data: Request.RegisterBody) {
+  return await Axios({
+    url: '/api/register',
     method: 'post',
     data
   })
