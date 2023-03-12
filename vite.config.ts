@@ -18,6 +18,12 @@ export default defineConfig({
         target: 'http://localhost:8080',
         changeOrigin: true
         // rewrite: path => path.replace(/^\/api/, '')
+      },
+      // 图片上传
+      '/images': {
+        target: 'http://localhost:8080',
+        changeOrigin: true
+        // rewrite: path => path.replace(/^\/api/, '')
       }
     }
   },
