@@ -29,11 +29,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           token: $__THEME__$ // vite global
         }}
       >
-        <div className="_page_">
-          <React.Suspense fallback={<>...</>}>
-            <RouterProvider router={router} />
-          </React.Suspense>
-        </div>
+        <React.Suspense fallback={<>...</>}>
+          <RouterProvider router={router} />
+        </React.Suspense>
       </ConfigProvider>
     </Provider>
   </ErrorBoundary>
