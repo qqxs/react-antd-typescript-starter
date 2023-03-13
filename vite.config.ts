@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import viteImagemin from 'vite-plugin-imagemin'
 import compression from 'vite-plugin-compression'
+import { VitePWA } from 'vite-plugin-pwa'
 import path from 'path'
 
 import sassVar2JSON from './scripts/sass-to-json'
@@ -89,6 +90,13 @@ export default defineConfig({
         ]
       }
     }),
-    compression()
+    compression(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true
+      }
+    })
   ]
 })
