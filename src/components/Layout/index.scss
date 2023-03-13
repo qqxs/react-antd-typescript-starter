@@ -1,0 +1,14 @@
+@import '../../styles/theme.scss';
+
+._layout {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+}
+
+._main {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - $header-height - $footer-height);
+}

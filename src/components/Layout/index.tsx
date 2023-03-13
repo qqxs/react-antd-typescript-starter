@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
-
 import { getMe } from '@/models/auth'
-
 import { useAppDispatch } from '@/hooks/redux'
 import { setMe } from '@/store/reducer/me-reducer'
+
+import Header from './Header'
+import Footer from './Footer'
+
+import './index.scss'
 
 const Layout = () => {
   const [loading, setLoading] = useState(true)
@@ -43,7 +46,11 @@ const Layout = () => {
 
   return (
     <div className="_layout">
-      <Outlet />
+      <Header />
+      <main className="_main">
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   )
 }
