@@ -1,4 +1,10 @@
 
+## 0.3.2
+
+- Support imagemin、pwa and gzip
+- Add login and register page
+- Add [sentry](#sentry)
+- Fix some bugs
 ## 0.3.1
 
 - Fix deploy bug
