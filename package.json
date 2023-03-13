@@ -51,6 +51,7 @@
     "sass": "^1.58.3",
     "typescript": "*",
     "vite": "^4.1.0",
+    "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1"
   },
   "bugs": {

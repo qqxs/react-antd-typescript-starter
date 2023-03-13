@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import viteImagemin from 'vite-plugin-imagemin'
+import compression from 'vite-plugin-compression'
 import path from 'path'
 
 import sassVar2JSON from './scripts/sass-to-json'
@@ -87,6 +88,7 @@ export default defineConfig({
           }
         ]
       }
-    })
+    }),
+    compression()
   ]
 })
