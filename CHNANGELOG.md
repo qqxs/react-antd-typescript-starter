@@ -3,7 +3,7 @@
 
 - Support imagemin、pwa and gzip
 - Add login and register page
-- Add [sentry](#sentry)
+- Add sentry
 - Fix some bugs
 ## 0.3.1
 
