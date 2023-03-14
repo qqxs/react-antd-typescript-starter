@@ -1,13 +1,7 @@
 import fs from 'fs'
 
 import sassVars from 'get-sass-vars'
-
-function toCamel(name) {
-  // eslint-disable-next-line no-useless-escape
-  return name.replace(/\-(\w)/g, function (all, letter) {
-    return letter.toUpperCase()
-  })
-}
+import { lowerCamel } from '@skax/camel'
 
 /**
  * sass 变量转成 json 格式
@@ -24,7 +18,7 @@ function sassVar2JSON() {
   const result = sassVars.sync(css)
 
   return Object.keys(result).reduce((pre, cur) => {
-    pre[toCamel(cur.replace('$', ''))] = result[cur]
+    pre[lowerCamel(cur.replace('$', ''), '-')] = result[cur]
     return pre
   }, {})
 }

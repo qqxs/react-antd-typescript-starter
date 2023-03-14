@@ -33,6 +33,7 @@
     "redux": "^4.2.1"
   },
   "devDependencies": {
+    "@skax/camel": "^0.2.1",
     "@types/js-cookie": "^3.0.3",
     "@types/node": "^18.14.6",
     "@types/react": "^18.0.27",
