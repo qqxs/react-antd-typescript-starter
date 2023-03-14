@@ -12,27 +12,29 @@ git clone git@github.com:qqxs/react-antd-typescript-starter.git
 
 ```sh
 # 安装项目依赖
-npm install
+# only allow pnpm
+pnpm install
 
 # development environment
 # 开启开发环境react 编译
-npm run dev
+pnpm run dev
 
+# production environment
 # 开始编译测试或生产环境
-npm run build
+pnpm run build
 
 # eslint fix code
 # 对部分不符合eslint 语法进行修复
 # 注意⚠️: 不是所有的错误都会修复，部分还是要手动修复
-npm run fix
+pnpm run fix
 
 # eslint lint code
 # 进行eslint语法检查, 如果有错会在控制中指出
-npm run lint
+pnpm run lint
 
 # prettier format code
 # 使用prettier 代码进行格式化
-npm run fmt
+pnpm run fmt
 
 # 首先要安装nginx镜像
 # docker nginx deploy
