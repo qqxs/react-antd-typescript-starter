@@ -5,6 +5,7 @@
 - Add login and register page
 - Add sentry
 - Fix some bugs
+  
 ## 0.3.1
 
 - Fix deploy bug
