@@ -2,7 +2,7 @@
   "name": "react-antd-typescript-starter",
   "version": "0.3.3",
   "private": true,
-  "description": "React antd typescript template",
+  "description": "React antd5 typescript redux template",
   "author": "ShineShao <xiaoshaoqq@gmail.com>",
   "license": "MIT",
   "scripts": {
