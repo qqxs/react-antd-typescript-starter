@@ -49,8 +49,7 @@ export default defineConfig({
             'axios',
             'redux',
             'react-redux',
-            '@reduxjs/toolkit',
-            'classnames'
+            '@reduxjs/toolkit'
           ],
           sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : []
         }
