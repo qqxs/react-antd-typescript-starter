@@ -1,4 +1,8 @@
 
+## 0.3.3
+
+- Support pnpm
+
 ## 0.3.2
 
 - Support imagemin、pwa and gzip
