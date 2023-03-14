@@ -12,7 +12,8 @@
     "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx",
     "lint": "eslint --ext .ts --ext .tsx --ext .js --ext .jsx ./src",
     "fmt": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
@@ -47,6 +48,7 @@
     "eslint-plugin-react": "^7.32.2",
     "get-sass-vars": "^3.4.0",
     "husky": "^8.0.3",
+    "only-allow": "^1.1.1",
     "prettier": "^2.8.4",
     "pretty-quick": "^3.1.3",
     "sass": "^1.58.3",
