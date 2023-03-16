@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import viteImagemin from 'vite-plugin-imagemin'
 import compression from 'vite-plugin-compression'
 import { VitePWA } from 'vite-plugin-pwa'
+import legacy from '@vitejs/plugin-legacy'
 import path from 'path'
 
 import sassVar2JSON from './scripts/sass-to-json'
@@ -62,6 +63,12 @@ export default defineConfig({
   },
   plugins: [
     react(),
+    // https://www.npmjs.com/package/@vitejs/plugin-legacy
+    // Vite's default browser support baseline is Native ESM, native ESM dynamic import, and import.meta. This plugin provides support for legacy browsers that do not support those features when building for production.
+    legacy({
+      targets: ['chrome 52', 'Android >= 39', 'iOS >= 10.3', 'iOS >= 10.3'], // 需要兼容的目标列表，可以设置多个
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime'] // 面向IE11时需要此插件
+    }),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
