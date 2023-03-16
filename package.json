@@ -33,6 +33,8 @@
     "redux": "^4.2.1"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@skax/camel": "^0.2.1",
     "@types/js-cookie": "^3.0.3",
     "@types/node": "^18.14.6",
@@ -54,7 +56,8 @@
     "prettier": "^2.8.4",
     "pretty-quick": "^3.1.3",
     "sass": "^1.58.3",
-    "typescript": "*",
+    "terser": "^5.16.6",
+    "typescript": "^4.9.5",
     "vite": "^4.1.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1",
