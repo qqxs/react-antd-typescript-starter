@@ -35,6 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/prompt-cli": "^17.4.4",
     "@skax/camel": "^0.2.1",
     "@types/js-cookie": "^3.0.3",
     "@types/node": "^18.14.6",
