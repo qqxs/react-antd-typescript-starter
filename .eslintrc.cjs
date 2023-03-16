@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
+  extends: ['standard-with-typescript'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -16,7 +16,7 @@ module.exports = {
       'vitest.setup.ts'
     ]
   },
-  plugins: ['react'],
+  plugins: [],
   rules: {
     '@typescript-eslint/space-before-function-paren': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
