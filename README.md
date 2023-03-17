@@ -88,6 +88,39 @@ docker-compose up -d
 
 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 自行调试。
 
+```ts
+import lessToJs from 'less-vars-to-js'
+import { lowerCamel } from '@skax/camel'
+import fs from 'fs'
+
+
+/**
+ * less 变量转成 json 格式
+ *
+ * @example
+ *
+ * lessVar2JSON()  // {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ *
+ * @returns Object
+ */
+function lessVar2JSON() {
+  // Read the less file in as string
+  const paletteLess = fs.readFileSync('./src/styles/antd-theme.less', 'utf-8')
+  // Pass in file contents
+  const palette = lessToJs(paletteLess, {
+    resolveVariables: true,
+    stripPrefix: true
+  });
+
+  return Object.keys(palette).reduce((pre, cur) => {
+    pre[lowerCamel(cur, '-')] = palette[cur]
+    return pre
+  }, {})
+}
+export default lessVar2JSON
+
+```
+
 ## api
 
 [gin_serve api](https://github.com/freeshineit/gin_serve)
