@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import { getMe } from '@/models/auth'
 import { useAppDispatch } from '@/hooks/redux'

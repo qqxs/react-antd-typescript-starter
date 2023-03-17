@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import { useState, useCallback } from 'react'
 import { LoadingOutlined, PlusOutlined } from '@ant-design/icons'
 import { Upload, message, Form } from 'antd'
 import type { UploadChangeParam } from 'antd/es/upload'

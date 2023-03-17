@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript'],
+  extends: ['plugin:react/jsx-runtime', 'standard-with-typescript'],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -25,6 +25,7 @@ module.exports = {
     '@typescript-eslint/triple-slash-reference': 'off',
     '@typescript-eslint/indent': 'off',
     '@typescript-eslint/await-thenable': 'off',
-    'multiline-ternary': 'off'
+    'multiline-ternary': 'off',
+    '@typescript-eslint/no-unused-vars': 1 // warn
   }
 }

@@ -1,4 +1,3 @@
-import React from 'react'
 import { classPrefix } from '@/constant'
 
 const NotFound = () => {

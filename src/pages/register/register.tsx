@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { Form, Button, message, Input, InputNumber } from 'antd'
 import { postRegister } from '@/models/auth'
 import { classPrefix } from '@/constant'
