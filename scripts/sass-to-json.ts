@@ -13,9 +13,9 @@ import { lowerCamel } from '@skax/camel'
  * @returns Object
  */
 function sassVar2JSON() {
-  const css = fs.readFileSync('./src/styles/antd-theme.scss', 'utf-8')
+  const paletteSass = fs.readFileSync('./src/styles/antd-theme.scss', 'utf-8')
 
-  const result = sassVars.sync(css)
+  const result = sassVars.sync(paletteSass)
 
   return Object.keys(result).reduce((pre, cur) => {
     pre[lowerCamel(cur.replace('$', ''), '-')] = result[cur]
