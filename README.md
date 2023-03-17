@@ -84,8 +84,9 @@ docker-compose up -d
 
 ## 主题
 
-如果需要 [antd 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
+如果需要 [antd5 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
 
+如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 自行调试。
 
 ## api
 
