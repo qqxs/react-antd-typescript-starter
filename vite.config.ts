@@ -16,6 +16,7 @@ const OPEN_SENTRY: boolean = false // process.env.NODE_ENV === 'production' // o
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
+    // port: 3000, // 设置端口号
     proxy: {
       '/api': {
         target: 'http://localhost:8080',
@@ -55,7 +56,15 @@ export default defineConfig({
           sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : []
         }
       }
-    }
+    },
+    chunkSizeWarningLimit: 1000
+    // terserOptions: {
+    //   // 清除console和debugger
+    //   compress: {
+    //     // drop_console: true,
+    //     // drop_debugger: true
+    //   }
+    // }
   },
   define: {
     $__THEME__$: theme, // antd theme
@@ -65,6 +74,7 @@ export default defineConfig({
     react(),
     // https://www.npmjs.com/package/@vitejs/plugin-legacy
     // Vite's default browser support baseline is Native ESM, native ESM dynamic import, and import.meta. This plugin provides support for legacy browsers that do not support those features when building for production.
+    // 低版本浏览器兼容
     legacy({
       targets: ['chrome 52', 'Android >= 39', 'iOS >= 10.3', 'iOS >= 10.3'], // 需要兼容的目标列表，可以设置多个
       additionalLegacyPolyfills: ['regenerator-runtime/runtime'] // 面向IE11时需要此插件
