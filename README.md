@@ -20,8 +20,12 @@ pnpm install
 pnpm run dev
 
 # production environment
-# 开始编译测试或生产环境
+# 开始编译生产环境
 pnpm run build
+
+# production environment analyzer
+# 开始编译生产环境并输出分析
+pnpm run analyzer
 
 # eslint fix code
 # 对部分不符合eslint 语法进行修复

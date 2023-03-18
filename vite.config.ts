@@ -117,6 +117,10 @@ export default defineConfig({
         skipWaiting: true
       }
     }),
-    visualizer()
+    process.env.ANALYZER
+      ? visualizer({
+          gzipSize: true
+        })
+      : null
   ]
 })
