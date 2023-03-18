@@ -4,6 +4,7 @@ import viteImagemin from 'vite-plugin-imagemin'
 import compression from 'vite-plugin-compression'
 import { VitePWA } from 'vite-plugin-pwa'
 import legacy from '@vitejs/plugin-legacy'
+import { visualizer } from 'rollup-plugin-visualizer'
 import path from 'path'
 
 import sassVar2JSON from './scripts/sass-to-json'
@@ -51,7 +52,8 @@ export default defineConfig({
             'axios',
             'redux',
             'react-redux',
-            '@reduxjs/toolkit'
+            '@reduxjs/toolkit',
+            'js-cookie'
           ],
           sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : []
         }
@@ -114,6 +116,7 @@ export default defineConfig({
         clientsClaim: true,
         skipWaiting: true
       }
-    })
+    }),
+    visualizer()
   ]
 })
