@@ -57,14 +57,14 @@ export default defineConfig({
         }
       }
     },
-    chunkSizeWarningLimit: 1000
-    // terserOptions: {
-    //   // 清除console和debugger
-    //   compress: {
-    //     // drop_console: true,
-    //     // drop_debugger: true
-    //   }
-    // }
+    chunkSizeWarningLimit: 1000,
+    terserOptions: {
+      // 清除console和debugger
+      compress: {
+        // drop_console: true,
+        drop_debugger: true
+      }
+    }
   },
   define: {
     $__THEME__$: theme, // antd theme
