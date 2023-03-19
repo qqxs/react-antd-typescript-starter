@@ -1,5 +1,9 @@
 
+## 0.3.5
 
+- Feat swc
+- Feat analyzer
+- Docs less
 ## 0.3.4
 
 - Feat commitlint
