@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 import viteImagemin from 'vite-plugin-imagemin'
 import compression from 'vite-plugin-compression'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -38,6 +38,7 @@ export default defineConfig({
     }
   },
   build: {
+    minify: 'terser',
     rollupOptions: {
       output: {
         /**
@@ -73,11 +74,7 @@ export default defineConfig({
     $__SENTRY__$: OPEN_SENTRY // process.env.NODE_ENV === 'production' // open sentry
   },
   plugins: [
-    react({
-      exclude: /\.test\.(t|j)sx?$/,
-      // Only .tsx files
-      include: 'src/**/*.tsx'
-    }),
+    react(),
     // https://www.npmjs.com/package/@vitejs/plugin-legacy
     // Vite's default browser support baseline is Native ESM, native ESM dynamic import, and import.meta. This plugin provides support for legacy browsers that do not support those features when building for production.
     // 低版本浏览器兼容
