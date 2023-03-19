@@ -12,28 +12,23 @@ const Register = () => {
 
   useEffect(() => {}, [])
 
-  const handleCaptcha = useCallback(() => {}, [])
+  const onFinish = useCallback((values: any) => {
+    setLoading(true)
+    values.avatar = getUploadImageList(values.avatar)[0]
 
-  const onFinish = useCallback(
-    (values: any) => {
-      setLoading(true)
-      values.avatar = getUploadImageList(values.avatar)[0]
-
-      postRegister(values)
-        .then(res => {
-          if (res.code === 0) {
-            location.href = '/login'
-          } else {
-            void message.error(res.msg)
-            setLoading(false)
-          }
-        })
-        .catch(() => {
+    postRegister(values)
+      .then(res => {
+        if (res.code === 0) {
+          location.href = '/login'
+        } else {
+          void message.error(res.msg)
           setLoading(false)
-        })
-    },
-    [handleCaptcha]
-  )
+        }
+      })
+      .catch(() => {
+        setLoading(false)
+      })
+  }, [])
 
   return (
     <div className={`${classPrefix}_register`}>

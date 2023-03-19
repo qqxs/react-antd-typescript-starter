@@ -15,10 +15,6 @@ const Login = () => {
   const [codeImg, setCodeImg] = useState('')
   const [captchaID, setCaptchaID] = useState('')
 
-  useEffect(() => {
-    handleCaptcha()
-  }, [])
-
   const handleCaptcha = useCallback(() => {
     getCaptcha()
       .then(res => {
@@ -31,6 +27,11 @@ const Login = () => {
         console.log(error.response)
         setLoading(false)
       })
+  }, [])
+
+  useEffect(() => {
+    handleCaptcha()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onFinish = useCallback(

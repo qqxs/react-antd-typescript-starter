@@ -25,7 +25,7 @@ const Layout = () => {
       .catch(() => {
         setLoading(false)
       })
-  }, [])
+  }, [dispatch])
 
   if (loading) {
     return (
