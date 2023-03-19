@@ -73,7 +73,11 @@ export default defineConfig({
     $__SENTRY__$: OPEN_SENTRY // process.env.NODE_ENV === 'production' // open sentry
   },
   plugins: [
-    react(),
+    react({
+      exclude: /\.test\.(t|j)sx?$/,
+      // Only .tsx files
+      include: 'src/**/*.tsx'
+    }),
     // https://www.npmjs.com/package/@vitejs/plugin-legacy
     // Vite's default browser support baseline is Native ESM, native ESM dynamic import, and import.meta. This plugin provides support for legacy browsers that do not support those features when building for production.
     // 低版本浏览器兼容
