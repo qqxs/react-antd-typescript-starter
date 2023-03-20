@@ -80,8 +80,9 @@ export default defineConfig({
     // 低版本浏览器兼容
     legacy({
       targets: ['chrome 52', 'Android >= 39', 'iOS >= 10.3', 'IE >= 11'], // 需要兼容的目标列表，可以设置多个
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime'], // 面向IE11时需要此插件
-      polyfills: ['es.promise', 'es.array.iterator']
+      modernPolyfills: true
+      // additionalLegacyPolyfills: ['regenerator-runtime/runtime'], // 面向IE11时需要此插件
+      // polyfills: ['es.promise', 'es.array.iterator']
     }),
     viteImagemin({
       gifsicle: {
