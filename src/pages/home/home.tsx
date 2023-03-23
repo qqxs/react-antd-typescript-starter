@@ -4,8 +4,8 @@ import { useState } from 'react'
 import reactLogo from '@/assets/react.svg'
 import { useAppDispatch } from '@/hooks/redux'
 import { increment } from '@/store/reducer/counter-reducer'
-
-import './home.scss'
+import cls from 'classnames'
+import styles from './home.module.scss'
 
 const Home = () => {
   const [count, setCount] = useState(0)
@@ -13,13 +13,17 @@ const Home = () => {
   const dispatch = useAppDispatch()
 
   return (
-    <div className="_page-home">
+    <div className={styles['_page-home']}>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
+          <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img
+            src={reactLogo}
+            className={cls(styles.logo, 'react')}
+            alt="React logo"
+          />
         </a>
         <a
           href="https://www.typescriptlang.org/"
@@ -28,20 +32,20 @@ const Home = () => {
         >
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-            className="logo ts"
+            className={cls(styles.logo, 'ts')}
             alt="typescript logo"
           />
         </a>
         <a href="https://react-redux.js.org/" target="_blank" rel="noreferrer">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-            className="logo redux"
+            className={cls(styles.logo, 'redux')}
             alt="redux logo"
           />
         </a>
       </div>
       <h1>Vite + React + Ts + Redux</h1>
-      <div className="card">
+      <div className={styles.card}>
         <button
           onClick={() => {
             setCount(count => count + 1)
