@@ -69,6 +69,9 @@
     "vite-plugin-imagemin": "^0.6.1",
     "vite-plugin-pwa": "^0.14.4"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "bugs": {
     "url": "https://github.com/qqxs/react-antd-typescript-starter/issues"
   },
