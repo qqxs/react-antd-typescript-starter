@@ -8,9 +8,9 @@ describe('Footer component', () => {
     render(<Footer />)
 
     // act
-    const title = screen.getByTestId('author')
+    const linkEle = screen.getByText('ShineShao')
 
     // assert
-    expect(title).toHaveTextContent(/ShineShao/i)
+    expect(linkEle).toBeInTheDocument()
   })
 })

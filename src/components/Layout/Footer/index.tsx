@@ -19,7 +19,6 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
           style={{ marginLeft: '15px' }}
-          id="author"
         >
           ShineShao
         </a>

@@ -15,8 +15,8 @@
     "fmt": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css,scss}\"",
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
-    "test:unit": "jest --watch",
-    "test:unit:ci": "jest",
+    "test:watch": "jest --watch",
+    "test": "jest",
     "test:coverage": "jest --silent --watchAll=false --coverage"
   },
   "dependencies": {
