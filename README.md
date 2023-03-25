@@ -40,6 +40,9 @@ pnpm run lint
 # 使用prettier 代码进行格式化
 pnpm run fmt
 
+# test
+pnpm run test
+
 # 首先要安装nginx镜像
 # docker nginx deploy
 # http://localhost:8000
@@ -61,7 +64,7 @@ docker-compose up -d
 ├── hooks       # @/hooks
 │   └── redux.ts # redux 相关hook
 ├── main.tsx    # 入口
-├── models      # @/models  api 接口 
+├── models      # @/models  api 接口
 ├── page        # 页面
 │   ├── error   # 错误页
 │   ├── home    # 首页
@@ -72,7 +75,7 @@ docker-compose up -d
 ├── store       # redux store
 │   ├── index.ts
 │   └── reducer
-├── styles 
+├── styles
 │   ├── antd-theme.scss #antd 主题
 │   └── theme.scss  # 项目自定义主题
 ├── utils
@@ -85,7 +88,6 @@ docker-compose up -d
 
 自定义组件放在`src/components`下 ，希望在每个组件同级目录下都添加一个 example
 
-
 ## 主题
 
 如果需要 [antd5 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
@@ -96,7 +98,6 @@ docker-compose up -d
 import lessToJs from 'less-vars-to-js'
 import { lowerCamel } from '@skax/camel'
 import fs from 'fs'
-
 
 /**
  * less 变量转成 json 格式
@@ -114,7 +115,7 @@ function lessVar2JSON() {
   const palette = lessToJs(paletteLess, {
     resolveVariables: true,
     stripPrefix: true
-  });
+  })
 
   return Object.keys(palette).reduce((pre, cur) => {
     pre[lowerCamel(cur, '-')] = palette[cur]
@@ -122,7 +123,6 @@ function lessVar2JSON() {
   }, {})
 }
 export default lessVar2JSON
-
 ```
 
 ## api
@@ -131,6 +131,6 @@ export default lessVar2JSON
 
 ## sentry
 
-在[vite.config.ts](./vite.config.ts)中开启sentry, 并在[src/sentry.tsx](./src/sentry.ts) 中配置。
+在[vite.config.ts](./vite.config.ts)中开启 sentry, 并在[src/sentry.tsx](./src/sentry.ts) 中配置。
 
 **请不要让项目 面向 any 编程 谢谢 🙏**
