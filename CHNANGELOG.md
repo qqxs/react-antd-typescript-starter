@@ -1,9 +1,13 @@
+## 0.3.6
+
+- Feat jest test
 
 ## 0.3.5
 
 - Feat swc
 - Feat analyzer
 - Docs less
+
 ## 0.3.4
 
 - Feat commitlint
@@ -19,7 +23,7 @@
 - Add login and register page
 - Add sentry
 - Fix some bugs
-  
+
 ## 0.3.1
 
 - Fix deploy bug
@@ -33,6 +37,7 @@
 ## 0.2.0
 
 - antd5
+
 ## 0.0.1
 
 - 初始化项目模版
