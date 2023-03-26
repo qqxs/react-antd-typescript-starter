@@ -54,7 +54,8 @@ export default defineConfig({
             'redux',
             'react-redux',
             '@reduxjs/toolkit',
-            'js-cookie'
+            'js-cookie',
+            'classnames'
           ],
           sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : []
         }
