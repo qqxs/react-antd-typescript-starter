@@ -56,10 +56,10 @@ specifiers:
   terser: ^5.16.6
   ts-jest: ^29.0.5
   typescript: ^4.9.5
-  vite: ^4.1.0
+  vite: ^4.2.1
   vite-plugin-compression: ^0.5.1
   vite-plugin-imagemin: ^0.6.1
-  vite-plugin-pwa: ^0.14.4
+  vite-plugin-pwa: ^0.14.6
 
 dependencies:
   '@ant-design/icons': 5.0.1_biqbaboplfbrettd7655fr4n2y
@@ -96,8 +96,8 @@ devDependencies:
   '@types/testing-library__jest-dom': 5.14.5
   '@typescript-eslint/eslint-plugin': 5.55.0_342y7v4tc7ytrrysmit6jo4wri
   '@typescript-eslint/parser': 5.55.0_vgl77cfdswitgr47lm5swmv43m
-  '@vitejs/plugin-legacy': 4.0.2_terser@5.16.6+vite@4.2.0
-  '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.0
+  '@vitejs/plugin-legacy': 4.0.2_terser@5.16.6+vite@4.2.1
+  '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.1
   cross-env: 7.0.3
   eslint: 8.36.0
   eslint-config-standard-with-typescript: 34.0.1_m62ggp4hpbv7eiyz4q3ztczpa4
@@ -119,10 +119,10 @@ devDependencies:
   terser: 5.16.6
   ts-jest: 29.0.5_doipufordlnvh5g4adbwayvyvy
   typescript: 4.9.5
-  vite: 4.2.0_34kcdhufoak4xbjfji44lxubke
-  vite-plugin-compression: 0.5.1_vite@4.2.0
-  vite-plugin-imagemin: 0.6.1_vite@4.2.0
-  vite-plugin-pwa: 0.14.4_vite@4.2.0
+  vite: 4.2.1_34kcdhufoak4xbjfji44lxubke
+  vite-plugin-compression: 0.5.1_vite@4.2.1
+  vite-plugin-imagemin: 0.6.1_vite@4.2.1
+  vite-plugin-pwa: 0.14.6_vite@4.2.1
 
 packages:
   /@adobe/css-tools/4.2.0:
@@ -3927,7 +3927,7 @@ packages:
       }
     dev: true
 
-  /@vitejs/plugin-legacy/4.0.2_terser@5.16.6+vite@4.2.0:
+  /@vitejs/plugin-legacy/4.0.2_terser@5.16.6+vite@4.2.1:
     resolution:
       {
         integrity: sha512-ivnt9sCkgwJTYTWLjuvY6H/HTuiQC1EgzAPkiAvi0yNAssiqOJjyjhG3hAK5LFUUorE0w9kGxn8K0f/74DlbxQ==
@@ -3945,12 +3945,12 @@ packages:
       regenerator-runtime: 0.13.11
       systemjs: 6.14.0
       terser: 5.16.6
-      vite: 4.2.0_34kcdhufoak4xbjfji44lxubke
+      vite: 4.2.1_34kcdhufoak4xbjfji44lxubke
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-react-swc/3.2.0_vite@4.2.0:
+  /@vitejs/plugin-react-swc/3.2.0_vite@4.2.1:
     resolution:
       {
         integrity: sha512-IcBoXL/mcH7JdQr/nfDlDwTdIaH8Rg7LpfQDF4nAht+juHWIuv6WhpKPCSfY4+zztAaB07qdBoFz1XCZsgo3pQ==
@@ -3959,7 +3959,7 @@ packages:
       vite: ^4
     dependencies:
       '@swc/core': 1.3.41
-      vite: 4.2.0_34kcdhufoak4xbjfji44lxubke
+      vite: 4.2.1_34kcdhufoak4xbjfji44lxubke
     dev: true
 
   /JSONStream/1.3.5:
@@ -13864,7 +13864,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-compression/0.5.1_vite@4.2.0:
+  /vite-plugin-compression/0.5.1_vite@4.2.1:
     resolution:
       {
         integrity: sha512-5QJKBDc+gNYVqL/skgFAP81Yuzo9R+EAf19d+EtsMF/i8kFUpNi3J/H01QD3Oo8zBQn+NzoCIFkpPLynoOzaJg==
@@ -13875,12 +13875,12 @@ packages:
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 10.1.0
-      vite: 4.2.0_34kcdhufoak4xbjfji44lxubke
+      vite: 4.2.1_34kcdhufoak4xbjfji44lxubke
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-plugin-imagemin/0.6.1_vite@4.2.0:
+  /vite-plugin-imagemin/0.6.1_vite@4.2.1:
     resolution:
       {
         integrity: sha512-cP7LDn8euPrji7WYtDoNQpJEB9nkMxJHm/A+QZnvMrrCSuyo/clpMy/T1v7suDXPBavsDiDdFdVQB5p7VGD2cg==
@@ -13911,15 +13911,15 @@ packages:
       imagemin-webp: 6.1.0
       jpegtran-bin: 6.0.1
       pathe: 0.2.0
-      vite: 4.2.0_34kcdhufoak4xbjfji44lxubke
+      vite: 4.2.1_34kcdhufoak4xbjfji44lxubke
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-plugin-pwa/0.14.4_vite@4.2.0:
+  /vite-plugin-pwa/0.14.6_vite@4.2.1:
     resolution:
       {
-        integrity: sha512-M7Ct0so8OlouMkTWgXnl8W1xU95glITSKIe7qswZf1tniAstO2idElGCnsrTJ5NPNSx1XqfTCOUj8j94S6FD7Q==
+        integrity: sha512-3mqbkjvSF89pCSZyXAbv6AO4gYKYZel0rcpBgWOWqEupoBOZF9oHDdgHc+FgjmvQXxuU2k9aEFOfRCMGorV+4Q==
       }
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
@@ -13929,7 +13929,7 @@ packages:
       fast-glob: 3.2.12
       pretty-bytes: 6.1.0
       rollup: 3.19.1
-      vite: 4.2.0_34kcdhufoak4xbjfji44lxubke
+      vite: 4.2.1_34kcdhufoak4xbjfji44lxubke
       workbox-build: 6.5.4
       workbox-window: 6.5.4
     transitivePeerDependencies:
@@ -13937,10 +13937,10 @@ packages:
       - supports-color
     dev: true
 
-  /vite/4.2.0_34kcdhufoak4xbjfji44lxubke:
+  /vite/4.2.1_34kcdhufoak4xbjfji44lxubke:
     resolution:
       {
-        integrity: sha512-AbDTyzzwuKoRtMIRLGNxhLRuv1FpRgdIw+1y6AQG73Q5+vtecmvzKo/yk8X/vrHDpETRTx01ABijqUHIzBXi0g==
+        integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==
       }
     engines: { node: ^14.18.0 || >=16.0.0 }
     hasBin: true

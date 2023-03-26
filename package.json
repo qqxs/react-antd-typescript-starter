@@ -77,10 +77,10 @@
     "terser": "^5.16.6",
     "ts-jest": "^29.0.5",
     "typescript": "^4.9.5",
-    "vite": "^4.1.0",
+    "vite": "^4.2.1",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-imagemin": "^0.6.1",
-    "vite-plugin-pwa": "^0.14.4"
+    "vite-plugin-pwa": "^0.14.6"
   },
   "engines": {
     "node": ">=14"
