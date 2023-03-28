@@ -9,8 +9,8 @@ module.exports = {
       'tsconfig.node.json',
       'jest.config.ts',
       'vite.config.ts',
-      'vitest.setup.ts'
-    ]
+      'vitest.setup.ts',
+    ],
   },
   rules: {
     // '@typescript-eslint/space-before-function-paren': 'off',
@@ -23,5 +23,5 @@ module.exports = {
     // 'multiline-ternary': 'off',
     // '@typescript-eslint/no-unused-vars': 1, // warn
     // 'react-hooks/exhaustive-deps': 2 // error
-  }
+  },
 }

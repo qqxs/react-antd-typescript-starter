@@ -19,17 +19,9 @@ const Home = () => {
           <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
         </a>
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img
-            src={reactLogo}
-            className={cls(styles.logo, 'react')}
-            alt="React logo"
-          />
+          <img src={reactLogo} className={cls(styles.logo, 'react')} alt="React logo" />
         </a>
-        <a
-          href="https://www.typescriptlang.org/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
           <img
             src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
             className={cls(styles.logo, 'ts')}
@@ -48,7 +40,7 @@ const Home = () => {
       <div className={styles.card}>
         <button
           onClick={() => {
-            setCount(count => count + 1)
+            setCount((count) => count + 1)
             dispatch(increment(count + 1))
           }}
         >
@@ -58,9 +50,7 @@ const Home = () => {
           Edit <code>src/home/home.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite、React and Ts logos to learn more
-      </p>{' '}
+      <p className="read-the-docs">Click on the Vite、React and Ts logos to learn more</p>{' '}
       {/* <Link to="/login">login</Link> */}
     </div>
   )

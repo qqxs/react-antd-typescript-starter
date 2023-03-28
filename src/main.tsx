@@ -26,7 +26,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Provider store={store}>
       <ConfigProvider
         theme={{
-          token: $__THEME__$ // vite global
+          token: $__THEME__$, // vite global
         }}
       >
         <React.Suspense fallback={<>...</>}>
@@ -34,6 +34,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
         </React.Suspense>
       </ConfigProvider>
     </Provider>
-  </ErrorBoundary>
+  </ErrorBoundary>,
   // </React.StrictMode>
 )

@@ -58,7 +58,7 @@ const FormUploadImage = (props: FormUploadProps) => {
         // console.log(info.file.response)
         const res = info.file.response
         // Get this url from response in real world.
-        getBase64(info.file.originFileObj as RcFile, url => {
+        getBase64(info.file.originFileObj as RcFile, (url) => {
           setLoading(false)
           if (res.code === 0) {
             setImageUrl(res.data.urls[0])
@@ -66,7 +66,7 @@ const FormUploadImage = (props: FormUploadProps) => {
         })
       }
     },
-    []
+    [],
   )
 
   const uploadButton = (
@@ -93,11 +93,7 @@ const FormUploadImage = (props: FormUploadProps) => {
         onChange={handleChange}
         maxCount={1}
       >
-        {imageUrl ? (
-          <img src={imageUrl} alt="avatar" style={{ width: '100%' }} />
-        ) : (
-          uploadButton
-        )}
+        {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
       </Upload>
     </Form.Item>
   )

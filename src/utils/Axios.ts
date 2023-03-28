@@ -5,13 +5,13 @@
 import axios, {
   type AxiosRequestConfig,
   type AxiosResponse,
-  type InternalAxiosRequestConfig
+  type InternalAxiosRequestConfig,
 } from 'axios'
 import { getToken, removeToken } from '@/utils/auth'
 
 // 请求超时时间
 const instance = axios.create({
-  timeout: 6000
+  timeout: 6000,
 })
 
 // 请求拦截器
@@ -25,9 +25,9 @@ instance.interceptors.request.use(
     }
     return config
   },
-  async error => {
+  async (error) => {
     return await Promise.reject(error)
-  }
+  },
 )
 
 // 响应拦截器
@@ -36,7 +36,7 @@ instance.interceptors.response.use(
     return await Promise.resolve(response)
   },
   // 服务器状态码不是200的情况
-  async error => {
+  async (error) => {
     const response = error.response
 
     if (response?.status) {
@@ -60,7 +60,7 @@ instance.interceptors.response.use(
       }
     }
     return await Promise.reject(error)
-  }
+  },
 )
 
 /**
@@ -69,12 +69,10 @@ instance.interceptors.response.use(
  * @param configParam axios config param
  * @returns Promise
  */
-async function Axios<T = unknown>(
-  configParam: AxiosRequestConfig
-): Promise<Response.Common<T>> {
+async function Axios<T = unknown>(configParam: AxiosRequestConfig): Promise<Response.Common<T>> {
   return await instance
     .request<Response.Common<T>, AxiosResponse<Response.Common<T>>>(configParam)
-    .then(res => res.data)
+    .then((res) => res.data)
 }
 
 export default Axios

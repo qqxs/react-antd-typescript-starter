@@ -6,8 +6,8 @@ import meReducer from './reducer/me-reducer'
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
-    me: meReducer
-  }
+    me: meReducer,
+  },
 })
 
 export type AppDispatch = typeof store.dispatch

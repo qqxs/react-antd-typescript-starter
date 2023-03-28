@@ -13,7 +13,7 @@ export async function postLogin(data: Request.LoginBody) {
   return await Axios<string>({
     url: '/api/login',
     method: 'post',
-    data
+    data,
   })
 }
 
@@ -30,7 +30,7 @@ export async function postRegister(data: Request.RegisterBody) {
   return await Axios({
     url: '/api/register',
     method: 'post',
-    data
+    data,
   })
 }
 
@@ -45,7 +45,7 @@ export async function postRegister(data: Request.RegisterBody) {
  */
 export async function getMe() {
   return await Axios<Response.Me>({
-    url: '/api/me'
+    url: '/api/me',
   })
 }
 
@@ -61,7 +61,7 @@ export async function getMe() {
 export function postLogout(): any {
   return Axios({
     url: '/api/login_out',
-    method: 'post'
+    method: 'post',
   })
 }
 
@@ -80,6 +80,6 @@ interface ResponseCaptcha {
  */
 export async function getCaptcha() {
   return await Axios<ResponseCaptcha>({
-    url: '/api/captcha'
+    url: '/api/captcha',
   })
 }

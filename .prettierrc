@@ -1,12 +1,15 @@
 {
-  "htmlWhitespaceSensitivity": "ignore",
-  "semi": false,
   "singleQuote": true,
-  "trailingComma": "none",
-  "bracketSpacing": true,
-  "jsxBracketSameLine": false,
-  "arrowParens": "avoid",
-  "endOfLine": "auto",
-  "tabWidth": 2,
-  "printWidth": 80
+  "semi": false,
+  "trailingComma": "all",
+  "printWidth": 100,
+  "proseWrap": "never",
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
 }

@@ -8,7 +8,7 @@ const NotFound = () => {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        height: '100vh'
+        height: '100vh',
       }}
     >
       <section
@@ -16,7 +16,7 @@ const NotFound = () => {
           display: 'flex',
           justifyContent: 'center',
           alignItems: 'center',
-          height: '40px'
+          height: '40px',
         }}
       >
         <span
@@ -24,7 +24,7 @@ const NotFound = () => {
             borderBottom: 0,
             borderRight: '1px solid #EAEAEA',
             padding: '0 20px 0 0',
-            width: 'auto'
+            width: 'auto',
           }}
         >
           404
@@ -34,7 +34,7 @@ const NotFound = () => {
             height: '100%',
             lineHeight: '40px',
             paddingLeft: '20px',
-            margin: '0'
+            margin: '0',
           }}
         >
           The requested path could not be found

@@ -18,11 +18,11 @@ export const counterSlice = createSlice({
       // state = { ...action.payload }  // failed
       // state.id = action.payload.id // success
       !!action.payload &&
-        Object.keys(action.payload).forEach(key => {
+        Object.keys(action.payload).forEach((key) => {
           state[key as KeyType] = (action.payload as any)[key]
         })
-    }
-  }
+    },
+  },
 })
 
 // action

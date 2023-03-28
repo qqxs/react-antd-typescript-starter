@@ -8,9 +8,7 @@ import Layout from '@/components/Layout'
 // import Home from '@/page/home/home'
 const Home = React.lazy(async () => await import('@/pages/home/home'))
 const Login = React.lazy(async () => await import('@/pages/login/login'))
-const Register = React.lazy(
-  async () => await import('@/pages/register/register')
-)
+const Register = React.lazy(async () => await import('@/pages/register/register'))
 const Hello = React.lazy(async () => await import('@/pages/hello'))
 const Error404 = React.lazy(async () => await import('@/pages/error/404'))
 
@@ -23,11 +21,11 @@ export const router = createBrowserRouter(
   [
     {
       path: '/login',
-      element: <Login />
+      element: <Login />,
     },
     {
       path: '/register',
-      element: <Register />
+      element: <Register />,
     },
     {
       path: '/',
@@ -35,11 +33,11 @@ export const router = createBrowserRouter(
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: '/hello',
-          element: <Hello />
+          element: <Hello />,
         },
         // auth router
         {
@@ -48,18 +46,18 @@ export const router = createBrowserRouter(
           children: [
             {
               path: '/profile',
-              element: <Profile />
-            }
-          ]
-        }
-      ]
+              element: <Profile />,
+            },
+          ],
+        },
+      ],
     },
     {
       path: '*',
-      element: <Error404 />
-    }
+      element: <Error404 />,
+    },
   ],
   {
-    basename: '/'
-  }
+    basename: '/',
+  },
 )

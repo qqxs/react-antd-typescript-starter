@@ -17,13 +17,13 @@ const Login = () => {
 
   const handleCaptcha = useCallback(() => {
     getCaptcha()
-      .then(res => {
+      .then((res) => {
         // console.log('res.data', res.data)
         // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
         setCodeImg(res.data.image_url)
         setCaptchaID(res.data.captcha_id)
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error.response)
         setLoading(false)
       })
@@ -41,7 +41,7 @@ const Login = () => {
       values.captcha_id = captchaID
 
       postLogin(values)
-        .then(res => {
+        .then((res) => {
           if (res.code === 0) {
             setToken(res.data)
             location.href = '/'
@@ -51,13 +51,13 @@ const Login = () => {
             handleCaptcha()
           }
         })
-        .catch(error => {
+        .catch((error) => {
           console.log(error.response)
           setLoading(false)
           handleCaptcha()
         })
     },
-    [captchaID, handleCaptcha]
+    [captchaID, handleCaptcha],
   )
 
   return (
@@ -68,16 +68,12 @@ const Login = () => {
         </div>
         <div className={`${classPrefix}_login-content-right`}>
           <h2>用户登录</h2>
-          <Form
-            name="normal_login"
-            initialValues={{ remember: true }}
-            onFinish={onFinish}
-          >
+          <Form name="normal_login" initialValues={{ remember: true }} onFinish={onFinish}>
             <Form.Item
               name="email"
               rules={[
                 { required: true, message: '请输入邮箱!' },
-                { type: 'email', message: '请输入有效邮箱!' }
+                { type: 'email', message: '请输入有效邮箱!' },
               ]}
             >
               <Input
@@ -86,10 +82,7 @@ const Login = () => {
                 size="large"
               />
             </Form.Item>
-            <Form.Item
-              name="password"
-              rules={[{ required: true, message: '请输入密码!' }]}
-            >
+            <Form.Item name="password" rules={[{ required: true, message: '请输入密码!' }]}>
               <Input.Password
                 prefix={<LockOutlined className="site-form-item-icon" />}
                 size="large"
@@ -104,20 +97,14 @@ const Login = () => {
                   rules={[
                     {
                       required: true,
-                      message: '请输入验证码!'
-                    }
+                      message: '请输入验证码!',
+                    },
                   ]}
                 >
-                  <Input
-                    size="large"
-                    placeholder="验证码"
-                    prefix={<SafetyOutlined />}
-                  />
+                  <Input size="large" placeholder="验证码" prefix={<SafetyOutlined />} />
                 </Form.Item>
                 <div className="codeWrapper">
-                  {!!codeImg && (
-                    <img src={codeImg} alt="验证码" onClick={handleCaptcha} />
-                  )}
+                  {!!codeImg && <img src={codeImg} alt="验证码" onClick={handleCaptcha} />}
                 </div>
               </Row>
             </Form.Item>

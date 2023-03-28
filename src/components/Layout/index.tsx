@@ -16,7 +16,7 @@ const Layout = () => {
 
   useEffect(() => {
     getMe()
-      .then(res => {
+      .then((res) => {
         if (res.code === 0) {
           dispatch(setMe(res.data))
         }
@@ -36,7 +36,7 @@ const Layout = () => {
           alignItems: 'center',
           justifyContent: 'center',
           fontSize: '20px',
-          color: '#fff'
+          color: '#fff',
         }}
       >
         Loading

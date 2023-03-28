@@ -10,7 +10,7 @@ import Axios from '@/utils/Axios'
  */
 export const getMe = async () => {
   return await Axios({
-    url: '/api/v1/me'
+    url: '/api/v1/me',
   })
 }
 
@@ -25,6 +25,6 @@ export const getMe = async () => {
  */
 export const getGlobal = async () => {
   return await Axios({
-    url: '/api/v1/global'
+    url: '/api/v1/global',
   })
 }
