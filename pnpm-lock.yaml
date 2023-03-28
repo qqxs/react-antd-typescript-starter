@@ -26,7 +26,7 @@ specifiers:
   classnames: ^2.3.2
   cross-env: ^7.0.3
   eslint: ^8.0.1
-  eslint-config-xx: ^1.0.4
+  eslint-config-xx: ^1.0.7
   get-sass-vars: ^3.4.0
   husky: ^8.0.3
   identity-obj-proxy: ^3.0.0
@@ -91,7 +91,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.1
   cross-env: 7.0.3
   eslint: 8.36.0
-  eslint-config-xx: 1.0.4_eslint@8.36.0
+  eslint-config-xx: 1.0.7_eslint@8.36.0
   get-sass-vars: 3.4.0
   husky: 8.0.3
   identity-obj-proxy: 3.0.0
@@ -6504,10 +6504,10 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
     dev: true
 
-  /eslint-config-xx/1.0.4_eslint@8.36.0:
+  /eslint-config-xx/1.0.7_eslint@8.36.0:
     resolution:
       {
-        integrity: sha512-YXuiUFs8Yw7jnQk541taWBBQaNKpscaZGxfAFQg1rW1vdUFdv5SYGJB4SBMO6bwhcOPlP/kan9Bu0/WrfWSR1A==,
+        integrity: sha512-9CT5GmCeHGVDEkyzF7+2MBN1Zpsq7yY3300dUITb1ojqKuDJoQbfytxc5BLG3/ipmRF4mQBbtbOhvRvW8cYZeQ==,
       }
     engines: { node: '>=14.0.0' }
     requiresBuild: true
