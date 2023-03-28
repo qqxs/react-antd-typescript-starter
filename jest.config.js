@@ -15,7 +15,7 @@ module.exports = {
   // Jest transformations
   // https://jestjs.io/docs/configuration#transform-objectstring-pathtotransformer--pathtotransformer-object
   transform: {
-    '^.+\\.tsx?$': 'ts-jest' // Transform TypeScript files using ts-jest
+    '^.+\\.tsx?$': 'ts-jest', // Transform TypeScript files using ts-jest
   },
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test file in the suite is executed
@@ -29,7 +29,7 @@ module.exports = {
     '<rootDir>/src/**/*.{ts,tsx}',
     '!**/__mocks__/**',
     '!**/node_modules/**',
-    '!**/*.d.ts'
+    '!**/*.d.ts',
   ],
 
   // Important: order matters, specific rules should be defined first
@@ -44,13 +44,12 @@ module.exports = {
 
     // Handle static assets
     // https://jestjs.io/docs/webpack#handling-static-assets
-    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg|ttf|woff|woff2)$':
-      '<rootDir>/__mocks__/fileMock.js',
+    '^.+\\.(jpg|jpeg|png|gif|webp|avif|svg|ttf|woff|woff2)$': '<rootDir>/__mocks__/fileMock.js',
 
     // Handle TypeScript path aliases
-    '^@/(.*)$': '<rootDir>/src/$1'
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
 
   verbose: true,
-  testTimeout: 30000
+  testTimeout: 30000,
 }

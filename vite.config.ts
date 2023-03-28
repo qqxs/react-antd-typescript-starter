@@ -21,21 +21,21 @@ export default defineConfig({
     proxy: {
       '/api': {
         target: 'http://localhost:8080',
-        changeOrigin: true
+        changeOrigin: true,
         // rewrite: path => path.replace(/^\/api/, '')
       },
       // 图片上传
       '/images': {
         target: 'http://localhost:8080',
-        changeOrigin: true
+        changeOrigin: true,
         // rewrite: path => path.replace(/^\/api/, '')
-      }
-    }
+      },
+    },
   },
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, 'src')
-    }
+      '@': path.resolve(__dirname, 'src'),
+    },
   },
   build: {
     minify: 'terser',
@@ -55,24 +55,24 @@ export default defineConfig({
             'react-redux',
             '@reduxjs/toolkit',
             'js-cookie',
-            'classnames'
+            'classnames',
           ],
-          sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : []
-        }
-      }
+          sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : [],
+        },
+      },
     },
     chunkSizeWarningLimit: 1000,
     terserOptions: {
       // 清除console和debugger
       compress: {
         // drop_console: true,
-        drop_debugger: true
-      }
-    }
+        drop_debugger: true,
+      },
+    },
   },
   define: {
     $__THEME__$: theme, // antd theme
-    $__SENTRY__$: OPEN_SENTRY // process.env.NODE_ENV === 'production' // open sentry
+    $__SENTRY__$: OPEN_SENTRY, // process.env.NODE_ENV === 'production' // open sentry
   },
   plugins: [
     react(),
@@ -81,49 +81,49 @@ export default defineConfig({
     // 低版本浏览器兼容
     legacy({
       targets: ['chrome 52', 'Android >= 39', 'iOS >= 10.3', 'IE >= 11'], // 需要兼容的目标列表，可以设置多个
-      modernPolyfills: true
+      modernPolyfills: true,
       // additionalLegacyPolyfills: ['regenerator-runtime/runtime'], // 面向IE11时需要此插件
       // polyfills: ['es.promise', 'es.array.iterator']
     }),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,
-        interlaced: false
+        interlaced: false,
       },
       optipng: {
-        optimizationLevel: 7
+        optimizationLevel: 7,
       },
       mozjpeg: {
-        quality: 20
+        quality: 20,
       },
       pngquant: {
         quality: [0.8, 0.9],
-        speed: 4
+        speed: 4,
       },
       svgo: {
         plugins: [
           {
-            name: 'removeViewBox'
+            name: 'removeViewBox',
           },
           {
             name: 'removeEmptyAttrs',
-            active: false
-          }
-        ]
-      }
+            active: false,
+          },
+        ],
+      },
     }),
     compression(),
     VitePWA({
       registerType: 'autoUpdate',
       workbox: {
         clientsClaim: true,
-        skipWaiting: true
-      }
+        skipWaiting: true,
+      },
     }),
     process.env.ANALYZER
       ? visualizer({
-          gzipSize: true
+          gzipSize: true,
         })
-      : null
-  ]
+      : null,
+  ],
 })

@@ -26,7 +26,7 @@ specifiers:
   classnames: ^2.3.2
   cross-env: ^7.0.3
   eslint: ^8.0.1
-  eslint-config-xx: ^1.0.2
+  eslint-config-xx: ^1.0.4
   get-sass-vars: ^3.4.0
   husky: ^8.0.3
   identity-obj-proxy: ^3.0.0
@@ -91,7 +91,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.1
   cross-env: 7.0.3
   eslint: 8.36.0
-  eslint-config-xx: 1.0.2_eslint@8.36.0
+  eslint-config-xx: 1.0.4_eslint@8.36.0
   get-sass-vars: 3.4.0
   husky: 8.0.3
   identity-obj-proxy: 3.0.0
@@ -6450,6 +6450,18 @@ packages:
       source-map: 0.6.1
     dev: true
 
+  /eslint-config-prettier/8.8.0_eslint@8.36.0:
+    resolution:
+      {
+        integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==,
+      }
+    hasBin: true
+    peerDependencies:
+      eslint: '>=7.0.0'
+    dependencies:
+      eslint: 8.36.0
+    dev: true
+
   /eslint-config-standard-with-typescript/34.0.1_jo4jc4suruallj56mai7w4wzte:
     resolution:
       {
@@ -6492,18 +6504,20 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.36.0
     dev: true
 
-  /eslint-config-xx/1.0.2_eslint@8.36.0:
+  /eslint-config-xx/1.0.4_eslint@8.36.0:
     resolution:
       {
-        integrity: sha512-zADF4THtWl7HBF5nY15NYIPkOYNhoMLW5EKqgx46vvy5rvRyLG64UzRz4VoaF1+9m6PCPHMK8yolld/JKBYn4w==,
+        integrity: sha512-YXuiUFs8Yw7jnQk541taWBBQaNKpscaZGxfAFQg1rW1vdUFdv5SYGJB4SBMO6bwhcOPlP/kan9Bu0/WrfWSR1A==,
       }
     engines: { node: '>=14.0.0' }
+    requiresBuild: true
     peerDependencies:
       eslint: ^8.0.1
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.57.0_5t5646cukn2kik5kiydglap3vi
       '@typescript-eslint/parser': 5.57.0_vgl77cfdswitgr47lm5swmv43m
       eslint: 8.36.0
+      eslint-config-prettier: 8.8.0_eslint@8.36.0
       eslint-config-standard-with-typescript: 34.0.1_jo4jc4suruallj56mai7w4wzte
       eslint-plugin-import: 2.27.5_74llxljztmzze2ez7aakaiqyti
       eslint-plugin-n: 15.6.1_eslint@8.36.0
