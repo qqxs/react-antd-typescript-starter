@@ -1,4 +1,4 @@
-import Axios from '@/utils/Axios'
+import Axios from '@/utils/Axios';
 
 /**
  *
@@ -14,7 +14,7 @@ export async function postLogin(data: Request.LoginBody) {
     url: '/api/login',
     method: 'post',
     data,
-  })
+  });
 }
 
 /**
@@ -31,7 +31,7 @@ export async function postRegister(data: Request.RegisterBody) {
     url: '/api/register',
     method: 'post',
     data,
-  })
+  });
 }
 
 /**
@@ -46,7 +46,7 @@ export async function postRegister(data: Request.RegisterBody) {
 export async function getMe() {
   return await Axios<Response.Me>({
     url: '/api/me',
-  })
+  });
 }
 
 /**
@@ -62,12 +62,12 @@ export function postLogout(): any {
   return Axios({
     url: '/api/login_out',
     method: 'post',
-  })
+  });
 }
 
 interface ResponseCaptcha {
-  image_url: string
-  captcha_id: string
+  image_url: string;
+  captcha_id: string;
 }
 /**
  *
@@ -81,5 +81,5 @@ interface ResponseCaptcha {
 export async function getCaptcha() {
   return await Axios<ResponseCaptcha>({
     url: '/api/captcha',
-  })
+  });
 }

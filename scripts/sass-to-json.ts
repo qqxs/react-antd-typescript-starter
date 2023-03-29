@@ -1,7 +1,7 @@
-import fs from 'fs'
+import fs from 'fs';
 
-import sassVars from 'get-sass-vars'
-import { lowerCamel } from '@skax/camel'
+import sassVars from 'get-sass-vars';
+import { lowerCamel } from '@skax/camel';
 
 /**
  * sass 变量转成 json 格式
@@ -13,14 +13,14 @@ import { lowerCamel } from '@skax/camel'
  * @returns Object
  */
 function sassVar2JSON() {
-  const paletteSass = fs.readFileSync('./src/styles/antd-theme.scss', 'utf-8')
+  const paletteSass = fs.readFileSync('./src/styles/antd-theme.scss', 'utf-8');
 
-  const result = sassVars.sync(paletteSass)
+  const result = sassVars.sync(paletteSass);
 
   return Object.keys(result).reduce((pre, cur) => {
-    pre[lowerCamel(cur.replace('$', ''), '-')] = result[cur]
-    return pre
-  }, {})
+    pre[lowerCamel(cur.replace('$', ''), '-')] = result[cur];
+    return pre;
+  }, {});
 }
 
-export default sassVar2JSON
+export default sassVar2JSON;

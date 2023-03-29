@@ -1,11 +1,11 @@
-import { useState, useCallback } from 'react'
-import { LoadingOutlined, PlusOutlined } from '@ant-design/icons'
-import { Upload, message, Form } from 'antd'
-import type { UploadChangeParam } from 'antd/es/upload'
-import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface'
+import { useState, useCallback } from 'react';
+import { LoadingOutlined, PlusOutlined } from '@ant-design/icons';
+import { Upload, message, Form } from 'antd';
+import type { UploadChangeParam } from 'antd/es/upload';
+import type { RcFile, UploadFile, UploadProps } from 'antd/es/upload/interface';
 
 interface FormUploadProps {
-  name: string
+  name: string;
 }
 
 /**
@@ -14,67 +14,67 @@ interface FormUploadProps {
  * @returns
  */
 export function getUploadImageList(fileList: any): string[] {
-  return fileList.map((item: any) => item.response.data.urls[0])
+  return fileList.map((item: any) => item.response.data.urls[0]);
 }
 
 const getBase64 = (img: RcFile, callback: (url: string) => void) => {
-  const reader = new FileReader()
+  const reader = new FileReader();
   // eslint-disable-next-line n/no-callback-literal
-  reader.addEventListener('load', () => callback(reader.result as string))
-  reader.readAsDataURL(img)
-}
+  reader.addEventListener('load', () => callback(reader.result as string));
+  reader.readAsDataURL(img);
+};
 
 const beforeUpload = (file: RcFile) => {
-  const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png'
+  const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
   if (!isJpgOrPng) {
-    void message.error('You can only upload JPG/PNG file!')
+    void message.error('You can only upload JPG/PNG file!');
   }
-  const isLt2M = file.size / 1024 / 1024 < 2
+  const isLt2M = file.size / 1024 / 1024 < 2;
   if (!isLt2M) {
-    void message.error('Image must smaller than 2MB!')
+    void message.error('Image must smaller than 2MB!');
   }
-  return isJpgOrPng && isLt2M
-}
+  return isJpgOrPng && isLt2M;
+};
 
 export const getFile = (e: any) => {
-  console.log('Upload event:', e)
+  console.log('Upload event:', e);
   if (Array.isArray(e)) {
-    return e
+    return e;
   }
-  return e?.fileList
-}
+  return e?.fileList;
+};
 
 const FormUploadImage = (props: FormUploadProps) => {
-  const [loading, setLoading] = useState(false)
-  const [imageUrl, setImageUrl] = useState<string>()
+  const [loading, setLoading] = useState(false);
+  const [imageUrl, setImageUrl] = useState<string>();
 
   const handleChange: UploadProps['onChange'] = useCallback(
     (info: UploadChangeParam<UploadFile>) => {
       if (info.file.status === 'uploading') {
-        setLoading(true)
-        return
+        setLoading(true);
+        return;
       }
       if (info.file.status === 'done') {
         // console.log(info.file.response)
-        const res = info.file.response
+        const res = info.file.response;
         // Get this url from response in real world.
         getBase64(info.file.originFileObj as RcFile, (url) => {
-          setLoading(false)
+          setLoading(false);
           if (res.code === 0) {
-            setImageUrl(res.data.urls[0])
+            setImageUrl(res.data.urls[0]);
           }
-        })
+        });
       }
     },
     [],
-  )
+  );
 
   const uploadButton = (
     <div>
       {loading ? <LoadingOutlined /> : <PlusOutlined />}
       <div style={{ marginTop: 8 }}>Upload</div>
     </div>
-  )
+  );
 
   return (
     <Form.Item
@@ -96,7 +96,7 @@ const FormUploadImage = (props: FormUploadProps) => {
         {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
       </Upload>
     </Form.Item>
-  )
-}
+  );
+};
 
-export default FormUploadImage
+export default FormUploadImage;

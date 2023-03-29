@@ -1,2 +1,2 @@
-export const classPrefix = 'y'
-export const tokenStorageKey = 'token'
+export const classPrefix = 'y';
+export const tokenStorageKey = 'token';

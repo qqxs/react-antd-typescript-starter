@@ -1,34 +1,34 @@
-import { useEffect, useState, useCallback } from 'react'
-import { Form, Button, message, Input, InputNumber } from 'antd'
-import { postRegister } from '@/models/auth'
-import { classPrefix } from '@/constant'
+import { useEffect, useState, useCallback } from 'react';
+import { Form, Button, message, Input, InputNumber } from 'antd';
+import { postRegister } from '@/models/auth';
+import { classPrefix } from '@/constant';
 
-import FormRUpload, { getUploadImageList } from '@/components/Upload'
+import FormRUpload, { getUploadImageList } from '@/components/Upload';
 
-import './register.scss'
+import './register.scss';
 
 const Register = () => {
-  const [loading, setLoading] = useState(false)
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {}, [])
+  useEffect(() => {}, []);
 
   const onFinish = useCallback((values: any) => {
-    setLoading(true)
-    values.avatar = getUploadImageList(values.avatar)[0]
+    setLoading(true);
+    values.avatar = getUploadImageList(values.avatar)[0];
 
     postRegister(values)
       .then((res) => {
         if (res.code === 0) {
-          location.href = '/login'
+          location.href = '/login';
         } else {
-          void message.error(res.msg)
-          setLoading(false)
+          void message.error(res.msg);
+          setLoading(false);
         }
       })
       .catch(() => {
-        setLoading(false)
-      })
-  }, [])
+        setLoading(false);
+      });
+  }, []);
 
   return (
     <div className={`${classPrefix}_register`}>
@@ -82,7 +82,7 @@ const Register = () => {
         </Form>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;

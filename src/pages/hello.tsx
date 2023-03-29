@@ -1,5 +1,5 @@
 const Hello = () => {
-  return <>Hello</>
-}
+  return <>Hello</>;
+};
 
-export default Hello
+export default Hello;

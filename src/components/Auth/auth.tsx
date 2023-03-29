@@ -1,16 +1,16 @@
-import { Outlet, Navigate } from 'react-router-dom'
-import { useAppSelector } from '@/hooks/redux'
+import { Outlet, Navigate } from 'react-router-dom';
+import { useAppSelector } from '@/hooks/redux';
 
-import { selectMe } from '@/store/reducer/me-reducer'
+import { selectMe } from '@/store/reducer/me-reducer';
 
 const Auth = () => {
-  const me = useAppSelector(selectMe)
+  const me = useAppSelector(selectMe);
 
   if (!me.id) {
-    return <Navigate to="/login" state={{ from: location }} />
+    return <Navigate to="/login" state={{ from: location }} />;
   }
 
-  return <Outlet />
-}
+  return <Outlet />;
+};
 
-export default Auth
+export default Auth;

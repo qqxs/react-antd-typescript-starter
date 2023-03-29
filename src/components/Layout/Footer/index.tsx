@@ -1,5 +1,5 @@
-import React from 'react'
-import './index.scss'
+import React from 'react';
+import './index.scss';
 
 const Footer = () => {
   return (
@@ -24,7 +24,7 @@ const Footer = () => {
         </a>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default React.memo(Footer)
+export default React.memo(Footer);

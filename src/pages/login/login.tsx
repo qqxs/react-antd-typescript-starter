@@ -1,64 +1,64 @@
-import { useEffect, useState, useCallback } from 'react'
-import { Link } from 'react-router-dom'
-import { Form, Input, Button, Row, message } from 'antd'
-import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons'
-import { postLogin, getCaptcha } from '@/models/auth'
-import { classPrefix } from '@/constant'
-import FE from '@/assets/FE.png'
-import { setToken } from '@/utils/auth'
+import { useEffect, useState, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { Form, Input, Button, Row, message } from 'antd';
+import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
+import { postLogin, getCaptcha } from '@/models/auth';
+import { classPrefix } from '@/constant';
+import FE from '@/assets/FE.png';
+import { setToken } from '@/utils/auth';
 
-import './login.scss'
+import './login.scss';
 
 const Login = () => {
   //   const history = useHistory();
-  const [loading, setLoading] = useState(false)
-  const [codeImg, setCodeImg] = useState('')
-  const [captchaID, setCaptchaID] = useState('')
+  const [loading, setLoading] = useState(false);
+  const [codeImg, setCodeImg] = useState('');
+  const [captchaID, setCaptchaID] = useState('');
 
   const handleCaptcha = useCallback(() => {
     getCaptcha()
       .then((res) => {
         // console.log('res.data', res.data)
         // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
-        setCodeImg(res.data.image_url)
-        setCaptchaID(res.data.captcha_id)
+        setCodeImg(res.data.image_url);
+        setCaptchaID(res.data.captcha_id);
       })
       .catch((error) => {
-        console.log(error.response)
-        setLoading(false)
-      })
-  }, [])
+        console.log(error.response);
+        setLoading(false);
+      });
+  }, []);
 
   useEffect(() => {
-    handleCaptcha()
+    handleCaptcha();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, []);
 
   const onFinish = useCallback(
     (values: any) => {
       // console.log(values)
-      setLoading(true)
-      values.captcha_id = captchaID
+      setLoading(true);
+      values.captcha_id = captchaID;
 
       postLogin(values)
         .then((res) => {
           if (res.code === 0) {
-            setToken(res.data)
-            location.href = '/'
+            setToken(res.data);
+            location.href = '/';
           } else {
-            void message.error(res.msg)
-            setLoading(false)
-            handleCaptcha()
+            void message.error(res.msg);
+            setLoading(false);
+            handleCaptcha();
           }
         })
         .catch((error) => {
-          console.log(error.response)
-          setLoading(false)
-          handleCaptcha()
-        })
+          console.log(error.response);
+          setLoading(false);
+          handleCaptcha();
+        });
     },
     [captchaID, handleCaptcha],
-  )
+  );
 
   return (
     <div className={`${classPrefix}_login`}>
@@ -128,7 +128,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;

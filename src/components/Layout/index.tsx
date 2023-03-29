@@ -1,31 +1,31 @@
-import { useEffect, useState } from 'react'
-import { Outlet } from 'react-router-dom'
-import { getMe } from '@/models/auth'
-import { useAppDispatch } from '@/hooks/redux'
-import { setMe } from '@/store/reducer/me-reducer'
+import { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import { getMe } from '@/models/auth';
+import { useAppDispatch } from '@/hooks/redux';
+import { setMe } from '@/store/reducer/me-reducer';
 
-import Header from './Header'
-import Footer from './Footer'
+import Header from './Header';
+import Footer from './Footer';
 
-import './index.scss'
+import './index.scss';
 
 const Layout = () => {
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   useEffect(() => {
     getMe()
       .then((res) => {
         if (res.code === 0) {
-          dispatch(setMe(res.data))
+          dispatch(setMe(res.data));
         }
-        setLoading(false)
+        setLoading(false);
       })
       .catch(() => {
-        setLoading(false)
-      })
-  }, [dispatch])
+        setLoading(false);
+      });
+  }, [dispatch]);
 
   if (loading) {
     return (
@@ -41,7 +41,7 @@ const Layout = () => {
       >
         Loading
       </div>
-    )
+    );
   }
 
   return (
@@ -52,7 +52,7 @@ const Layout = () => {
       </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

@@ -1,23 +1,23 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { ConfigProvider } from 'antd'
-import { RouterProvider } from 'react-router-dom'
-import { Provider } from 'react-redux'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ConfigProvider } from 'antd';
+import { RouterProvider } from 'react-router-dom';
+import { Provider } from 'react-redux';
 
-import ErrorBoundary from '@/components/ErrorBoundary'
+import ErrorBoundary from '@/components/ErrorBoundary';
 
-import { store } from './store'
-import { router } from './router'
+import { store } from './store';
+import { router } from './router';
 
-import InitSentry from './sentry'
+import InitSentry from './sentry';
 
-import 'normalize.css'
+import 'normalize.css';
 
-import './index.scss'
+import './index.scss';
 
 if ($__SENTRY__$) {
   // 初始化Sentry
-  InitSentry()
+  InitSentry();
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -36,4 +36,4 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     </Provider>
   </ErrorBoundary>,
   // </React.StrictMode>
-)
+);

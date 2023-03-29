@@ -1,5 +1,5 @@
-import * as Sentry from '@sentry/react'
-import { BrowserTracing } from '@sentry/tracing'
+import * as Sentry from '@sentry/react';
+import { BrowserTracing } from '@sentry/tracing';
 
 /**
  * 出初始化Sentry
@@ -14,7 +14,7 @@ function InitSentry() {
     // We recommend adjusting this value in production, or using tracesSampler
     // for finer control
     tracesSampleRate: 1.0,
-  })
+  });
 }
 
-export default InitSentry
+export default InitSentry;

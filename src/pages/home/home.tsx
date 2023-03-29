@@ -1,16 +1,16 @@
-import { useState } from 'react'
+import { useState } from 'react';
 // import { useSelector } from 'react-redux'
 // import { Link } from 'react-router-dom'
-import reactLogo from '@/assets/react.svg'
-import { useAppDispatch } from '@/hooks/redux'
-import { increment } from '@/store/reducer/counter-reducer'
-import cls from 'classnames'
-import styles from './home.module.scss'
+import reactLogo from '@/assets/react.svg';
+import { useAppDispatch } from '@/hooks/redux';
+import { increment } from '@/store/reducer/counter-reducer';
+import cls from 'classnames';
+import styles from './home.module.scss';
 
 const Home = () => {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
-  const dispatch = useAppDispatch()
+  const dispatch = useAppDispatch();
 
   return (
     <div className={styles['_page-home']}>
@@ -40,8 +40,8 @@ const Home = () => {
       <div className={styles.card}>
         <button
           onClick={() => {
-            setCount((count) => count + 1)
-            dispatch(increment(count + 1))
+            setCount((count) => count + 1);
+            dispatch(increment(count + 1));
           }}
         >
           count is {count}
@@ -53,7 +53,7 @@ const Home = () => {
       <p className="read-the-docs">Click on the Vite、React and Ts logos to learn more</p>{' '}
       {/* <Link to="/login">login</Link> */}
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

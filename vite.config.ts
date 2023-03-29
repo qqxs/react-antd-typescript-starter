@@ -1,19 +1,19 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react-swc'
-import viteImagemin from 'vite-plugin-imagemin'
-import compression from 'vite-plugin-compression'
-import { VitePWA } from 'vite-plugin-pwa'
-import legacy from '@vitejs/plugin-legacy'
-import { visualizer } from 'rollup-plugin-visualizer'
-import path from 'path'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react-swc';
+import viteImagemin from 'vite-plugin-imagemin';
+import compression from 'vite-plugin-compression';
+import { VitePWA } from 'vite-plugin-pwa';
+import legacy from '@vitejs/plugin-legacy';
+import { visualizer } from 'rollup-plugin-visualizer';
+import path from 'path';
 
-import sassVar2JSON from './scripts/sass-to-json'
+import sassVar2JSON from './scripts/sass-to-json';
 
-const theme = sassVar2JSON()
+const theme = sassVar2JSON();
 
 // console.log('sassVar2JSON', theme)
 
-const OPEN_SENTRY: boolean = false // process.env.NODE_ENV === 'production' // open sentry
+const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production' // open sentry
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -126,4 +126,4 @@ export default defineConfig({
         })
       : null,
   ],
-})
+});

@@ -1,4 +1,4 @@
-import { classPrefix } from '@/constant'
+import { classPrefix } from '@/constant';
 
 const NotFound = () => {
   return (
@@ -41,7 +41,7 @@ const NotFound = () => {
         </p>
       </section>
     </div>
-  )
-}
+  );
+};
 
-export default NotFound
+export default NotFound;

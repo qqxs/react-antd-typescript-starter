@@ -1,14 +1,14 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { useAppSelector } from '@/hooks/redux'
-import { selectMe } from '@/store/reducer/me-reducer'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { useAppSelector } from '@/hooks/redux';
+import { selectMe } from '@/store/reducer/me-reducer';
 
-import FE from '@/assets/FE.png'
+import FE from '@/assets/FE.png';
 
-import './index.scss'
+import './index.scss';
 
 const Header = () => {
-  const me = useAppSelector(selectMe)
+  const me = useAppSelector(selectMe);
 
   return (
     <header className="_header">
@@ -28,7 +28,7 @@ const Header = () => {
         )}
       </div>
     </header>
-  )
-}
+  );
+};
 
-export default React.memo(Header)
+export default React.memo(Header);

@@ -1,6 +1,6 @@
-import type React from 'react'
+import type React from 'react';
 
-import { ErrorBoundary as ReactErrorBoundary, type FallbackProps } from 'react-error-boundary'
+import { ErrorBoundary as ReactErrorBoundary, type FallbackProps } from 'react-error-boundary';
 
 function ErrorFallback(props: FallbackProps) {
   return (
@@ -9,7 +9,7 @@ function ErrorFallback(props: FallbackProps) {
       <pre>{props.error.message}</pre>
       <button onClick={props.resetErrorBoundary}>Try again</button>
     </div>
-  )
+  );
 }
 
 const ErrorBoundary: React.FC<React.PropsWithChildren> = (props) => {
@@ -22,7 +22,7 @@ const ErrorBoundary: React.FC<React.PropsWithChildren> = (props) => {
     >
       {props.children}
     </ReactErrorBoundary>
-  )
-}
+  );
+};
 
-export default ErrorBoundary
+export default ErrorBoundary;
