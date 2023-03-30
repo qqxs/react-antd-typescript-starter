@@ -1,3 +1,4 @@
+import React from 'react';
 import { Outlet, Navigate } from 'react-router-dom';
 import { useAppSelector } from '@/hooks/redux';
 
@@ -13,4 +14,4 @@ const Auth = () => {
   return <Outlet />;
 };
 
-export default Auth;
+export default React.memo(Auth);

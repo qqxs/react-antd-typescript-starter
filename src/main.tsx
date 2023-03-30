@@ -5,6 +5,7 @@ import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
 
 import ErrorBoundary from '@/components/ErrorBoundary';
+import Loading from '@/components/Loading';
 
 import { store } from './store';
 import { router } from './router';
@@ -29,7 +30,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           token: $__THEME__$, // vite global
         }}
       >
-        <React.Suspense fallback={<>...</>}>
+        <React.Suspense fallback={<Loading />}>
           <RouterProvider router={router} />
         </React.Suspense>
       </ConfigProvider>
