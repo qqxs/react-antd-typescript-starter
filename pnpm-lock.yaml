@@ -50,6 +50,7 @@ specifiers:
   typescript: ^4.9.5
   vite: ^4.2.1
   vite-plugin-compression: ^0.5.1
+  vite-plugin-eslint: ^1.8.1
   vite-plugin-imagemin: ^0.6.1
   vite-plugin-pwa: ^0.14.6
 
@@ -105,6 +106,7 @@ devDependencies:
   typescript: 4.9.5
   vite: 4.2.1_6bcwaj7ijj3j45rbkt37hc3vbi
   vite-plugin-compression: 0.5.1_vite@4.2.1
+  vite-plugin-eslint: 1.8.1_vite@4.2.1
   vite-plugin-imagemin: 0.6.1_vite@4.2.1
   vite-plugin-pwa: 0.14.7_vite@4.2.1
 
@@ -2954,6 +2956,17 @@ packages:
       rollup: 2.79.1
     dev: true
 
+  /@rollup/pluginutils/4.2.1:
+    resolution:
+      {
+        integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==,
+      }
+    engines: { node: '>= 8.0.0' }
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.1
+    dev: true
+
   /@rollup/pluginutils/5.0.2_rollup@3.20.2:
     resolution:
       {
@@ -3417,6 +3430,16 @@ packages:
       }
     dependencies:
       '@babel/types': 7.21.3
+    dev: true
+
+  /@types/eslint/8.37.0:
+    resolution:
+      {
+        integrity: sha512-Piet7dG2JBuDIfohBngQ3rCt7MgO9xCO4xIMKxBThCq5PNRB91IjlJ10eJVwfoNtvTErmxLzwBZ7rHZtbOMmFQ==,
+      }
+    dependencies:
+      '@types/estree': 1.0.0
+      '@types/json-schema': 7.0.11
     dev: true
 
   /@types/estree/0.0.39:
@@ -13911,6 +13934,21 @@ packages:
       vite: 4.2.1_6bcwaj7ijj3j45rbkt37hc3vbi
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-eslint/1.8.1_vite@4.2.1:
+    resolution:
+      {
+        integrity: sha512-PqdMf3Y2fLO9FsNPmMX+//2BF5SF8nEWspZdgl4kSt7UvHDRHVVfHvxsD7ULYzZrJDGRxR81Nq7TOFgwMnUang==,
+      }
+    peerDependencies:
+      eslint: '>=7'
+      vite: '>=2'
+    dependencies:
+      '@rollup/pluginutils': 4.2.1
+      '@types/eslint': 8.37.0
+      rollup: 2.79.1
+      vite: 4.2.1_6bcwaj7ijj3j45rbkt37hc3vbi
     dev: true
 
   /vite-plugin-imagemin/0.6.1_vite@4.2.1:
