@@ -1,33 +1,22 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
-import { getMe } from '@/models/auth';
-import { useAppDispatch } from '@/hooks/redux';
-import { setMe } from '@/store/reducer/me-reducer';
+import { useAppDispatch, useAppSelector } from '@/hooks/redux';
+import { fetchMeSync, selectMe } from '@/store/features/me-slice';
+import { ResponseStatus } from '@/constant';
 
 import Header from './Header';
 import Footer from './Footer';
-
 import './index.scss';
 
 const Layout = () => {
-  const [loading, setLoading] = useState(true);
-
   const dispatch = useAppDispatch();
+  const me = useAppSelector(selectMe);
 
   useEffect(() => {
-    getMe()
-      .then((res) => {
-        if (res.code === 0) {
-          dispatch(setMe(res.data));
-        }
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
+    void dispatch(fetchMeSync());
   }, [dispatch]);
 
-  if (loading) {
+  if (me.status === ResponseStatus.Loading) {
     return (
       <div
         style={{

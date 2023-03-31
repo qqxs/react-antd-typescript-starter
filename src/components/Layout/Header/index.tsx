@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '@/hooks/redux';
-import { selectMe } from '@/store/reducer/me-reducer';
+import { selectMe } from '@/store/features/me-slice';
 
 import FE from '@/assets/FE.png';
 
@@ -18,8 +18,8 @@ const Header = () => {
         </Link>
       </div>
       <div className="_header-right">
-        {me.id ? (
-          <span>{me.name}</span>
+        {me.result.id ? (
+          <span>{me.result.name}</span>
         ) : (
           <>
             <Link to="/login">Login</Link>

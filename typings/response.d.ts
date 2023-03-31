@@ -3,6 +3,13 @@ declare namespace Response {
     code: number;
     data: T;
     msg?: string;
+    error?: string[];
+  }
+
+  export interface ReduxState<T> {
+    status: keyof typeof ResponseStatus;
+    result: T;
+    error?: string;
   }
 
   export interface Me {

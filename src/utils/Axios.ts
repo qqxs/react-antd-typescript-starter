@@ -44,11 +44,9 @@ instance.interceptors.response.use(
         // 401: 未登录
         case 401:
           removeToken();
-
           if (!['/api/me'].includes(response?.config?.url)) {
             window.location.href = '/login';
           }
-
           break;
         // 其他错误，直接抛出错误提示
         default:
@@ -57,6 +55,16 @@ instance.interceptors.response.use(
             // message.error(response.data.message || requestMsg[response.status])
           }
           break;
+      }
+      // 处理接口返回的错误信息
+      if (error.response) {
+        error.message = error.response.data.message;
+      } else if (error.request) {
+        // 处理请求未得到响应的错误
+        error.message = 'No response from server.';
+      } else {
+        // 处理其他错误
+        error.message = 'Something went wrong.';
       }
     }
     return await Promise.reject(error);
