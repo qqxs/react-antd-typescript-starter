@@ -6,6 +6,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 import legacy from '@vitejs/plugin-legacy';
 import { visualizer } from 'rollup-plugin-visualizer';
 import eslint from 'vite-plugin-eslint';
+import postcssPreset from 'postcss-preset-env';
 import path from 'path';
 
 import sassVar2JSON from './scripts/sass-to-json';
@@ -17,6 +18,8 @@ const theme = sassVar2JSON();
 const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production' // open sentry
 // https://vitejs.dev/config/
 export default defineConfig((env) => {
+  const isDev = env.mode === 'development';
+
   return {
     server: {
       // port: 3000, // 设置端口号
@@ -37,6 +40,11 @@ export default defineConfig((env) => {
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
+      },
+    },
+    css: {
+      postcss: {
+        plugins: isDev ? [] : [postcssPreset()],
       },
     },
     build: {
@@ -127,7 +135,7 @@ export default defineConfig((env) => {
             gzipSize: true,
           })
         : null,
-      env.mode === 'development' ? eslint() : undefined,
+      isDev ? eslint() : undefined,
     ].filter(Boolean),
   };
 });
