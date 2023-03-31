@@ -77,9 +77,8 @@ instance.interceptors.response.use(
  * @param configParam axios config param
  * @returns Promise
  */
-// eslint-disable-next-line @typescript-eslint/promise-function-async
-function Axios<T = unknown>(configParam: AxiosRequestConfig): Promise<Response.Common<T>> {
-  return instance
+async function Axios<T = unknown>(configParam: AxiosRequestConfig): Promise<Response.Common<T>> {
+  return await instance
     .request<Response.Common<T>, AxiosResponse<Response.Common<T>>>(configParam)
     .then((res) => res.data);
 }
