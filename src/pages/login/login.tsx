@@ -2,7 +2,7 @@ import { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input, Button, Row, message } from 'antd';
 import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
-import { postLogin, getCaptcha } from '@/models/auth';
+import { postLogin, getCaptcha } from '@/services/auth';
 import { classPrefix } from '@/constant';
 import FE from '@/assets/FE.png';
 import { setToken } from '@/utils/auth';

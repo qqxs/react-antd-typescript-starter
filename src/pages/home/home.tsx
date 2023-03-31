@@ -3,7 +3,7 @@ import { useState } from 'react';
 // import { Link } from 'react-router-dom'
 import reactLogo from '@/assets/react.svg';
 import { useAppDispatch } from '@/hooks/redux';
-import { increment } from '@/store/reducer/counter-reducer';
+import { increment } from '@/store/features/counter-slice';
 import cls from 'classnames';
 import styles from './home.module.scss';
 

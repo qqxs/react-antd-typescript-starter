@@ -64,7 +64,7 @@ docker-compose up -d
 ├── hooks       # @/hooks
 │   └── redux.ts # redux 相关hook
 ├── main.tsx    # 入口
-├── models      # @/models  api 接口
+├── services      # @/services  api 接口
 ├── page        # 页面
 │   ├── error   # 错误页
 │   ├── home    # 首页
@@ -95,9 +95,9 @@ docker-compose up -d
 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 自行调试。
 
 ```ts
-import lessToJs from 'less-vars-to-js'
-import { lowerCamel } from '@skax/camel'
-import fs from 'fs'
+import lessToJs from 'less-vars-to-js';
+import { lowerCamel } from '@skax/camel';
+import fs from 'fs';
 
 /**
  * less 变量转成 json 格式
@@ -110,19 +110,19 @@ import fs from 'fs'
  */
 function lessVar2JSON() {
   // Read the less file in as string
-  const paletteLess = fs.readFileSync('./src/styles/antd-theme.less', 'utf-8')
+  const paletteLess = fs.readFileSync('./src/styles/antd-theme.less', 'utf-8');
   // Pass in file contents
   const palette = lessToJs(paletteLess, {
     resolveVariables: true,
-    stripPrefix: true
-  })
+    stripPrefix: true,
+  });
 
   return Object.keys(palette).reduce((pre, cur) => {
-    pre[lowerCamel(cur, '-')] = palette[cur]
-    return pre
-  }, {})
+    pre[lowerCamel(cur, '-')] = palette[cur];
+    return pre;
+  }, {});
 }
-export default lessVar2JSON
+export default lessVar2JSON;
 ```
 
 ## api

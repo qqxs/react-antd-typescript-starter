@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from 'react';
 import { Form, Button, message, Input, InputNumber } from 'antd';
-import { postRegister } from '@/models/auth';
+import { postRegister } from '@/services/auth';
 import { classPrefix } from '@/constant';
 
 import FormRUpload, { getUploadImageList } from '@/components/Upload';
