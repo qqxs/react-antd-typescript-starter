@@ -18,7 +18,7 @@ const Header = () => {
         </Link>
       </div>
       <div className="_header-right">
-        {me.result.id ? (
+        {me.result?.id ? (
           <span>{me.result.name}</span>
         ) : (
           <>

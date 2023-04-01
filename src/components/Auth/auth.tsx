@@ -7,7 +7,7 @@ import { selectMe } from '@/store/features/me-slice';
 const Auth = () => {
   const me = useAppSelector(selectMe);
 
-  if (!me.result?.id) {
+  if (!me?.result?.id) {
     return <Navigate to="/login" state={{ from: location }} />;
   }
 
