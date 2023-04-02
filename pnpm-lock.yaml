@@ -50,12 +50,12 @@ specifiers:
   sass: ^1.58.3
   terser: ^5.16.6
   ts-jest: ^29.0.5
-  typescript: ^4.9.5
+  typescript: ^5.0.3
   vite: ^4.2.1
   vite-plugin-compression: ^0.5.1
   vite-plugin-eslint: ^1.8.1
   vite-plugin-imagemin: ^0.6.1
-  vite-plugin-pwa: ^0.14.6
+  vite-plugin-pwa: ^0.14.7
 
 dependencies:
   '@ant-design/icons': 5.0.1_biqbaboplfbrettd7655fr4n2y
@@ -108,8 +108,8 @@ devDependencies:
   rollup-plugin-visualizer: 5.9.0
   sass: 1.60.0
   terser: 5.16.8
-  ts-jest: 29.0.5_doipufordlnvh5g4adbwayvyvy
-  typescript: 4.9.5
+  ts-jest: 29.0.5_ntm4xngu7em45lqojwsg6ufzc4
+  typescript: 5.0.3
   vite: 4.2.1_6bcwaj7ijj3j45rbkt37hc3vbi
   vite-plugin-compression: 0.5.1_vite@4.2.1
   vite-plugin-eslint: 1.8.1_eslint@8.37.0+vite@4.2.1
@@ -1845,13 +1845,13 @@ packages:
       '@types/node': 18.15.10
       chalk: 4.1.2
       cosmiconfig: 8.1.3
-      cosmiconfig-typescript-loader: 4.3.0_cwejo6a3jrsuzg27ji24tbs5ya
+      cosmiconfig-typescript-loader: 4.3.0_skhqalabyycu53gn474yh4mcqq
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1_z3vu5dg2hu3jqyh3anri5tms2q
-      typescript: 4.9.5
+      ts-node: 10.9.1_mbv2xpbzu5truqp3khu4fbawty
+      typescript: 5.0.3
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -5734,7 +5734,7 @@ packages:
       }
     dev: true
 
-  /cosmiconfig-typescript-loader/4.3.0_cwejo6a3jrsuzg27ji24tbs5ya:
+  /cosmiconfig-typescript-loader/4.3.0_skhqalabyycu53gn474yh4mcqq:
     resolution:
       {
         integrity: sha512-NTxV1MFfZDLPiBMjxbHRwSh5LaLcPMwNdCutmnHJCKoVnlvldPWlllonKwrsRJ5pYZBIBGRWWU2tfvzxgeSW5Q==,
@@ -5748,8 +5748,8 @@ packages:
     dependencies:
       '@types/node': 18.15.10
       cosmiconfig: 8.1.3
-      ts-node: 10.9.1_z3vu5dg2hu3jqyh3anri5tms2q
-      typescript: 4.9.5
+      ts-node: 10.9.1_mbv2xpbzu5truqp3khu4fbawty
+      typescript: 5.0.3
     dev: true
 
   /cosmiconfig/8.1.3:
@@ -14436,7 +14436,7 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /ts-jest/29.0.5_doipufordlnvh5g4adbwayvyvy:
+  /ts-jest/29.0.5_ntm4xngu7em45lqojwsg6ufzc4:
     resolution:
       {
         integrity: sha512-PL3UciSgIpQ7f6XjVOmbi96vmDHUqAyqDr8YxzopDqX3kfgYtX1cuNeBjP+L9sFXi6nzsGGA6R3fP3DDDJyrxA==,
@@ -14468,11 +14468,11 @@ packages:
       lodash.memoize: 4.1.2
       make-error: 1.3.6
       semver: 7.3.8
-      typescript: 4.9.5
+      typescript: 5.0.3
       yargs-parser: 21.1.1
     dev: true
 
-  /ts-node/10.9.1_z3vu5dg2hu3jqyh3anri5tms2q:
+  /ts-node/10.9.1_mbv2xpbzu5truqp3khu4fbawty:
     resolution:
       {
         integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==,
@@ -14501,7 +14501,7 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 4.9.5
+      typescript: 5.0.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
@@ -14647,6 +14647,15 @@ packages:
         integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==,
       }
     engines: { node: '>=4.2.0' }
+    hasBin: true
+    dev: true
+
+  /typescript/5.0.3:
+    resolution:
+      {
+        integrity: sha512-xv8mOEDnigb/tN9PSMTwSEqAnUvkoXMQlicOb0IUVDBSQCgBSaAAROUZYy2IcUy5qU6XajK5jjjO7TMWqBTKZA==,
+      }
+    engines: { node: '>=12.20' }
     hasBin: true
     dev: true
 
