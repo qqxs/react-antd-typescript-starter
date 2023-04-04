@@ -26,7 +26,7 @@ specifiers:
   classnames: ^2.3.2
   cross-env: ^7.0.3
   eslint: ^8.37.0
-  eslint-config-xx: ^1.0.8
+  eslint-config-xx: ^1.0.9
   get-sass-vars: ^3.4.0
   husky: ^8.0.3
   identity-obj-proxy: ^3.0.0
@@ -94,7 +94,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.2.0_vite@4.2.1
   cross-env: 7.0.3
   eslint: 8.37.0
-  eslint-config-xx: 1.0.8_eslint@8.37.0
+  eslint-config-xx: 1.0.9
   get-sass-vars: 3.4.0
   husky: 8.0.3
   identity-obj-proxy: 3.0.0
@@ -4815,6 +4815,13 @@ packages:
     engines: { node: '>=8' }
     dev: true
 
+  /ast-types-flow/0.0.7:
+    resolution:
+      {
+        integrity: sha512-eBvWn1lvIApYMhzQMsu9ciLfkBY499mFZlNqG+/9WR7PVlroQw0vG30cOQQbaKz3sCEc44TAOu2ykzqXSNnwag==,
+      }
+    dev: true
+
   /async-validator/4.2.5:
     resolution:
       {
@@ -4870,6 +4877,14 @@ packages:
     engines: { node: '>= 0.4' }
     dev: true
 
+  /axe-core/4.6.3:
+    resolution:
+      {
+        integrity: sha512-/BQzOX780JhsxDnPpH4ZiyrJAzcd8AfzFPkv+89veFSr1rcMjuq2JDCwypKaPeB6ljHp9KjXhPpjgCvQlWYuqg==,
+      }
+    engines: { node: '>=4' }
+    dev: true
+
   /axios/1.3.4:
     resolution:
       {
@@ -4882,6 +4897,15 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: false
+
+  /axobject-query/3.1.1:
+    resolution:
+      {
+        integrity: sha512-goKlv8DZrK9hUh975fnHzhNIO4jUnFCfv/dszV5VwUGDFjI6vQ2VwoyjYjYNEbBE8AH87TduWP5uyDR1D+Iteg==,
+      }
+    dependencies:
+      deep-equal: 2.2.0
+    dev: true
 
   /babel-jest/29.5.0_@babel+core@7.21.3:
     resolution:
@@ -6025,6 +6049,13 @@ packages:
       bin-wrapper: 4.1.0
     dev: true
 
+  /damerau-levenshtein/1.0.8:
+    resolution:
+      {
+        integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==,
+      }
+    dev: true
+
   /dargs/7.0.0:
     resolution:
       {
@@ -6471,6 +6502,13 @@ packages:
     resolution:
       {
         integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==,
+      }
+    dev: true
+
+  /emoji-regex/9.2.2:
+    resolution:
+      {
+        integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==,
       }
     dev: true
 
@@ -7007,15 +7045,13 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.37.0
     dev: true
 
-  /eslint-config-xx/1.0.8_eslint@8.37.0:
+  /eslint-config-xx/1.0.9:
     resolution:
       {
-        integrity: sha512-dzYX9322J2P8UBUkTl8cQCR1W/vpN6wMJzrwE9tOg/UWH2S5WTIgmc1sIn4TghBORkNrq7czX5fTUrrlnCDlcQ==,
+        integrity: sha512-NW0NsWxNkiFQNxQkzzzaDsI47dYOIqgKcsx+iId8nNQTaUdp8RQ9ur+eT98+PM8lkrTQmSueS7WOppRlocz4Yw==,
       }
     engines: { node: '>=14.0.0' }
     requiresBuild: true
-    peerDependencies:
-      eslint: ^8.0.1
     dependencies:
       '@typescript-eslint/eslint-plugin': 5.57.0_x4rubgibnu7ujqspfqdeho4yiu
       '@typescript-eslint/parser': 5.57.0_ip5up2nocltd47wbnuyybe5dxu
@@ -7023,6 +7059,7 @@ packages:
       eslint-config-prettier: 8.8.0_eslint@8.37.0
       eslint-config-standard-with-typescript: 34.0.1_kvq2miwpgpvg6abs6klhnqfodm
       eslint-plugin-import: 2.27.5_2niwd2uqke2jpnohndnwvllrkm
+      eslint-plugin-jsx-a11y: 6.7.1_eslint@8.37.0
       eslint-plugin-n: 15.6.1_eslint@8.37.0
       eslint-plugin-promise: 6.1.1_eslint@8.37.0
       eslint-plugin-react: 7.32.2_eslint@8.37.0
@@ -7128,6 +7165,34 @@ packages:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
       - supports-color
+    dev: true
+
+  /eslint-plugin-jsx-a11y/6.7.1_eslint@8.37.0:
+    resolution:
+      {
+        integrity: sha512-63Bog4iIethyo8smBklORknVjB0T2dwB8Mr/hIC+fBS0uyHdYYpzM/Ed+YC8VxTjlXHEWFOdmgwcDn1U2L9VCA==,
+      }
+    engines: { node: '>=4.0' }
+    peerDependencies:
+      eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
+    dependencies:
+      '@babel/runtime': 7.21.0
+      aria-query: 5.1.3
+      array-includes: 3.1.6
+      array.prototype.flatmap: 1.3.1
+      ast-types-flow: 0.0.7
+      axe-core: 4.6.3
+      axobject-query: 3.1.1
+      damerau-levenshtein: 1.0.8
+      emoji-regex: 9.2.2
+      eslint: 8.37.0
+      has: 1.0.3
+      jsx-ast-utils: 3.3.3
+      language-tags: 1.0.5
+      minimatch: 3.1.2
+      object.entries: 1.1.6
+      object.fromentries: 2.0.6
+      semver: 6.3.0
     dev: true
 
   /eslint-plugin-n/15.6.1_eslint@8.37.0:
@@ -10139,6 +10204,22 @@ packages:
         integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==,
       }
     engines: { node: '>=6' }
+    dev: true
+
+  /language-subtag-registry/0.3.22:
+    resolution:
+      {
+        integrity: sha512-tN0MCzyWnoz/4nHS6uxdlFWoUZT7ABptwKPQ52Ea7URk6vll88bWBVhodtnlfEuCcKWNGoc+uGbw1cwa9IKh/w==,
+      }
+    dev: true
+
+  /language-tags/1.0.5:
+    resolution:
+      {
+        integrity: sha512-qJhlO9cGXi6hBGKoxEG/sKZDAHD5Hnu9Hs4WbOY3pCWXDhw0N8x1NenNzm2EnNLkLkk7J2SdxAkDSbb6ftT+UQ==,
+      }
+    dependencies:
+      language-subtag-registry: 0.3.22
     dev: true
 
   /leven/3.1.0:
