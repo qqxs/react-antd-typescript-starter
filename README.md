@@ -2,42 +2,46 @@
 
 ![build](https://github.com/qqxs/react-antd-typescript-starter/workflows/build/badge.svg)
 
-### 项目使用
+### Use
 
 ```sh
 git clone git@github.com:qqxs/react-antd-typescript-starter.git
+
+cd react-antd-typescript-starter
+
+yarn install
 ```
 
-## 可用脚本
+## Scripts
 
 ```sh
 # 安装项目依赖
 # only allow pnpm
 pnpm install
 
-# development environment
 # 开启开发环境react 编译
+# start development environment
 pnpm run dev
 
-# production environment
 # 开始编译生产环境
+# production environment
 pnpm run build
 
-# production environment analyzer
 # 开始编译生产环境并输出分析
+# production environment analyzer
 pnpm run analyzer
 
-# eslint fix code
 # 对部分不符合eslint 语法进行修复
 # 注意⚠️: 不是所有的错误都会修复，部分还是要手动修复
+# eslint fix code
 pnpm run fix
 
-# eslint lint code
 # 进行eslint语法检查, 如果有错会在控制中指出
+# eslint lint code
 pnpm run lint
 
-# prettier format code
 # 使用prettier 代码进行格式化
+# prettier format code
 pnpm run fmt
 
 # test
@@ -49,46 +53,48 @@ pnpm run test
 docker-compose up -d
 ```
 
-## src 目录
+## src
 
 ```bash
 .
-├── assets      # @/assets/xxx
+├── assets      # @/assets/xxx assets source
 │   ├── FE.png
 │   └── react.svg
-├── components  # @/components 公共组件
-│   ├── Auth    # 需要权限
+├── components  # @/components common components
+│   ├── Auth    # auth
 │   ├── ErrorBoundary  # ErrorBoundary
-│   └── Layout  # `/`路由的element
-├── constant    # @/constant 全局变量
+│   └── Layout  # layout
+├── constant    # @/constant constant
 ├── hooks       # @/hooks
-│   └── redux.ts # redux 相关hook
-├── main.tsx    # 入口
-├── services      # @/services  api 接口
-├── page        # 页面
-│   ├── error   # 错误页
-│   ├── home    # 首页
-│   ├── login   # 登录页
+│   └── redux.ts # redux hook
+├── main.tsx    # entry
+├── services    # @/services  api
+├── pages       # pages
+│   ├── error   # error page
+│   ├── home    # home page
+│   ├── login   # login page
 │   └── register
-├── router.tsx  # 路由
+├── router.tsx  # router tree
 ├── sentry.ts   # sentry config
 ├── store       # redux store
 │   ├── index.ts
 │   └── reducer
 ├── styles
-│   ├── antd-theme.scss #antd 主题
-│   └── theme.scss  # 项目自定义主题
+│   ├── antd-theme.scss #antd theme
+│   └── theme.scss  # custom theme
 ├── utils
-│   ├── Axios.ts   # axios封装
+│   ├── Axios.ts   # axios
 │   └── auth.ts
 └── vite-env.d.ts
 ```
 
-## 自定义组件
+## Components
 
-自定义组件放在`src/components`下 ，希望在每个组件同级目录下都添加一个 example
+自定义组件放在`src/components`下
 
-## 主题
+Place custom components under 'src/components'
+
+## Themes
 
 如果需要 [antd5 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
 
@@ -101,10 +107,11 @@ import fs from 'fs';
 
 /**
  * less 变量转成 json 格式
+ * Convert the less variable to JSON format
  *
  * @example
  *
- * lessVar2JSON()  // {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
  *
  * @returns Object
  */
@@ -125,12 +132,10 @@ function lessVar2JSON() {
 export default lessVar2JSON;
 ```
 
-## api
+## Api
 
 [gin_serve api](https://github.com/freeshineit/gin_serve)
 
-## sentry
+## Sentry
 
 在[vite.config.ts](./vite.config.ts)中开启 sentry, 并在[src/sentry.tsx](./src/sentry.ts) 中配置。
-
-**请不要让项目 面向 any 编程 谢谢 🙏**

@@ -12,6 +12,8 @@ const Home = () => {
 
   const dispatch = useAppDispatch();
 
+  console.log('home haahah haahah  123412');
+
   return (
     <div className={styles['_page-home']}>
       <div>
@@ -50,7 +52,7 @@ const Home = () => {
           Edit <code>src/home/home.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">Click on the Vite、React and Ts logos to learn more</p>{' '}
+      <p className="read-the-docs">Click on the Vite、React and Ts logos to learn more</p>
       {/* <Link to="/login">login</Link> */}
     </div>
   );
