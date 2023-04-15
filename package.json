@@ -56,7 +56,7 @@
     "@vitejs/plugin-react-swc": "^3.2.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.37.0",
-    "eslint-config-xx": "^1.1.2-rc.0",
+    "eslint-config-xx": "^1.1.2",
     "get-sass-vars": "^3.4.0",
     "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
