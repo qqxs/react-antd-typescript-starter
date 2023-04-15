@@ -12,7 +12,5 @@ module.exports = {
       'vitest.setup.ts',
     ],
   },
-  rules: {
-    '@typescript-eslint/prefer-nullish-coalescing': 0,
-  },
+  rules: {},
 };
