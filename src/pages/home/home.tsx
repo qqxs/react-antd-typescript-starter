@@ -12,8 +12,6 @@ const Home = () => {
 
   const dispatch = useAppDispatch();
 
-  console.log('home haahah haahah  123412');
-
   return (
     <div className={styles['_page-home']}>
       <div>
