@@ -1,9 +1,6 @@
-import { classPrefix } from '@/constant';
-
 const NotFound = () => {
   return (
     <div
-      className={`${classPrefix}_notfound`}
       style={{
         display: 'flex',
         justifyContent: 'center',

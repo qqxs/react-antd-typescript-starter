@@ -1,11 +1,9 @@
 import { useEffect, useState, useCallback } from 'react';
 import { Form, Button, message, Input, InputNumber } from 'antd';
 import { postRegister } from '@/services/auth';
-import { classPrefix } from '@/constant';
-
 import FormRUpload, { getUploadImageList } from '@/components/Upload';
 
-import './register.scss';
+import styles from './register.module.scss';
 
 const Register = () => {
   const [loading, setLoading] = useState(false);
@@ -31,10 +29,10 @@ const Register = () => {
   }, []);
 
   return (
-    <div className={`${classPrefix}_register`}>
-      <div className={`${classPrefix}_register-content`}>
+    <div className={styles.register}>
+      <div className={styles.content}>
         <h2>用户注册</h2>
-        <Form name="normal_login" initialValues={{ remember: true }} onFinish={onFinish}>
+        <Form name="register" initialValues={{ remember: true }} onFinish={onFinish}>
           <div style={{ textAlign: 'center' }}>
             <FormRUpload name="avatar" />
           </div>
@@ -68,14 +66,7 @@ const Register = () => {
           </Form.Item>
 
           <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
-              size="large"
-              block
-              loading={loading}
-            >
+            <Button type="primary" htmlType="submit" size="large" block loading={loading}>
               登录
             </Button>
           </Form.Item>

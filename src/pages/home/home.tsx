@@ -13,7 +13,7 @@ const Home = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className={styles['_page-home']}>
+    <div className={styles.home}>
       <div>
         <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
           <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
@@ -50,7 +50,7 @@ const Home = () => {
           Edit <code>src/home/home.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className="read-the-docs">Click on the Vite、React and Ts logos to learn more</p>
+      <p className={styles['read-the-docs']}>Click on the Vite、React and Ts logos to learn more</p>
       {/* <Link to="/login">login</Link> */}
     </div>
   );

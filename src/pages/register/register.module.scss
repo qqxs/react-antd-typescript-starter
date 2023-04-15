@@ -1,6 +1,6 @@
 @import '../../styles/theme.scss';
 
-.#{$class-prefix}_register {
+.register {
   flex: 1;
   display: flex;
   background-color: #282c34;
@@ -10,17 +10,17 @@
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+}
 
-  &-content {
-    width: 500px;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 30px 80px;
-    margin: 100px 0;
+.content {
+  width: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px 80px;
+  margin: 100px 0;
 
-    h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      color: #000;
-    }
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #000;
   }
 }
