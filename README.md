@@ -1,4 +1,4 @@
-## react-antd-typescript-starter (vite + react + ts 模版)
+## react-antd-typescript-starter (vite + react + ts template)
 
 ![build](https://github.com/qqxs/react-antd-typescript-starter/workflows/build/badge.svg)
 
@@ -80,7 +80,7 @@ docker-compose up -d
 │   ├── index.ts
 │   └── reducer
 ├── styles
-│   ├── antd-theme.scss #antd theme
+│   ├── antd-theme.scss # antd theme
 │   └── theme.scss  # custom theme
 ├── utils
 │   ├── Axios.ts   # axios
