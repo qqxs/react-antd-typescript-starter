@@ -1,7 +1,7 @@
-import './profile.scss';
+import styles from './profile.module.scss';
 
 const Profile = () => {
-  return <div className="_page-profile">profile</div>;
+  return <div className={styles.profile}>profile</div>;
 };
 
 export default Profile;
