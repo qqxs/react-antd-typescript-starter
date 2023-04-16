@@ -9,7 +9,7 @@ specifiers:
   '@sentry/react': ^7.42.0
   '@sentry/tracing': ^7.42.0
   '@skax/camel': ^0.2.4
-  '@testing-library/dom': ^9.0.1
+  '@testing-library/dom': ^9.2.0
   '@testing-library/jest-dom': ^5.16.5
   '@testing-library/react': ^14.0.0
   '@testing-library/user-event': ^14.4.3
@@ -49,7 +49,7 @@ specifiers:
   rollup-plugin-visualizer: ^5.9.0
   sass: ^1.58.3
   terser: ^5.16.6
-  ts-jest: ^29.0.5
+  ts-jest: ^29.1.0
   typescript: ^5.0.3
   vite: ^4.2.1
   vite-plugin-compression: ^0.5.1
@@ -108,7 +108,7 @@ devDependencies:
   rollup-plugin-visualizer: 5.9.0
   sass: 1.60.0
   terser: 5.16.8
-  ts-jest: 29.0.5_ntm4xngu7em45lqojwsg6ufzc4
+  ts-jest: 29.1.0_ntm4xngu7em45lqojwsg6ufzc4
   typescript: 5.0.3
   vite: 4.2.1_6bcwaj7ijj3j45rbkt37hc3vbi
   vite-plugin-compression: 0.5.1_vite@4.2.1
@@ -14521,10 +14521,10 @@ packages:
       escape-string-regexp: 1.0.5
     dev: true
 
-  /ts-jest/29.0.5_ntm4xngu7em45lqojwsg6ufzc4:
+  /ts-jest/29.1.0_ntm4xngu7em45lqojwsg6ufzc4:
     resolution:
       {
-        integrity: sha512-PL3UciSgIpQ7f6XjVOmbi96vmDHUqAyqDr8YxzopDqX3kfgYtX1cuNeBjP+L9sFXi6nzsGGA6R3fP3DDDJyrxA==,
+        integrity: sha512-ZhNr7Z4PcYa+JjMl62ir+zPiNJfXJN6E8hSLnaUKhOgqcn8vb3e537cpkd0FuAfRK3sR1LSqM1MOhliXNgOFPA==,
       }
     engines: { node: ^14.15.0 || ^16.10.0 || >=18.0.0 }
     hasBin: true
@@ -14534,7 +14534,7 @@ packages:
       babel-jest: ^29.0.0
       esbuild: '*'
       jest: ^29.0.0
-      typescript: '>=4.3'
+      typescript: '>=4.3 <6'
     peerDependenciesMeta:
       '@babel/core':
         optional: true
