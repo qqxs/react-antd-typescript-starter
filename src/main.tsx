@@ -10,7 +10,7 @@ import Loading from '@/components/Loading';
 import { store } from './store';
 import { router } from './router';
 
-import InitSentry from './sentry';
+// import InitSentry from './sentry';
 
 import 'normalize.css';
 
@@ -18,7 +18,9 @@ import './index.scss';
 
 if ($__SENTRY__$) {
   // 初始化Sentry
-  InitSentry();
+  import('./sentry').then(({ default: InitSentry }) => {
+    InitSentry();
+  });
 }
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
@@ -27,7 +29,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <Provider store={store}>
       <ConfigProvider
         theme={{
-          token: $__THEME__$, // vite global
+          token: $__THEME__$, // vite global antd5 theme
         }}
       >
         <React.Suspense fallback={<Loading />}>
