@@ -1,5 +1,5 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
-module.exports = {
+export default {
   // The test environment that will be used for testing, jsdom for browser environment
   // https://jestjs.io/docs/configuration#testenvironment-string
   testEnvironment: 'jsdom',
