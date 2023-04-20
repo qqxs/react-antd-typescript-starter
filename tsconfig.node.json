@@ -11,6 +11,7 @@
     "jest.setup.ts",
     "jest.config.ts",
     ".eslintrc.cjs",
-    ".prettierrc.cjs"
+    ".prettierrc.cjs",
+    "commitlint.config.js"
   ]
 }

@@ -1,6 +1,8 @@
-## react-antd-typescript-starter (vite + react + ts template)
+## react-antd-typescript-starter
 
 ![build](https://github.com/qqxs/react-antd-typescript-starter/workflows/build/badge.svg)
+
+vite + react + ts template
 
 ### Use
 
