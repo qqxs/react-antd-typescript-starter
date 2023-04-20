@@ -17,6 +17,7 @@ module.exports = {
         'perf', // 性能优化
         'conf', // 配置文件修改
         'chore',
+        'version',
       ],
     ],
   },
