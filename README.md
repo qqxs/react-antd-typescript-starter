@@ -2,7 +2,7 @@
 
 ![build](https://github.com/qqxs/react-antd-typescript-starter/workflows/build/badge.svg)
 
-vite + react + ts template
+vite + react + ts + redux template
 
 ### Use
 
