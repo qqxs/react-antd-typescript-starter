@@ -51,7 +51,7 @@ specifiers:
   terser: ^5.16.6
   ts-jest: ^29.1.0
   typescript: ^5.0.3
-  vite: ^4.3.1
+  vite: ^4.3.3
   vite-plugin-compression: ^0.5.1
   vite-plugin-eslint: ^1.8.1
   vite-plugin-imagemin: ^0.6.1
@@ -90,8 +90,8 @@ devDependencies:
   '@types/react': 18.0.30
   '@types/react-dom': 18.0.11
   '@types/testing-library__jest-dom': 5.14.5
-  '@vitejs/plugin-legacy': 4.0.2_terser@5.16.8+vite@4.3.1
-  '@vitejs/plugin-react-swc': 3.2.0_vite@4.3.1
+  '@vitejs/plugin-legacy': 4.0.2_terser@5.16.8+vite@4.3.3
+  '@vitejs/plugin-react-swc': 3.2.0_vite@4.3.3
   cross-env: 7.0.3
   eslint: 8.37.0
   eslint-config-xx: 1.1.5
@@ -110,11 +110,11 @@ devDependencies:
   terser: 5.16.8
   ts-jest: 29.1.0_ouzw4wy6ff4msuwadenn7yxm5a
   typescript: 5.0.3
-  vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
-  vite-plugin-compression: 0.5.1_vite@4.3.1
-  vite-plugin-eslint: 1.8.1_eslint@8.37.0+vite@4.3.1
-  vite-plugin-imagemin: 0.6.1_vite@4.3.1
-  vite-plugin-pwa: 0.14.7_vite@4.3.1
+  vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
+  vite-plugin-compression: 0.5.1_vite@4.3.3
+  vite-plugin-eslint: 1.8.1_eslint@8.37.0+vite@4.3.3
+  vite-plugin-imagemin: 0.6.1_vite@4.3.3
+  vite-plugin-pwa: 0.14.7_vite@4.3.3
 
 packages:
   /@adobe/css-tools/4.2.0:
@@ -4352,7 +4352,7 @@ packages:
       }
     dev: true
 
-  /@vitejs/plugin-legacy/4.0.2_terser@5.16.8+vite@4.3.1:
+  /@vitejs/plugin-legacy/4.0.2_terser@5.16.8+vite@4.3.3:
     resolution:
       {
         integrity: sha512-ivnt9sCkgwJTYTWLjuvY6H/HTuiQC1EgzAPkiAvi0yNAssiqOJjyjhG3hAK5LFUUorE0w9kGxn8K0f/74DlbxQ==,
@@ -4370,12 +4370,12 @@ packages:
       regenerator-runtime: 0.13.11
       systemjs: 6.14.1
       terser: 5.16.8
-      vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
+      vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@vitejs/plugin-react-swc/3.2.0_vite@4.3.1:
+  /@vitejs/plugin-react-swc/3.2.0_vite@4.3.3:
     resolution:
       {
         integrity: sha512-IcBoXL/mcH7JdQr/nfDlDwTdIaH8Rg7LpfQDF4nAht+juHWIuv6WhpKPCSfY4+zztAaB07qdBoFz1XCZsgo3pQ==,
@@ -4384,7 +4384,7 @@ packages:
       vite: ^4
     dependencies:
       '@swc/core': 1.3.42
-      vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
+      vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
     dev: true
 
   /JSONStream/1.3.5:
@@ -12039,6 +12039,18 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /postcss/8.4.23:
+    resolution:
+      {
+        integrity: sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==,
+      }
+    engines: { node: ^10 || ^12 || >=14 }
+    dependencies:
+      nanoid: 3.3.6
+      picocolors: 1.0.0
+      source-map-js: 1.0.2
+    dev: true
+
   /prelude-ls/1.1.2:
     resolution:
       {
@@ -13481,6 +13493,17 @@ packages:
     resolution:
       {
         integrity: sha512-3zwkBQl7Ai7MFYQE0y1MeQ15+9jsi7XxfrqwTb/9EK8D9C9+//EBR4M+CuA1KODRaNbFez/lWxA5vhEGZp4MUg==,
+      }
+    engines: { node: '>=14.18.0', npm: '>=8.0.0' }
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
+  /rollup/3.21.0:
+    resolution:
+      {
+        integrity: sha512-ANPhVcyeHvYdQMUyCbczy33nbLzI7RzrBje4uvNiTDJGIMtlKoOStmympwr9OtS1LZxiDmE2wvxHyVhoLtf1KQ==,
       }
     engines: { node: '>=14.18.0', npm: '>=8.0.0' }
     hasBin: true
@@ -14953,7 +14976,7 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-compression/0.5.1_vite@4.3.1:
+  /vite-plugin-compression/0.5.1_vite@4.3.3:
     resolution:
       {
         integrity: sha512-5QJKBDc+gNYVqL/skgFAP81Yuzo9R+EAf19d+EtsMF/i8kFUpNi3J/H01QD3Oo8zBQn+NzoCIFkpPLynoOzaJg==,
@@ -14964,12 +14987,12 @@ packages:
       chalk: 4.1.2
       debug: 4.3.4
       fs-extra: 10.1.0
-      vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
+      vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-plugin-eslint/1.8.1_eslint@8.37.0+vite@4.3.1:
+  /vite-plugin-eslint/1.8.1_eslint@8.37.0+vite@4.3.3:
     resolution:
       {
         integrity: sha512-PqdMf3Y2fLO9FsNPmMX+//2BF5SF8nEWspZdgl4kSt7UvHDRHVVfHvxsD7ULYzZrJDGRxR81Nq7TOFgwMnUang==,
@@ -14982,10 +15005,10 @@ packages:
       '@types/eslint': 8.37.0
       eslint: 8.37.0
       rollup: 2.79.1
-      vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
+      vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
     dev: true
 
-  /vite-plugin-imagemin/0.6.1_vite@4.3.1:
+  /vite-plugin-imagemin/0.6.1_vite@4.3.3:
     resolution:
       {
         integrity: sha512-cP7LDn8euPrji7WYtDoNQpJEB9nkMxJHm/A+QZnvMrrCSuyo/clpMy/T1v7suDXPBavsDiDdFdVQB5p7VGD2cg==,
@@ -15016,12 +15039,12 @@ packages:
       imagemin-webp: 6.1.0
       jpegtran-bin: 6.0.1
       pathe: 0.2.0
-      vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
+      vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /vite-plugin-pwa/0.14.7_vite@4.3.1:
+  /vite-plugin-pwa/0.14.7_vite@4.3.3:
     resolution:
       {
         integrity: sha512-dNJaf0fYOWncmjxv9HiSa2xrSjipjff7IkYE5oIUJ2x5HKu3cXgA8LRgzOwTc5MhwyFYRSU0xyN0Phbx3NsQYw==,
@@ -15034,7 +15057,7 @@ packages:
       fast-glob: 3.2.12
       pretty-bytes: 6.1.0
       rollup: 3.20.2
-      vite: 4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi
+      vite: 4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi
       workbox-build: 6.5.4
       workbox-window: 6.5.4
     transitivePeerDependencies:
@@ -15042,10 +15065,10 @@ packages:
       - supports-color
     dev: true
 
-  /vite/4.3.1_6bcwaj7ijj3j45rbkt37hc3vbi:
+  /vite/4.3.3_6bcwaj7ijj3j45rbkt37hc3vbi:
     resolution:
       {
-        integrity: sha512-EPmfPLAI79Z/RofuMvkIS0Yr091T2ReUoXQqc5ppBX/sjFRhHKiPPF/R46cTdoci/XgeQpB23diiJxq5w30vdg==,
+        integrity: sha512-MwFlLBO4udZXd+VBcezo3u8mC77YQk+ik+fbc0GZWGgzfbPP+8Kf0fldhARqvSYmtIWoAJ5BXPClUbMTlqFxrA==,
       }
     engines: { node: ^14.18.0 || >=16.0.0 }
     hasBin: true
@@ -15072,8 +15095,8 @@ packages:
     dependencies:
       '@types/node': 18.15.10
       esbuild: 0.17.14
-      postcss: 8.4.21
-      rollup: 3.20.2
+      postcss: 8.4.23
+      rollup: 3.21.0
       sass: 1.60.0
       terser: 5.16.8
     optionalDependencies:
