@@ -3,16 +3,10 @@ import ReactDOM from 'react-dom/client';
 import { ConfigProvider } from 'antd';
 import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
-
 import ErrorBoundary from '@/components/ErrorBoundary';
 import Loading from '@/components/Loading';
-
 import { store } from './store';
 import { router } from './router';
-
-// import InitSentry from './sentry';
-
-import 'normalize.css';
 
 import './index.scss';
 
