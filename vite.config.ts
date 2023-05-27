@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig, type ConfigEnv} from 'vite';
 import react from '@vitejs/plugin-react-swc';
 import viteImagemin from 'vite-plugin-imagemin';
 import compression from 'vite-plugin-compression';
@@ -17,7 +17,7 @@ const theme = sassVar2JSON();
 
 const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production' // open sentry
 // https://vitejs.dev/config/
-export default defineConfig((env) => {
+export default defineConfig(((env: ConfigEnv) => {
   const isDev = env.mode === 'development';
 
   return {
@@ -138,4 +138,4 @@ export default defineConfig((env) => {
       isDev ? eslint() : undefined,
     ].filter(Boolean),
   };
-});
+}) as UserConfig);
