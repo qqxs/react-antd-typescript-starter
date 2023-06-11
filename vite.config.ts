@@ -1,6 +1,6 @@
-import { defineConfig, type UserConfig, type ConfigEnv} from 'vite';
+import { defineConfig, type UserConfig, type ConfigEnv } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import viteImagemin from 'vite-plugin-imagemin';
+// import viteImagemin from 'vite-plugin-imagemin';
 import compression from 'vite-plugin-compression';
 import { VitePWA } from 'vite-plugin-pwa';
 import legacy from '@vitejs/plugin-legacy';
@@ -95,33 +95,33 @@ export default defineConfig(((env: ConfigEnv) => {
         // additionalLegacyPolyfills: ['regenerator-runtime/runtime'], // 面向IE11时需要此插件
         // polyfills: ['es.promise', 'es.array.iterator']
       }),
-      viteImagemin({
-        gifsicle: {
-          optimizationLevel: 7,
-          interlaced: false,
-        },
-        optipng: {
-          optimizationLevel: 7,
-        },
-        mozjpeg: {
-          quality: 20,
-        },
-        pngquant: {
-          quality: [0.8, 0.9],
-          speed: 4,
-        },
-        svgo: {
-          plugins: [
-            {
-              name: 'removeViewBox',
-            },
-            {
-              name: 'removeEmptyAttrs',
-              active: false,
-            },
-          ],
-        },
-      }),
+      // viteImagemin({
+      //   gifsicle: {
+      //     optimizationLevel: 7,
+      //     interlaced: false,
+      //   },
+      //   optipng: {
+      //     optimizationLevel: 7,
+      //   },
+      //   mozjpeg: {
+      //     quality: 20,
+      //   },
+      //   pngquant: {
+      //     quality: [0.8, 0.9],
+      //     speed: 4,
+      //   },
+      //   svgo: {
+      //     plugins: [
+      //       {
+      //         name: 'removeViewBox',
+      //       },
+      //       {
+      //         name: 'removeEmptyAttrs',
+      //         active: false,
+      //       },
+      //     ],
+      //   },
+      // }),
       compression(),
       VitePWA({
         registerType: 'autoUpdate',
