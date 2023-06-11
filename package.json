@@ -20,19 +20,19 @@
     "test:coverage": "jest --silent --watchAll=false --coverage"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.0.1",
-    "@reduxjs/toolkit": "^1.9.3",
+    "@ant-design/icons": "^5.1.4",
+    "@reduxjs/toolkit": "^1.9.5",
     "@sentry/react": "^7.42.0",
     "@sentry/tracing": "^7.42.0",
-    "antd": "^5.4.6",
+    "antd": "^5.6.1",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
     "immer": "^9.0.21",
     "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-error-boundary": "^3.1.4",
-    "react-redux": "^8.0.5",
+    "react-error-boundary": "^4.0.10",
+    "react-redux": "^8.0.7",
     "react-router-dom": "^6.10.0",
     "redux": "^4.2.1"
   },
@@ -74,7 +74,6 @@
     "vite": "^4.3.3",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-imagemin": "^0.6.1",
     "vite-plugin-pwa": "^0.14.7"
   },
   "engines": {
