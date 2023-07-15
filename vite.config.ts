@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite';
+import { defineConfig, type UserConfig, type ConfigEnv } from 'vite';
 import react from '@vitejs/plugin-react-swc';
-import viteImagemin from 'vite-plugin-imagemin';
+// import viteImagemin from 'vite-plugin-imagemin';
 import compression from 'vite-plugin-compression';
 import { VitePWA } from 'vite-plugin-pwa';
 import legacy from '@vitejs/plugin-legacy';
@@ -17,7 +17,7 @@ const theme = sassVar2JSON();
 
 const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production' // open sentry
 // https://vitejs.dev/config/
-export default defineConfig((env) => {
+export default defineConfig(((env: ConfigEnv) => {
   const isDev = env.mode === 'development';
 
   return {
@@ -95,33 +95,33 @@ export default defineConfig((env) => {
         // additionalLegacyPolyfills: ['regenerator-runtime/runtime'], // 面向IE11时需要此插件
         // polyfills: ['es.promise', 'es.array.iterator']
       }),
-      viteImagemin({
-        gifsicle: {
-          optimizationLevel: 7,
-          interlaced: false,
-        },
-        optipng: {
-          optimizationLevel: 7,
-        },
-        mozjpeg: {
-          quality: 20,
-        },
-        pngquant: {
-          quality: [0.8, 0.9],
-          speed: 4,
-        },
-        svgo: {
-          plugins: [
-            {
-              name: 'removeViewBox',
-            },
-            {
-              name: 'removeEmptyAttrs',
-              active: false,
-            },
-          ],
-        },
-      }),
+      // viteImagemin({
+      //   gifsicle: {
+      //     optimizationLevel: 7,
+      //     interlaced: false,
+      //   },
+      //   optipng: {
+      //     optimizationLevel: 7,
+      //   },
+      //   mozjpeg: {
+      //     quality: 20,
+      //   },
+      //   pngquant: {
+      //     quality: [0.8, 0.9],
+      //     speed: 4,
+      //   },
+      //   svgo: {
+      //     plugins: [
+      //       {
+      //         name: 'removeViewBox',
+      //       },
+      //       {
+      //         name: 'removeEmptyAttrs',
+      //         active: false,
+      //       },
+      //     ],
+      //   },
+      // }),
       compression(),
       VitePWA({
         registerType: 'autoUpdate',
@@ -138,4 +138,4 @@ export default defineConfig((env) => {
       isDev ? eslint() : undefined,
     ].filter(Boolean),
   };
-});
+}) as UserConfig);

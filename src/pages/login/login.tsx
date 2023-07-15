@@ -75,10 +75,14 @@ const Login = () => {
                 { type: 'email', message: '请输入有效邮箱!' },
               ]}
             >
-              <Input prefix={<UserOutlined />} placeholder="邮箱" size="large" />
+              <Input prefix={<UserOutlined rev={undefined} />} placeholder="邮箱" size="large" />
             </Form.Item>
             <Form.Item name="password" rules={[{ required: true, message: '请输入密码!' }]}>
-              <Input.Password prefix={<LockOutlined />} size="large" placeholder="密码" />
+              <Input.Password
+                prefix={<LockOutlined rev={undefined} />}
+                size="large"
+                placeholder="密码"
+              />
             </Form.Item>
             <Form.Item className={styles.captcha}>
               <Row justify="space-between">
@@ -92,7 +96,11 @@ const Login = () => {
                     },
                   ]}
                 >
-                  <Input size="large" placeholder="验证码" prefix={<SafetyOutlined />} />
+                  <Input
+                    size="large"
+                    placeholder="验证码"
+                    prefix={<SafetyOutlined rev={undefined} />}
+                  />
                 </Form.Item>
                 <div className={styles['code-wrapper']}>
                   {!!codeImg && <img src={codeImg} alt="验证码" onClick={handleCaptcha} />}

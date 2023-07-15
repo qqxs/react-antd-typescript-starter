@@ -71,7 +71,7 @@ const FormUploadImage = (props: FormUploadProps) => {
 
   const uploadButton = (
     <div>
-      {loading ? <LoadingOutlined /> : <PlusOutlined />}
+      {loading ? <LoadingOutlined rev={undefined} /> : <PlusOutlined rev={undefined} />}
       <div style={{ marginTop: 8 }}>Upload</div>
     </div>
   );
