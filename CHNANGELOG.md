@@ -1,3 +1,7 @@
+## 0.3.7
+
+- update dependencies
+
 ## 0.3.6
 
 - Feat jest test
