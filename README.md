@@ -11,7 +11,7 @@ git clone git@github.com:qqxs/react-antd-typescript-starter.git
 
 cd react-antd-typescript-starter
 
-yarn install
+pnpm install
 ```
 
 ## Scripts
