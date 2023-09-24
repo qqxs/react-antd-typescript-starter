@@ -1,10 +1,15 @@
+## 0.3.9
+
+- Update dependencies
+- Feat loading style full screen
+
 ## 0.3.8
 
-- update dependencies
+- Update dependencies
 
 ## 0.3.7
 
-- update dependencies
+- Update dependencies
 
 ## 0.3.6
 
