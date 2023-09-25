@@ -12,6 +12,8 @@ const Home = () => {
 
   const dispatch = useAppDispatch();
 
+  window.logger.v('Home page');
+
   return (
     <div className={styles.home}>
       <div>

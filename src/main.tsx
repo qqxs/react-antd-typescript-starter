@@ -7,8 +7,15 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import Loading from '@/components/Loading';
 import { store } from './store';
 import { router } from './router';
+import Logger from '@skax/logger';
 
 import './index.scss';
+
+const logger = new Logger({
+  level: process.env.NODE_ENV === 'production' ? 'WARN' : 'DEBUG',
+});
+
+window.logger = logger;
 
 if ($__SENTRY__$) {
   // 初始化Sentry
