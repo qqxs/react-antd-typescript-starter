@@ -1,3 +1,7 @@
+## 0.4.10
+
+- Feat add logger
+
 ## 0.3.9
 
 - Update dependencies
