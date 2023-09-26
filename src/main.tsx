@@ -12,6 +12,7 @@ import Logger from '@skax/logger';
 import './index.scss';
 
 const logger = new Logger({
+  // No show log,info,debug in production, only show warn,error
   level: process.env.NODE_ENV === 'production' ? 'WARN' : 'DEBUG',
 });
 
