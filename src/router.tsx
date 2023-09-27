@@ -9,7 +9,6 @@ import Layout from '@/components/Layout';
 const Home = React.lazy(async () => await import('@/pages/home/home'));
 const Login = React.lazy(async () => await import('@/pages/login/login'));
 const Register = React.lazy(async () => await import('@/pages/register/register'));
-const Hello = React.lazy(async () => await import('@/pages/hello'));
 const Error404 = React.lazy(async () => await import('@/pages/error/404'));
 
 // ------------------ auth page ---------------------------
@@ -34,10 +33,6 @@ export const router = createBrowserRouter(
         {
           index: true,
           element: <Home />,
-        },
-        {
-          path: '/hello',
-          element: <Hello />,
         },
         // auth router
         {
