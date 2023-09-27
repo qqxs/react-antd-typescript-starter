@@ -52,7 +52,9 @@ const Home = () => {
           Edit <code>src/home/home.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className={styles['read-the-docs']}>Click on the Vite、React and Ts logos to learn more</p>
+      <p className={styles['read-the-docs']}>
+        Click on the Vite、React、 Ts and Redux logos to learn more
+      </p>
       {/* <Link to="/login">login</Link> */}
     </div>
   );
