@@ -9,7 +9,7 @@ specifiers:
   '@sentry/react': ^7.42.0
   '@sentry/tracing': ^7.42.0
   '@skax/camel': ^0.2.5
-  '@skax/logger': ^1.0.0
+  '@skax/logger': ^1.0.1
   '@testing-library/dom': ^9.3.1
   '@testing-library/jest-dom': ^5.17.0
   '@testing-library/react': ^14.0.0
@@ -60,7 +60,7 @@ dependencies:
   '@reduxjs/toolkit': 1.9.5_nnem43rer6rxr5uhc4j6bxdlmm
   '@sentry/react': 7.69.0_react@18.2.0
   '@sentry/tracing': 7.69.0
-  '@skax/logger': 1.0.0
+  '@skax/logger': 1.0.1
   antd: 5.9.2_biqbaboplfbrettd7655fr4n2y
   axios: 1.5.0
   classnames: 2.3.2
@@ -3528,10 +3528,10 @@ packages:
     requiresBuild: true
     dev: true
 
-  /@skax/logger/1.0.0:
+  /@skax/logger/1.0.1:
     resolution:
       {
-        integrity: sha512-pxIAJJO0vg/JHMibf47FJJRo29kM6E82/fLk1nz4AdvB1ViSkhHMJq1hOqrs26kEny+5LQuY5iAP1bWcVxPEgg==,
+        integrity: sha512-N1gH6XRkzhucuiZS/39Jz2RUytzrRBPw4atQORh1aghnyYsAhBvufhsHlGjWIAa6sPmDpGNs+Dcd94nn/O1sbA==,
       }
     engines: { node: '>=16' }
     dev: false
