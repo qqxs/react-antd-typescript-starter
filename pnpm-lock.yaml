@@ -25,7 +25,7 @@ specifiers:
   classnames: ^2.3.2
   cross-env: ^7.0.3
   eslint: ^8.50.0
-  eslint-config-xx: ^1.2.0-alpha.0
+  eslint-config-xx: ^1.2.0-alpha.1
   get-sass-vars: ^3.4.0
   husky: ^8.0.3
   identity-obj-proxy: ^3.0.0
@@ -89,7 +89,7 @@ devDependencies:
   '@vitejs/plugin-react-swc': 3.3.2_vite@4.4.9
   cross-env: 7.0.3
   eslint: 8.50.0
-  eslint-config-xx: 1.2.0-alpha.0
+  eslint-config-xx: 1.2.0-alpha.1
   get-sass-vars: 3.4.0
   husky: 8.0.3
   identity-obj-proxy: 3.0.0
@@ -6242,10 +6242,10 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.50.0
     dev: true
 
-  /eslint-config-xx/1.2.0-alpha.0:
+  /eslint-config-xx/1.2.0-alpha.1:
     resolution:
       {
-        integrity: sha512-Zu9YCD5LpUPuJTnRtVy1t7sgZ58h99qgiGCszjuvcomUO3Pj30CobcPD8NObJ9iCO6PTOufLv4fGbiQm7oOUqQ==,
+        integrity: sha512-MyFd9SrprQLE6/feDRq6WMNVb9FcLQH31/OrDoh/tgaoGPYVAAMCq1kDM1sBrA6a1//yo+5sbiN5hX/Gv886mQ==,
       }
     engines: { node: '>=16' }
     dependencies:
@@ -6260,7 +6260,7 @@ packages:
       eslint-plugin-promise: 6.1.1_eslint@8.50.0
       eslint-plugin-react: 7.33.2_eslint@8.50.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.50.0
-      prettier: 3.0.3
+      prettier: 2.8.8
       typescript: 5.2.2
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
@@ -10107,15 +10107,6 @@ packages:
         integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==,
       }
     engines: { node: '>=10.13.0' }
-    hasBin: true
-    dev: true
-
-  /prettier/3.0.3:
-    resolution:
-      {
-        integrity: sha512-L/4pUDMxcNa8R/EthV08Zt42WBO4h1rarVtK0K+QJG0X187OLo7l699jWw0GKuwzkPQ//jMFA/8Xm6Fh3J/DAg==,
-      }
-    engines: { node: '>=14' }
     hasBin: true
     dev: true
 
