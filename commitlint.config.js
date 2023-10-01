@@ -7,7 +7,7 @@ module.exports = {
       [
         'feat', // 特性
         'fix', // 修复
-        'doc', // 文档
+        'docs', // 文档
         'style', // 代码格式（不影响功能，例如空格、分号等格式修正）
         'refactor', // 代码重构（不包括 bug 修复、功能新增）
         'test', // 测试

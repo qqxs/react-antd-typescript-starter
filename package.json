@@ -22,8 +22,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@reduxjs/toolkit": "^1.9.5",
-    "@sentry/react": "^7.42.0",
-    "@sentry/tracing": "^7.42.0",
+    "@sentry/react": "^7.72.0",
     "@skax/logger": "^1.0.1",
     "antd": "^5.9.2",
     "axios": "^1.5.0",

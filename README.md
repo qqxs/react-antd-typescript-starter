@@ -140,4 +140,4 @@ export default lessVar2JSON;
 
 ## Sentry
 
-在[vite.config.ts](./vite.config.ts)中开启 sentry, 并在[src/sentry.tsx](./src/sentry.ts) 中配置。
+在[vite.config.ts](./vite.config.ts)中开启`OPEN_SENTRY=true`, 并在[src/sentry.tsx](./src/sentry.ts) 中配置 `__DSN__`。
