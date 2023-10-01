@@ -1,3 +1,7 @@
+## 0.5.0
+
+- No longer supported node@14 and minimum version 16
+
 ## 0.4.10
 
 - Feat add logger
