@@ -66,7 +66,7 @@ export default defineConfig(((env: ConfigEnv) => {
               'js-cookie',
               'classnames',
             ],
-            sentry: OPEN_SENTRY ? ['@sentry/react', '@sentry/tracing'] : [],
+            sentry: OPEN_SENTRY ? ['@sentry/browser'] : [],
           },
         },
       },
