@@ -5,12 +5,14 @@ import { lowerCamel } from '@skax/camel';
 
 /**
  * sass 变量转成 json 格式
+ * Convert the sass variable to JSON format
+ *
  *
  * @example
  *
  * sassVar2JSON()  // {"colorPrimary": "#00b96b, borderRadius: '2px'}
  *
- * @returns Object
+ * @returns {Object}
  */
 function sassVar2JSON() {
   const paletteSass = fs.readFileSync('./src/styles/antd-theme.scss', 'utf-8');
