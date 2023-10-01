@@ -13,9 +13,8 @@ import sassVar2JSON from './scripts/sass-to-json';
 
 const theme = sassVar2JSON();
 
-// console.log('sassVar2JSON', theme)
-
-const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production' // open sentry
+// open sentry
+const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production'
 // https://vitejs.dev/config/
 export default defineConfig(((env: ConfigEnv) => {
   const isDev = env.mode === 'development';
