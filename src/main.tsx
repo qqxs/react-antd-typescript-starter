@@ -19,7 +19,7 @@ const logger = new Logger({
 window.logger = logger;
 
 if ($__SENTRY__$) {
-  // 初始化Sentry
+  // init Sentry
   import('./sentry').then(({ default: InitSentry }) => {
     InitSentry();
   });

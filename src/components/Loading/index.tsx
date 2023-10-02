@@ -1,9 +1,10 @@
+import cls from 'classnames';
 import styles from './loading.module.scss';
 
 /**
- * @description 页面级别懒加载loading
+ * @description page level loading
  * @returns
  */
-const Loading = () => <div className={styles.loading}>Loading...</div>;
+const Loading = () => <div className={cls(styles.loading, 'loading')}>Loading...</div>;
 
 export default Loading;

@@ -2,12 +2,12 @@ import Axios from '@/utils/Axios';
 
 /**
  *
- * @desc 全局信息
+ * @desc global info
  * @link
  *
  * @method GET
  *
- * @return {Promise} 请求返回
+ * @return {Promise}
  */
 export const getGlobal = async () => {
   return await Axios({

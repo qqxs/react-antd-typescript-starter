@@ -1,7 +1,7 @@
 import * as Sentry from '@sentry/react';
 
 /**
- * 出初始化Sentry
+ * Init sentry
  */
 function InitSentry() {
   // https://docs.sentry.io/platforms/javascript/guides/react/
