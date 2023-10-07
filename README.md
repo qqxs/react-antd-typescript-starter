@@ -94,7 +94,7 @@ docker-compose up -d
 
 自定义组件放在`src/components`下
 
-Place custom components under 'src/components'
+Place custom components under `src/components`
 
 ## Themes
 
@@ -115,7 +115,7 @@ import fs from 'fs';
  *
  * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
  *
- * @returns Object
+ * @returns {Object}
  */
 function lessVar2JSON() {
   // Read the less file in as string
