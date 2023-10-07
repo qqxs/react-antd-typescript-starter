@@ -94,7 +94,7 @@ docker-compose up -d
 
 自定义组件放在`src/components`下
 
-Place custom components under 'src/components'
+Place custom components under `src/components`
 
 ## Themes
 
