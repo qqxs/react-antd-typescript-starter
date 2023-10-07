@@ -4,7 +4,7 @@ import sassVars from 'get-sass-vars';
 import { lowerCamel } from '@skax/camel';
 
 /**
- * sass 变量转成 json 格式
+ * sass 变量转成 json 格式 (主题样式更新需要重启)
  * Convert the sass variable to JSON format
  *
  *
