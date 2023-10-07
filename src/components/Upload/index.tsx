@@ -37,7 +37,7 @@ const beforeUpload = (file: RcFile) => {
 };
 
 export const getFile = (e: any) => {
-  console.log('Upload event:', e);
+  logger.v('Upload event:', e);
   if (Array.isArray(e)) {
     return e;
   }
@@ -92,6 +92,7 @@ const FormUploadImage = (props: FormUploadProps) => {
         beforeUpload={beforeUpload}
         onChange={handleChange}
         maxCount={1}
+        accept="image/png,image/jpeg,image/jpg"
       >
         {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
       </Upload>

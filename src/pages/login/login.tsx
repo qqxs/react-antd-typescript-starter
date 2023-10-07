@@ -23,7 +23,7 @@ const Login = () => {
         setCaptchaID(res.data.captcha_id);
       })
       .catch((error) => {
-        console.log(error.response);
+        logger.e(error.response);
         setLoading(false);
       });
   }, []);
@@ -35,7 +35,6 @@ const Login = () => {
 
   const onFinish = useCallback(
     (values: any) => {
-      // console.log(values)
       setLoading(true);
       values.captcha_id = captchaID;
 
@@ -51,7 +50,7 @@ const Login = () => {
           }
         })
         .catch((error) => {
-          console.log(error.response);
+          logger.e(error.response);
           setLoading(false);
           handleCaptcha();
         });
