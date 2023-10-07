@@ -115,7 +115,7 @@ import fs from 'fs';
  *
  * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
  *
- * @returns Object
+ * @returns {Object}
  */
 function lessVar2JSON() {
   // Read the less file in as string
