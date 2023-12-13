@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^8.55.0
     version: 8.55.0
   eslint-config-xx:
-    specifier: ^1.5.0-alpha.1
-    version: 1.5.0-alpha.1
+    specifier: ^1.5.0
+    version: 1.5.0
   get-sass-vars:
     specifier: ^4.0.2
     version: 4.0.2
@@ -6487,10 +6487,10 @@ packages:
       eslint-plugin-promise: 6.1.1(eslint@8.55.0)
     dev: true
 
-  /eslint-config-xx@1.5.0-alpha.1:
+  /eslint-config-xx@1.5.0:
     resolution:
       {
-        integrity: sha512-3SB6iKtKuZ6RFGJ6dAsLQ3NafmFmT2qiin4w2iv6Ln5v5P4qx59OEq9pPS7Q2/oCMGtcoPN8t74PPWP+F8PG0A==,
+        integrity: sha512-rPW/rzyx6CgQpbUrIg5jdvZPxhZJzeWKyzg+gsaHCP20dGnGg1A470QVhBT6g0HsOMZR2n8NReS7Vl9UKPbWQQ==,
       }
     engines: { node: '>=16' }
     requiresBuild: true
