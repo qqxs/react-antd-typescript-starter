@@ -44,6 +44,7 @@ instance.interceptors.response.use(
         // 401: 未登录
         case 401:
           removeToken();
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
           if (!['/api/me'].includes(response?.config?.url)) {
             window.location.href = '/login';
           }
