@@ -38,6 +38,7 @@ const Login = () => {
       setLoading(true);
       values.captcha_id = captchaID;
 
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       postLogin(values)
         .then((res) => {
           if (res.code === 0) {

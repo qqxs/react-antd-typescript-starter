@@ -14,6 +14,7 @@ const Register = () => {
     setLoading(true);
     values.avatar = getUploadImageList(values.avatar)[0];
 
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     postRegister(values)
       .then((res) => {
         if (res.code === 0) {

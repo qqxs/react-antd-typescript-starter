@@ -61,7 +61,7 @@ const FormUploadImage = (props: FormUploadProps) => {
         getBase64(info.file.originFileObj as RcFile, () => {
           setLoading(false);
           if (res.code === 0) {
-            setImageUrl(res.data.urls[0]);
+            setImageUrl(res.data.urls[0] as string);
           }
         });
       }
