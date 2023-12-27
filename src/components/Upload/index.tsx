@@ -37,7 +37,7 @@ const beforeUpload = (file: RcFile) => {
 };
 
 export const getFile = (e: any) => {
-  logger.v('Upload event:', e);
+  logger.log('Upload event:', e);
   if (Array.isArray(e)) {
     return e;
   }

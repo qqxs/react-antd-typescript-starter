@@ -8,21 +8,21 @@ dependencies:
   '@ant-design/icons':
     specifier: ^5.1.4
     version: 5.2.6(react-dom@18.2.0)(react@18.2.0)
+  '@ezuikit/utils-logger':
+    specifier: 1.0.0-alpha.3
+    version: 1.0.0-alpha.3
   '@reduxjs/toolkit':
     specifier: ^1.9.7
     version: 1.9.7(react-redux@8.1.3)(react@18.2.0)
   '@sentry/react':
     specifier: ^7.72.0
     version: 7.86.0(react@18.2.0)
-  '@skax/logger':
-    specifier: ^1.0.1
-    version: 1.0.1
   antd:
     specifier: ^5.12.5
     version: 5.12.5(react-dom@18.2.0)(react@18.2.0)
   axios:
-    specifier: ^1.6.2
-    version: 1.6.2
+    specifier: ^1.6.3
+    version: 1.6.3
   classnames:
     specifier: ^2.3.2
     version: 2.3.2
@@ -2892,6 +2892,13 @@ packages:
     engines: { node: ^12.22.0 || ^14.17.0 || >=16.0.0 }
     dev: true
 
+  /@ezuikit/utils-logger@1.0.0-alpha.3:
+    resolution:
+      {
+        integrity: sha512-I0WXGvDA23Tsy87fPdkS3IP7f8Ff3iYGj6/f3OQSlGG+g/oUsCH9sjjhDlY8srx7CcW6Re8mkS0juaQzXfJWdQ==,
+      }
+    dev: false
+
   /@humanwhocodes/config-array@0.11.13:
     resolution:
       {
@@ -3789,14 +3796,6 @@ packages:
     engines: { node: '>=14' }
     requiresBuild: true
     dev: true
-
-  /@skax/logger@1.0.1:
-    resolution:
-      {
-        integrity: sha512-N1gH6XRkzhucuiZS/39Jz2RUytzrRBPw4atQORh1aghnyYsAhBvufhsHlGjWIAa6sPmDpGNs+Dcd94nn/O1sbA==,
-      }
-    engines: { node: '>=16' }
-    dev: false
 
   /@surma/rollup-plugin-off-main-thread@2.2.3:
     resolution:
@@ -5050,10 +5049,10 @@ packages:
     engines: { node: '>=4' }
     dev: true
 
-  /axios@1.6.2:
+  /axios@1.6.3:
     resolution:
       {
-        integrity: sha512-7i24Ri4pmDRfJTR7LDBhsOTtcm+9kjX5WiY1X3wIisx6G9So3pfMkEiU7emUBe46oceVImccTEM3k6C5dbVW8A==,
+        integrity: sha512-fWyNdeawGam70jXSVlKl+SUNVcL6j6W79CuSIPfi6HnDUmSCH6gyUys/HrqHeA/wU0Az41rRgean494d0Jb+ww==,
       }
     dependencies:
       follow-redirects: 1.15.3
