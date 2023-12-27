@@ -23,7 +23,7 @@ const Login = () => {
         setCaptchaID(res.data.captcha_id);
       })
       .catch((error) => {
-        logger.e(error.response);
+        logger.error(error.response);
         setLoading(false);
       });
   }, []);
@@ -51,7 +51,7 @@ const Login = () => {
           }
         })
         .catch((error) => {
-          logger.e(error.response);
+          logger.error(error.response);
           setLoading(false);
           handleCaptcha();
         });

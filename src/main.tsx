@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Logger from '@ezuikit/utils-logger';
+import { type LoggerCls } from '@ezuikit/utils-logger/dist/types/logger';
 import { ConfigProvider } from 'antd';
 import { RouterProvider } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -7,13 +9,13 @@ import ErrorBoundary from '@/components/ErrorBoundary';
 import Loading from '@/components/Loading';
 import { store } from './store';
 import { router } from './router';
-import Logger from '@skax/logger';
 
 import './index.scss';
 
-const logger = new Logger({
-  // No show log,info,debug in production, only show warn,error
-  level: process.env.NODE_ENV === 'production' ? 'WARN' : 'DEBUG',
+const logger: LoggerCls = Logger({
+  level: process.env.NODE_ENV === 'production' ? 'ERROR' : 'INFO',
+  name: 'RATS',
+  showTime: true,
 });
 
 window.logger = logger;

@@ -12,7 +12,7 @@ const Home = () => {
 
   const dispatch = useAppDispatch();
 
-  logger.v('Home page');
+  logger.log('Home page');
 
   return (
     <div className={styles.home}>

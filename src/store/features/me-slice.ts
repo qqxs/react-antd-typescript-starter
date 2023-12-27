@@ -27,7 +27,7 @@ export const counterSlice = createSlice({
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     setMe: (state, action: PayloadAction<Response.Me>) => {
-      logger.v(state, action);
+      logger.log(state, action);
     },
   },
   // The `extraReducers` field lets the slice handle actions defined elsewhere,
