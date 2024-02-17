@@ -104,8 +104,8 @@ devDependencies:
     specifier: ^8.56.0
     version: 8.56.0
   eslint-config-xx:
-    specifier: ^1.7.0-alpha.4
-    version: 1.7.0-alpha.4
+    specifier: ^1.8.0-alpha.0
+    version: 1.8.0-alpha.0
   get-sass-vars:
     specifier: ^4.0.2
     version: 4.0.2
@@ -6559,10 +6559,10 @@ packages:
       eslint-plugin-promise: 6.1.1(eslint@8.56.0)
     dev: true
 
-  /eslint-config-xx@1.7.0-alpha.4:
+  /eslint-config-xx@1.8.0-alpha.0:
     resolution:
       {
-        integrity: sha512-Faf5PYad6Ik4qDoTl2LOhMO5R6wdGwNSYgQWx/iip3HC2sfSWQ9gf8HEXkbF6kn2ZbY6l2fnUO+aoSktQWmpSQ==,
+        integrity: sha512-JGYZo/uVt6+qqGfaTWoaNB2IEkaB+sOcGh0vCPWQyc5yVMJkn5oTgXQ1h3ynbrLKpycxSqWOYfZ3rqz4P/eAtQ==,
       }
     engines: { node: '>=18' }
     dependencies:
@@ -6577,7 +6577,7 @@ packages:
       eslint-plugin-promise: 6.1.1(eslint@8.56.0)
       eslint-plugin-react: 7.33.2(eslint@8.56.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
-      prettier: 2.8.8
+      prettier: 3.2.5
       typescript: 5.3.3
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
@@ -10438,15 +10438,6 @@ packages:
         integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==,
       }
     engines: { node: '>= 0.8.0' }
-    dev: true
-
-  /prettier@2.8.8:
-    resolution:
-      {
-        integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==,
-      }
-    engines: { node: '>=10.13.0' }
-    hasBin: true
     dev: true
 
   /prettier@3.2.5:
