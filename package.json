@@ -1,6 +1,6 @@
 {
   "name": "react-antd-typescript-starter",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "private": true,
   "description": "React antd5 typescript redux template",
   "author": "ShineShao <xiaoshaoqq@gmail.com>",
@@ -54,7 +54,7 @@
     "@vitejs/plugin-react-swc": "^3.5.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.56.0",
-    "eslint-config-xx": "^1.6.0",
+    "eslint-config-xx": "^1.7.0-alpha.4",
     "get-sass-vars": "^4.0.2",
     "husky": "^8.0.3",
     "identity-obj-proxy": "^3.0.0",
