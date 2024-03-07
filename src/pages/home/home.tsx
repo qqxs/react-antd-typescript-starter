@@ -38,7 +38,7 @@ const Home = () => {
           />
         </a>
       </div>
-      <h1>Vite + React + Ts + Redux</h1>
+      <h1 className={styles.title}>Vite + React + Ts + Redux</h1>
       <div className={styles.card}>
         <button
           onClick={() => {
@@ -49,7 +49,7 @@ const Home = () => {
           count is {count}
         </button>
         <p>
-          Edit <code>src/home/home.tsx</code> and save to test HMR
+          Edit <code>src/pages/home/home.tsx</code> and save to test HMR
         </p>
       </div>
       <p className={styles['read-the-docs']}>

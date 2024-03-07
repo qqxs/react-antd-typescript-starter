@@ -35,6 +35,13 @@
   }
 }
 
+.title {
+  background-image: linear-gradient(to right, orange, purple);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .card {
   padding: 2em;
 }
