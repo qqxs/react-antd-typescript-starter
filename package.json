@@ -1,6 +1,6 @@
 {
   "name": "react-antd-typescript-starter",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "private": true,
   "description": "React antd5 typescript redux template",
   "author": "ShineShao <xiaoshaoqq@gmail.com>",
@@ -20,14 +20,14 @@
     "test:coverage": "jest --silent --watchAll=false --coverage"
   },
   "dependencies": {
-    "@ant-design/icons": "^5.3.1",
+    "@ant-design/icons": "^5.3.3",
     "@ezuikit/utils-logger": "1.0.1-alpha.0",
     "@reduxjs/toolkit": "^2.2.1",
-    "@sentry/react": "^7.105.0",
-    "antd": "^5.15.1",
-    "axios": "^1.6.7",
+    "@sentry/react": "^7.107.0",
+    "antd": "^5.15.3",
+    "axios": "^1.6.8",
     "classnames": "^2.5.1",
-    "immer": "^10.0.3",
+    "immer": "^10.0.4",
     "js-cookie": "^3.0.5",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -50,7 +50,7 @@
     "@types/react": "^18.2.64",
     "@types/react-dom": "^18.2.21",
     "@types/testing-library__jest-dom": "^5.14.5",
-    "@vitejs/plugin-legacy": "^5.3.1",
+    "@vitejs/plugin-legacy": "^5.3.2",
     "@vitejs/plugin-react-swc": "^3.6.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.0",
@@ -66,15 +66,15 @@
     "prettier": "^3.2.5",
     "pretty-quick": "^4.0.0",
     "rollup-plugin-visualizer": "^5.12.0",
-    "sass": "^1.71.1",
-    "terser": "^5.29.1",
+    "sass": "^1.72.0",
+    "terser": "^5.29.2",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "5.3.3",
-    "vite": "^5.1.5",
+    "vite": "^5.1.6",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-pwa": "^0.19.2"
+    "vite-plugin-pwa": "^0.19.4"
   },
   "engines": {
     "node": ">=18"
