@@ -1,6 +1,6 @@
 {
   "name": "react-antd-typescript-starter",
-  "version": "0.7.5",
+  "version": "0.8.0",
   "private": true,
   "description": "React antd5 typescript redux template",
   "author": "ShineShao <xiaoshaoqq@gmail.com>",
@@ -24,7 +24,7 @@
     "@ezuikit/utils-logger": "1.0.1-alpha.0",
     "@reduxjs/toolkit": "^2.2.1",
     "@sentry/react": "^7.107.0",
-    "antd": "^5.15.3",
+    "antd": "^5.16.1",
     "axios": "^1.6.8",
     "classnames": "^2.5.1",
     "immer": "^10.0.4",
