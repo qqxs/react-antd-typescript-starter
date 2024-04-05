@@ -100,9 +100,13 @@ Place custom components under `src/components`
 
 如果需要修改[antd5 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
 
+If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/customize-theme-cn), Please modify the [src/styles/antd-theme.scss](./src/styles/antd-theme.scss)file.
+
 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
 
-```ts
+If using `less`, please install [less vars to js](https://www.npmjs.com/package/less-vars-to-js) According to the following 👇 Code self debugging.
+
+````ts
 import lessToJs from 'less-vars-to-js';
 import { lowerCamel } from '@skax/camel';
 import fs from 'fs';
@@ -113,7 +117,14 @@ import fs from 'fs';
  *
  * @example
  *
+ * ```scss
+ *   $color-primary: #00b96b;
+ *   $border-radius: 2px;
+ * ```
+ *
+ * ```js
  * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ * ```
  *
  * @returns {Object}
  */
@@ -132,7 +143,7 @@ function lessVar2JSON() {
   }, {});
 }
 export default lessVar2JSON;
-```
+````
 
 ## Api
 

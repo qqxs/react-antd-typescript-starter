@@ -9,8 +9,14 @@ import { lowerCamel } from '@skax/camel';
  *
  *
  * @example
+ * ```scss
+ *   $color-primary: #00b96b;
+ *   $border-radius: 2px;
+ * ```
  *
- * sassVar2JSON()  // {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ * ```ts
+ *  sassVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ * ```
  *
  * @returns {Object}
  */
