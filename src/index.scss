@@ -1,3 +1,5 @@
+@import './styles/theme.scss';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -24,6 +26,13 @@ html {
   min-height: 100vh;
 }
 
+a {
+  color: $color-primary;
+  &:hover {
+    color: #747bff;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -35,9 +44,6 @@ html {
     background-color: #ffffff;
   }
 
-  a:hover {
-    color: #747bff;
-  }
   button {
     background-color: #f9f9f9;
   }
