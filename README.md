@@ -117,7 +117,7 @@ import fs from 'fs';
  *
  * @example
  *
- * ```scss
+ * ```less
  *   $color-primary: #00b96b;
  *   $border-radius: 2px;
  * ```
