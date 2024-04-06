@@ -123,7 +123,7 @@ import fs from 'fs';
  * ```
  *
  * ```js
- * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b", "borderRadius": "2px"}
  * ```
  *
  * @returns {Object}
