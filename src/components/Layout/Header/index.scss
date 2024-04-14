@@ -12,13 +12,7 @@
     height: $header-height;
     display: inline-flex;
     align-items: center;
-
-    $img-w: 30px;
-    img {
-      height: $img-w;
-      width: $img-w;
-      border-radius: 50%;
-    }
+    font-size: 25px;
   }
 
   &-right {

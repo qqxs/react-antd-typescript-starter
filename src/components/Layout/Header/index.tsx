@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAppSelector } from '@/hooks/redux';
 import { selectMe } from '@/store/features/me-slice';
-
-import FE from '@/assets/FE.png';
+import Logo from '@/components/Logo';
 
 import './index.scss';
 
@@ -14,7 +13,7 @@ const Header = () => {
     <header className="_header">
       <div className="_header-left">
         <Link to="/">
-          <img src={FE} alt="ShineShao" />
+          <Logo />
         </Link>
       </div>
       <div className="_header-right">
