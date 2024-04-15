@@ -13,6 +13,10 @@
     display: inline-flex;
     align-items: center;
     font-size: 25px;
+
+    a {
+      color: #fff;
+    }
   }
 
   &-right {
@@ -23,6 +27,14 @@
     & > a {
       padding: 2px 8px;
       text-decoration: none;
+    }
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  ._header-left {
+    a {
+      color: #000;
     }
   }
 }
