@@ -11,9 +11,10 @@ import path from 'path';
 
 import sassVar2JSON from './scripts/sass-to-json';
 
+/** 更改 antd 主题样式更新需要重启 */
 const theme = sassVar2JSON();
 
-// open sentry
+/** open sentry */
 const OPEN_SENTRY: boolean = false; // process.env.NODE_ENV === 'production'
 // https://vitejs.dev/config/
 export default defineConfig(((env: ConfigEnv) => {

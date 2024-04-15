@@ -112,7 +112,7 @@ import { lowerCamel } from '@skax/camel';
 import fs from 'fs';
 
 /**
- * less 变量转成 json 格式
+ * less 变量转成 json 格式 (更改 antd 主题样式更新需要重启)
  * Convert the less variable to JSON format
  *
  * @example
