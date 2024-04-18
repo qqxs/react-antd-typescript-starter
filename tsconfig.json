@@ -18,8 +18,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    },
-    "types": ["@testing-library/jest-dom", "@types/node"]
+    }
   },
   "include": ["src/**/*", "typings", "tsconfig.node.json"],
   "exclude": ["node_modules", "dist", "coverage"],

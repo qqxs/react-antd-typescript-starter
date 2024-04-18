@@ -26,6 +26,7 @@ instance.interceptors.request.use(
     return config;
   },
   async (error) => {
+    // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
     return await Promise.reject(error);
   },
 );
@@ -68,6 +69,7 @@ instance.interceptors.response.use(
         error.message = 'Something went wrong.';
       }
     }
+    // eslint-disable-next-line @typescript-eslint/prefer-promise-reject-errors
     return await Promise.reject(error);
   },
 );
