@@ -18,7 +18,7 @@ const logger: LoggerCls = Logger({
   showTime: true,
 });
 
-// global logger
+/** global logger */
 window.logger = logger;
 
 if ($__SENTRY__$) {
