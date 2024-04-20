@@ -12,5 +12,10 @@ module.exports = {
       'vitest.setup.ts',
     ],
   },
+  globals: {
+    logger: true,
+    $__SENTRY__$: true,
+    $__THEME__$: true,
+  },
   rules: {},
 };
