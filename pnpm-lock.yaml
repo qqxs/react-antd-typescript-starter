@@ -104,7 +104,7 @@ devDependencies:
     specifier: ^8.57.0
     version: 8.57.0
   eslint-config-xx:
-    specifier: ^1.10.0
+    specifier: ^1.10.0-alpha.0
     version: 1.10.0
   get-sass-vars:
     specifier: ^4.0.2
