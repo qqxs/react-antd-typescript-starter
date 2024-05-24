@@ -75,7 +75,7 @@ docker-compose up -d
 │   ├── error   # error page
 │   ├── home    # home page
 │   ├── login   # login page
-│   └── register
+│   └── register # register page
 ├── router.tsx  # router tree
 ├── sentry.ts   # sentry config
 ├── store       # redux store

@@ -16,6 +16,11 @@ const Profile = React.lazy(async () => await import('@/pages/profile/profile'));
 // ------------------ end auth page -----------------------
 // end page
 
+const Error404Router = {
+  path: '*',
+  element: <Error404 />,
+};
+
 export const router = createBrowserRouter(
   [
     {
@@ -43,14 +48,12 @@ export const router = createBrowserRouter(
               path: '/profile',
               element: <Profile />,
             },
+            Error404Router,
           ],
         },
       ],
     },
-    {
-      path: '*',
-      element: <Error404 />,
-    },
+    Error404Router,
   ],
   {
     basename: '/',
