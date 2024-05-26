@@ -104,7 +104,7 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 
 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
 
-If using `less`, please install [less vars to js](https://www.npmjs.com/package/less-vars-to-js) According to the following 👇 Code self debugging.
+If using `less`, please install [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) According to the following 👇 Code self debugging.
 
 ````ts
 import lessToJs from 'less-vars-to-js';
