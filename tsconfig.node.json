@@ -12,6 +12,6 @@
     "jest.config.ts",
     ".eslintrc.cjs",
     ".prettierrc.cjs",
-    "commitlint.config.cjs"
+    "commitlint.config.mjs"
   ]
 }
