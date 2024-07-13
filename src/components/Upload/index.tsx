@@ -44,7 +44,12 @@ export const getFile = (e: any) => {
   return e?.fileList;
 };
 
-const FormUploadImage = (props: FormUploadProps) => {
+/**
+ * @description 文件上传
+ * @param {FormUploadProps} props
+ * @returns
+ */
+const FormUpload = (props: FormUploadProps) => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
 
@@ -100,4 +105,4 @@ const FormUploadImage = (props: FormUploadProps) => {
   );
 };
 
-export default FormUploadImage;
+export default FormUpload;
