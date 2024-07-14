@@ -1,20 +1,17 @@
 import { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Input, Button, Row, message, Select } from 'antd';
+import { Form, Input, Button, Row, message } from 'antd';
 import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
 import { postLogin, getCaptcha } from '@/services/auth';
 import FE from '@/assets/FE.png';
 import { setToken } from '@/utils/auth';
 import styles from './login.module.scss';
-import { useSetTheme } from '@/hooks/useTheme';
 
 const Login = () => {
   //   const history = useHistory();
   const [loading, setLoading] = useState(false);
   const [codeImg, setCodeImg] = useState('');
   const [captchaID, setCaptchaID] = useState('');
-
-  const setTheme = useSetTheme();
 
   const handleCaptcha = useCallback(() => {
     getCaptcha()
@@ -117,14 +114,6 @@ const Login = () => {
               <Button type="primary" htmlType="submit" size="large" block loading={loading}>
                 登录
               </Button>
-              <Select
-                onChange={(value: string) => {
-                  setTheme(value);
-                }}
-              >
-                <Select.Option value="dark">Dark</Select.Option>
-                <Select.Option value="default">default</Select.Option>
-              </Select>
             </Form.Item>
           </Form>
         </div>

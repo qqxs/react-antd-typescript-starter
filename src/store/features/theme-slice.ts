@@ -4,7 +4,8 @@ import { type RootState } from '..';
 const sliceName = 'theme';
 
 const initialState = {
-  theme: 'default',
+  // localStorage.setItem(key, value);
+  theme: localStorage.getItem(sliceName) || 'default',
 };
 
 export const themeSlice = createSlice({
@@ -13,6 +14,7 @@ export const themeSlice = createSlice({
   reducers: {
     setTheme: (state, action: PayloadAction<string>) => {
       state.theme = action.payload;
+      localStorage.setItem(sliceName, state.theme);
     },
   },
   initialState,
