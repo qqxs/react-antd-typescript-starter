@@ -1,0 +1,22 @@
+// https://ant.design/docs/react/customize-theme-cn
+
+// 在运行vite前会加载解析这个文件, 把sass 变量转成小驼峰对象，然后挂载到$__THEME__$上(在vite的define配置$__THEME__$变量， 在src/main.tsx中使用)
+//
+//
+// @example
+// $color-primary: #00b96b
+// $border-radius: 2px;
+//          |
+//          | sass/scss to json
+//          V
+// {"colorPrimary": "#00b96b", "borderRadius": "2px"}
+//
+// antd theme  token
+// $color-primary: var(--color-primary, '#00b96b'); // ->  colorPrimary: #00b96b
+// $border-radius: var(--border-radius); //  ->  borderRadius: 2px
+// $color-primary: #00b96b; // ->  colorPrimary: #00b96b
+// $border-radius: var(--border-radius, 2px); //  ->  borderRadius: 2px
+:root {
+  --color-primary: #000;
+  --border-radius: 4px;
+}

@@ -2,10 +2,12 @@ import { configureStore, combineReducers, type ThunkAction, type Action } from '
 
 import counterReducer from './features/counter-slice';
 import meReducer from './features/me-slice';
+import themeReducer from './features/theme-slice';
 
 const rootReducer = combineReducers({
   counter: counterReducer,
   me: meReducer,
+  theme: themeReducer,
 });
 
 export const store = configureStore({

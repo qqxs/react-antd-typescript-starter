@@ -2,7 +2,10 @@
 /// <reference types="./request.d.ts"/>
 /// <reference types="./response.d.ts"/>
 
-declare const $__THEME__$: Record<string, any>;
+declare const $__THEME__$: {
+  tokens: Record<string, object>;
+  vars: Record<string, string>;
+};
 
 declare const $__SENTRY__$: boolean;
 

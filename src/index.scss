@@ -27,7 +27,7 @@ html {
 }
 
 a {
-  color: $color-primary;
+  color: var(--color-primary);
   &:hover {
     color: #747bff;
   }
