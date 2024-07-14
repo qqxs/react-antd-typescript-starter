@@ -12,5 +12,11 @@
 // {"colorPrimary": "#00b96b", "borderRadius": "2px"}
 //
 // antd theme  token
-$color-primary: #00b96b; // ->  colorPrimary: #00b96b
-$border-radius: 2px; //  ->  borderRadius: 2px
+// $color-primary: var(--color-primary, '#00b96b'); // ->  colorPrimary: #00b96b
+// $border-radius: var(--border-radius); //  ->  borderRadius: 2px
+// $color-primary: #00b96b; // ->  colorPrimary: #00b96b
+// $border-radius: var(--border-radius, 2px); //  ->  borderRadius: 2px
+:root {
+  --color-primary: #00b96b;
+  --border-radius: 2px;
+}

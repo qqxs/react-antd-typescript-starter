@@ -5,7 +5,6 @@ import { UserOutlined, LockOutlined, SafetyOutlined } from '@ant-design/icons';
 import { postLogin, getCaptcha } from '@/services/auth';
 import FE from '@/assets/FE.png';
 import { setToken } from '@/utils/auth';
-
 import styles from './login.module.scss';
 
 const Login = () => {
