@@ -98,11 +98,20 @@ Place custom components under `src/components`
 
 ## Themes
 
-如果需要修改[antd5 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/antd-theme.scss](./src/styles/antd-theme.scss)文件
+如果需要修改[antd5 主题](https://ant.design/docs/react/customize-theme-cn)，请更改[src/styles/themes](./src/styles/themes)下文件
 
-If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/customize-theme-cn), Please modify the [src/styles/antd-theme.scss](./src/styles/antd-theme.scss)file.
+If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/customize-theme-cn), Please modify the [src/styles/themes](./src/styles/themes) file.
 
-如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
+```scss
+// https://ant.design/docs/react/customize-theme-cn
+
+:root {
+  --color-primary: #00b96b; // -> colorPrimary: #000
+  --border-radius: 4px; // -> borderRadius: 2px
+}
+```
+
+<!-- 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
 
 If using `less`, please install [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) According to the following 👇 Code self debugging.
 
@@ -143,7 +152,7 @@ function lessVar2JSON() {
   }, {});
 }
 export default lessVar2JSON;
-````
+```` -->
 
 ## Api
 
