@@ -68,7 +68,8 @@ docker-compose up -d
 │   └── Layout  # layout
 ├── constant    # @/constant constant
 ├── hooks       # @/hooks
-│   └── redux.ts # redux hook
+│   ├── useTheme.ts   # theme hooks
+│   └── redux.ts # redux hooks
 ├── main.tsx    # entry
 ├── services    # @/services  api
 ├── pages       # pages
@@ -80,10 +81,10 @@ docker-compose up -d
 ├── sentry.ts   # sentry config
 ├── store       # redux store
 │   ├── index.ts
-│   └── reducer
+│   └── features # redux state
 ├── styles
-│   ├── antd-theme.scss # antd theme
-│   └── theme.scss  # custom theme
+│   ├── themes      # antd theme file
+│   └── theme.scss
 ├── utils
 │   ├── Axios.ts   # axios
 │   └── auth.ts
@@ -104,12 +105,35 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 
 ```scss
 // https://ant.design/docs/react/customize-theme-cn
-
+// default.scss
 :root {
-  --color-primary: #00b96b; // -> colorPrimary: #000
+  --color-primary: #00b96b; // -> colorPrimary: #00b96b
   --border-radius: 4px; // -> borderRadius: 2px
 }
 ```
+
+[scripts/sass-to-json.ts](./scripts/sass-to-json.ts) 转换 [src/styles/themes](./src/styles/themes)下文件为下面对象格式
+
+```json
+{
+  "themes": {
+    "default": {},
+    "dark": {}
+  },
+  "vars": {
+    "default": {},
+    "dark": {}
+  }
+}
+```
+
+<!--
+- themes
+  themes下的
+
+- vars -->
+
+警告⚠️： 主题文件下文件中仅支持 css 变量
 
 <!-- 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
 
