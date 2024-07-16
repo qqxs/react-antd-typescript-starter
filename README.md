@@ -115,25 +115,39 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 [scripts/sass-to-json.ts](./scripts/sass-to-json.ts) 转换 [src/styles/themes](./src/styles/themes)下文件为下面对象格式
 
 ```json
-{
-  "themes": {
-    "default": {},
-    "dark": {}
+theme {
+  "tokens": {
+    "dark": {
+      "colorPrimary": "#000",
+      "borderRadius": "4px",
+    },
+    "default": {
+      "colorPrimary": "#00b96b",
+      "borderRadius": "4px"
+    }
   },
   "vars": {
-    "default": {},
-    "dark": {}
+    "dark": "  --color-primary: #000;  --border-radius: 4px;",
+    "default": "  --color-primary: #00b96b; --border-radius: 4px;"
   }
 }
 ```
 
-<!--
-- themes
-  themes下的
+css 变量在切换主题时自动注入到 `head` 下，保证 antd@5.x 主题 token 变量和css 变量对应
 
-- vars -->
+`head` 下 `style` 标签
 
-警告⚠️： 主题文件下文件中仅支持 css 变量
+```html
+<!-- $____theme____$ 是唯一id -->
+<style id="$____theme____$" data-theme="default">
+  :root {
+    --color-primary: #00b96b;
+    --border-radius: 4px;
+  }
+</style>
+```
+
+警告⚠️： 主题文夹下文件中仅支持 css 变量
 
 <!-- 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
 
