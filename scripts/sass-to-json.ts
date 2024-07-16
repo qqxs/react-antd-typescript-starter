@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-
-import sassVars from 'get-sass-vars';
+// import sassVars from 'get-sass-vars';
 import { lowerCamel } from '@skax/camel';
 
 /**
