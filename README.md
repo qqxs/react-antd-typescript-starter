@@ -115,20 +115,22 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 [scripts/sass-to-json.ts](./scripts/sass-to-json.ts) 转换 [src/styles/themes](./src/styles/themes)下文件为下面对象格式
 
 ```json
-theme {
-  "tokens": {
-    "dark": {
-      "colorPrimary": "#000",
-      "borderRadius": "4px",
+{
+  "theme" {
+    "tokens": {
+      "dark": {
+        "colorPrimary": "#000",
+        "borderRadius": "4px",
+      },
+      "default": {
+        "colorPrimary": "#00b96b",
+        "borderRadius": "4px"
+      }
     },
-    "default": {
-      "colorPrimary": "#00b96b",
-      "borderRadius": "4px"
+    "vars": {
+      "dark": "  --color-primary: #000;  --border-radius: 4px;",
+      "default": "  --color-primary: #00b96b; --border-radius: 4px;"
     }
-  },
-  "vars": {
-    "dark": "  --color-primary: #000;  --border-radius: 4px;",
-    "default": "  --color-primary: #00b96b; --border-radius: 4px;"
   }
 }
 ```
