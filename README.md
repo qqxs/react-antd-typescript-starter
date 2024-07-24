@@ -52,7 +52,8 @@ pnpm run test
 # 首先要安装nginx镜像
 # docker nginx deploy
 # http://localhost:8000
-docker-compose up -d
+# docker-compose up -d
+docker compose up -d
 ```
 
 ## src
