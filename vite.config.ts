@@ -85,6 +85,7 @@ export default defineConfig(((env: ConfigEnv) => {
     define: {
       $__THEME__$: theme, // antd theme
       $__SENTRY__$: OPEN_SENTRY, // process.env.NODE_ENV === 'production' // open sentry
+      $__IS_PRODUCTION__$: env.mode === 'production',
     },
     plugins: [
       react(),
