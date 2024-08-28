@@ -135,7 +135,7 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 }
 ```
 
-css 变量在切换主题时自动注入到 `head` 下，保证 antd@5.x 主题 token 变量和css 变量对应
+css 变量在切换主题时自动注入到 `head` 下，保证 [antd@5.x](https://ant-design.antgroup.com/docs/react/customize-theme-cn) 主题 token 变量和css 变量对应
 
 `head` 下 `style` 标签
 
