@@ -1,5 +1,5 @@
 import { configureStore, combineReducers, type ThunkAction, type Action } from '@reduxjs/toolkit';
-
+import logger from 'redux-logger';
 import counterReducer from './features/counter-slice';
 import meReducer from './features/me-slice';
 import themeReducer from './features/theme-slice';
@@ -12,6 +12,10 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
   reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => {
+    // eslint-disable-next-line no-undef
+    return !$__IS_PRODUCTION__$ ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware();
+  },
 });
 
 export type AppDispatch = typeof store.dispatch;
