@@ -41,7 +41,7 @@
     "@commitlint/cli": "^19.5.0",
     "@commitlint/config-conventional": "^19.5.0",
     "@commitlint/prompt-cli": "^19.5.0",
-    "@sentry/browser": "^8.31.0",
+    "@sentry/browser": "^8.33.0",
     "@skax/camel": "^0.2.6",
     "@testing-library/dom": "^9.3.4",
     "@testing-library/jest-dom": "^6.4.2",
