@@ -14,7 +14,7 @@
     "fix": "eslint --fix src/**/*.ts --fix  src/**/*.tsx",
     "lint": "eslint --ext .ts,tsx,.js,.jsx ./src",
     "fmt": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css,scss,cjs}\"",
-    "prepare": "husky install",
+    "prepare": "husky",
     "preinstall": "npx only-allow pnpm",
     "test:watch": "jest --watch",
     "test": "jest",
