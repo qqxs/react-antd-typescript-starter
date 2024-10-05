@@ -8,6 +8,7 @@ declare const $__THEME__$: {
 };
 
 declare const $__SENTRY__$: boolean;
+declare const $__SENTRY__DSN__$: string;
 
 declare const $__IS_PRODUCTION__$: boolean;
 

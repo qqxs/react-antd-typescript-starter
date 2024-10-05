@@ -48,6 +48,13 @@ export default defineConfig(((env: ConfigEnv) => {
       postcss: {
         plugins: isDev ? [] : [postcssPreset()],
       },
+      preprocessorOptions: {
+        scss: {
+          // More info: https://sass-lang.com/d/legacy-js-api
+          // Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
+          api: 'modern-compiler',
+        },
+      },
     },
     build: {
       minify: 'terser',
@@ -85,6 +92,7 @@ export default defineConfig(((env: ConfigEnv) => {
     define: {
       $__THEME__$: theme, // antd theme
       $__SENTRY__$: OPEN_SENTRY, // process.env.NODE_ENV === 'production' // open sentry
+      $__SENTRY__DSN__$: JSON.stringify('https://examplePublicKey@o0.ingest.sentry.io/0'),
       $__IS_PRODUCTION__$: env.mode === 'production',
     },
     plugins: [
