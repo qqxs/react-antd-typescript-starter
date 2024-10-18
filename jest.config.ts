@@ -19,6 +19,8 @@ const config: Config = {
     '^.+\\.tsx?$': 'ts-jest', // Transform TypeScript files using ts-jest
   },
 
+  passWithNoTests: true,
+
   // A list of paths to modules that run some code to configure or set up the testing framework before each test file in the suite is executed
   // https://jestjs.io/docs/configuration#setupfilesafterenv-array
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
