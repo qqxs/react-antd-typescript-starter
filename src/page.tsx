@@ -16,7 +16,12 @@ const Page = () => {
       }}
     >
       <React.Suspense fallback={<Loading />}>
-        <RouterProvider router={router} />
+        <RouterProvider
+          router={router}
+          future={{
+            v7_startTransition: true,
+          }}
+        />
       </React.Suspense>
     </ConfigProvider>
   );
