@@ -53,6 +53,8 @@ export default defineConfig(((env: ConfigEnv) => {
           // More info: https://sass-lang.com/d/legacy-js-api
           // Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
           api: 'modern-compiler',
+          sourceMap: isDev,
+          additionalData: `@import "@/styles/theme.scss";`,
         },
       },
     },
@@ -139,9 +141,9 @@ export default defineConfig(((env: ConfigEnv) => {
         workbox: {
           clientsClaim: true,
           skipWaiting: true,
-          globPatterns: ['**/*.{js,css,html,ico,jpg,png,svg,gif,webmanifest}'],
+          globPatterns: ['**/*.{js,css,scss,html,ico,jpg,png,svg,gif,webmanifest}'],
         },
-        includeAssets: ['**/*.{png}'],
+        includeAssets: ['**/*.{png,jpeg,ico,jpg,png,svg,gif,webmanifest}'],
         manifest: {
           name: 'React App',
           start_url: '/',
