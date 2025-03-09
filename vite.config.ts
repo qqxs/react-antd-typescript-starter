@@ -54,7 +54,7 @@ export default defineConfig(((env: ConfigEnv) => {
           // Deprecation Warning: The legacy JS API is deprecated and will be removed in Dart Sass 2.0.0.
           api: 'modern-compiler',
           sourceMap: isDev,
-          additionalData: `@import "@/styles/theme.scss";`,
+          // additionalData: `@use "@/styles/theme.scss";`,
         },
       },
     },

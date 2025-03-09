@@ -12,7 +12,7 @@ declare namespace Response {
 
   /** Redux state , 每项state的value */
   export interface ReduxState<T> {
-    status: keyof typeof ResponseStatus;
+    status: keyof typeof ResponseStatus; // RE
     result: T;
     error?: string;
   }

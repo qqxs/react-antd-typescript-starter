@@ -1,4 +1,4 @@
-// @import '../../styles/theme.scss';
+@use '../../styles/theme.scss' as *;
 
 ._layout {
   display: flex;
