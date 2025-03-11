@@ -10,9 +10,14 @@ declare namespace Response {
     error?: string[];
   }
 
+  /**
+   * 状态码
+   */
+  export type ResponseStatus = 'succeeded' | 'loading' | 'failed';
+
   /** Redux state , 每项state的value */
   export interface ReduxState<T> {
-    status: keyof typeof ResponseStatus; // RE
+    status: ResponseStatus; // RE
     result: T;
     error?: string;
   }
