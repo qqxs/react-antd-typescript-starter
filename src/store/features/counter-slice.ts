@@ -6,12 +6,12 @@ import { type RootState } from '..';
 
 export interface CounterState {
   value: number;
-  status: 'idle' | 'loading' | 'failed';
+  status: Response.ResponseStatus;
 }
 
 const initialState: CounterState = {
   value: 0,
-  status: 'idle',
+  status: 'loading',
 };
 
 // The function below is called a thunk and allows us to perform async logic. It
@@ -53,7 +53,7 @@ export const counterSlice = createSlice({
   //         state.status = 'loading'
   //       })
   //       .addCase(incrementAsync.fulfilled, (state, action) => {
-  //         state.status = 'idle'
+  //         state.status = 'succeeded'
   //         state.value += action.payload
   //       })
   //       .addCase(incrementAsync.rejected, state => {
