@@ -109,7 +109,7 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 // default.scss
 :root {
   --color-primary: #00b96b; // -> colorPrimary: #00b96b
-  --border-radius: 4px; // -> borderRadius: 2px
+  --border-radius: 4px; // -> borderRadius: 4px
 }
 ```
 
