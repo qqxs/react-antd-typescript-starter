@@ -54,7 +54,7 @@
     "@types/react-dom": "^18.2.25",
     "@types/redux-logger": "^3.0.13",
     "@vitejs/plugin-legacy": "^5.4.3",
-    "@vitejs/plugin-react-swc": "^3.8.0",
+    "@vitejs/plugin-react-swc": "^3.9.0",
     "cross-env": "^7.0.3",
     "eslint": "^8.57.1",
     "eslint-config-xx": "^1.10.1",
@@ -70,15 +70,15 @@
     "pretty-quick": "^4.1.1",
     "redux-logger": "^3.0.6",
     "rollup-plugin-visualizer": "^5.14.0",
-    "sass": "^1.85.1",
+    "sass": "^1.87.0",
     "terser": "^5.39.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "typescript": "5.3.3",
-    "vite": "^5.4.14",
+    "vite": "^5.4.19",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-eslint": "^1.8.1",
-    "vite-plugin-pwa": "^0.21.1"
+    "vite-plugin-pwa": "^0.21.2"
   },
   "engines": {
     "node": ">=18"
