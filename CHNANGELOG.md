@@ -1,3 +1,8 @@
+## 1.1.0
+
+- Update Vite@7
+- Update `vite.config.ts` config `define` `($__THEME__$` -> `__THEME__`, `$__SENTRY__$` -> `__SENTRY__`, `$__SENTRY__DSN__$` -> `__SENTRY__DSN__`, `$__IS_PRODUCTION__$` -> `__IS_PRODUCTION__`)
+
 ## 0.9.6
 
 - Update sentry
