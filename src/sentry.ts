@@ -9,7 +9,7 @@ function InitSentry() {
     // https://develop.sentry.dev/sdk/overview/
     // config your sentry
     // eslint-disable-next-line no-undef
-    dsn: $__SENTRY__DSN__$, // 'https://examplePublicKey@o0.ingest.sentry.io/0'
+    dsn: __SENTRY__DSN__, // 'https://examplePublicKey@o0.ingest.sentry.io/0'
     integrations: [
       Sentry.browserTracingIntegration({
         // disable automatic span creation

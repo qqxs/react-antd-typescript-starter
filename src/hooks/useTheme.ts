@@ -5,8 +5,8 @@ import { useMemo } from 'react';
 const styleID = '$____theme____$';
 let styleEle: HTMLElement | null = null;
 const head = document.head || document.getElementsByTagName('head')[0];
-// $__THEME__$ 来源 vite.config.ts
-const THEME = $__THEME__$;
+// __THEME__ 来源 vite.config.ts
+const THEME = __THEME__;
 
 const setStyleVars = (id: string) => {
   styleEle = document.getElementById(styleID);

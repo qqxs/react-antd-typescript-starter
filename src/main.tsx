@@ -16,14 +16,13 @@ const logger: LoggerCls = Logger({
 /** global logger */
 window.logger = logger;
 
-if ($__SENTRY__$) {
+if (__SENTRY__) {
   // init Sentry
   import('./sentry').then(({ default: InitSentry }) => {
     InitSentry();
   });
 }
-
-console.log($__THEME__$);
+console.log(__THEME__);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   // <React.StrictMode>

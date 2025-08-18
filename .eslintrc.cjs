@@ -14,8 +14,10 @@ module.exports = {
   },
   globals: {
     logger: true,
-    $__SENTRY__$: true,
-    $__THEME__$: true,
+    __SENTRY__: true,
+    __THEME__: true,
+    __IS_PRODUCTION__: true,
+    __SENTRY__DSN__: true,
   },
   rules: {},
 };

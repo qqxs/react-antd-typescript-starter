@@ -14,7 +14,7 @@ export const store = configureStore({
   reducer: rootReducer,
   middleware: (getDefaultMiddleware) => {
     // eslint-disable-next-line no-undef
-    return !$__IS_PRODUCTION__$ ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware();
+    return !__IS_PRODUCTION__ ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware();
   },
 });
 
