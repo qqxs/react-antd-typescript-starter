@@ -92,10 +92,10 @@ export default defineConfig(((env: ConfigEnv) => {
       },
     },
     define: {
-      $__THEME__$: theme, // antd theme
-      $__SENTRY__$: OPEN_SENTRY, // process.env.NODE_ENV === 'production' // open sentry
-      $__SENTRY__DSN__$: JSON.stringify('https://examplePublicKey@o0.ingest.sentry.io/0'),
-      $__IS_PRODUCTION__$: env.mode === 'production',
+      __THEME__: JSON.stringify(theme), // antd theme
+      __SENTRY__: OPEN_SENTRY, // process.env.NODE_ENV === 'production' // open sentry
+      __SENTRY__DSN__: JSON.stringify('https://examplePublicKey@o0.ingest.sentry.io/0'),
+      __IS_PRODUCTION__: env.mode === 'production',
     },
     plugins: [
       react(),
