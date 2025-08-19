@@ -205,7 +205,7 @@ export default lessVar2JSON;
 
 在[vite.config.ts](./vite.config.ts)中开启`OPEN_SENTRY=true`, 并在[src/sentry.tsx](./src/sentry.ts) 中配置 `__SENTRY__DSN__`。
 
-## FQA
+## FAQ
 
 - React@19
 
