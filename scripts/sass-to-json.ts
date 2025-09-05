@@ -1,17 +1,21 @@
 import fs from 'fs';
 import path from 'path';
-// import sassVars from 'get-sass-vars';
 import { lowerCamel } from '@skax/camel';
 
 /**
+ * 自动读取 ./src/styles/themes 下的 sass 文件，
  * sass 变量转成 json 格式 (主题样式更新需要重启)
+ *
+ * Automatic reading sass file under src/styles/themes,
  * Convert the sass variable to JSON format
  *
  *
  * @example
  * ```scss
- *   $color-primary: #00b96b;
- *   $border-radius: 2px;
+ * // -> colorPrimary: #000
+ * --color-primary: #000;
+ * // -> borderRadius: 4px
+ * --border-radius: 4px;
  * ```
  *
  * ```ts
