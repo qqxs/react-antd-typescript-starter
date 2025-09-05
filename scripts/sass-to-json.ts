@@ -39,7 +39,8 @@ function sassVar2JSON() {
     const antdToken = vars
       .map((line) => convertToSassVariable(line.replace(/ /gi, '')))
       .reduce((pre, cur) => {
-        const kv: string[] = cur.split(':');
+        const kv: string[] = cur.replace(/(\d+)px;/g, '$1;').split(':');
+
         pre[lowerCamel(kv[0], '-')] = kv[1].replace(/;$/, '');
         return pre;
       }, {});

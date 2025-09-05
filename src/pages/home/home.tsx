@@ -6,6 +6,7 @@ import { useAppDispatch } from '@/hooks/redux';
 import { increment } from '@/store/features/counter-slice';
 import cls from 'classnames';
 import styles from './home.module.scss';
+import { Popover } from 'antd';
 
 const Home = () => {
   const [count, setCount] = useState(0);
@@ -17,9 +18,16 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
-        </a>
+        <Popover
+          content="This project is built with Vite + React + TypeScript + Redux"
+          placement="top"
+          open={true}
+        >
+          <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
+            <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
+          </a>
+        </Popover>
+
         <a href="https://reactjs.org" target="_blank" rel="noreferrer">
           <img src={reactLogo} className={cls(styles.logo, 'react')} alt="React logo" />
         </a>
