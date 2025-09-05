@@ -18,8 +18,8 @@ dependencies:
     specifier: ^8.41.0
     version: 8.55.0(react@18.3.1)
   antd:
-    specifier: ^5.27.0
-    version: 5.27.1(react-dom@18.3.1)(react@18.3.1)
+    specifier: ^5.27.3
+    version: 5.27.3(react-dom@18.3.1)(react@18.3.1)
   axios:
     specifier: ^1.11.0
     version: 1.11.0
@@ -5602,10 +5602,10 @@ packages:
     engines: { node: '>=12' }
     dev: true
 
-  /antd@5.27.1(react-dom@18.3.1)(react@18.3.1):
+  /antd@5.27.3(react-dom@18.3.1)(react@18.3.1):
     resolution:
       {
-        integrity: sha512-jGMSdBN7hAMvPV27B4RhzZfL6n6yu8yDbo7oXrlJasaOqB7bSDPcjdEy1kXy3JPsny/Qazb1ykzRI4EfcByAPQ==,
+        integrity: sha512-Jewp1ek1iyqoAyjWyPgzc2kioZ+7S3jh39a+tld/j4ucnuf/cBk4omfyIdhLz49pVNsaEcRp5LtJOSQPFwPgpA==,
       }
     peerDependencies:
       react: '>=16.9.0'
@@ -5650,7 +5650,7 @@ packages:
       rc-slider: 11.1.8(react-dom@18.3.1)(react@18.3.1)
       rc-steps: 6.0.1(react-dom@18.3.1)(react@18.3.1)
       rc-switch: 4.1.0(react-dom@18.3.1)(react@18.3.1)
-      rc-table: 7.51.1(react-dom@18.3.1)(react@18.3.1)
+      rc-table: 7.52.6(react-dom@18.3.1)(react@18.3.1)
       rc-tabs: 15.7.0(react-dom@18.3.1)(react@18.3.1)
       rc-textarea: 1.10.2(react-dom@18.3.1)(react@18.3.1)
       rc-tooltip: 6.4.0(react-dom@18.3.1)(react@18.3.1)
@@ -11942,10 +11942,10 @@ packages:
       react-dom: 18.3.1(react@18.3.1)
     dev: false
 
-  /rc-table@7.51.1(react-dom@18.3.1)(react@18.3.1):
+  /rc-table@7.52.6(react-dom@18.3.1)(react@18.3.1):
     resolution:
       {
-        integrity: sha512-5iq15mTHhvC42TlBLRCoCBLoCmGlbRZAlyF21FonFnS/DIC8DeRqnmdyVREwt2CFbPceM0zSNdEeVfiGaqYsKw==,
+        integrity: sha512-FxcbhNEFhvg+2bV8KB2Z0RMZj5HFCtiUZU2XuAMwB6Fk3ry2RHtXQmKHpSekG8F480HoSpSmjQoq5/sjLUe6oA==,
       }
     engines: { node: '>=8.x' }
     peerDependencies:
