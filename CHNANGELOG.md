@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Fixed generate antd token error
+
 ## 1.1.0
 
 - Update Vite@7
