@@ -109,7 +109,7 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
 // default.scss
 :root {
   --color-primary: #00b96b; // -> colorPrimary: #00b96b
-  --border-radius: 4px; // -> borderRadius: 4px
+  --border-radius: 4px; // -> borderRadius: 4
 }
 ```
 
@@ -121,11 +121,11 @@ If it is necessary to modify the [antd5 theme](https://ant.design/docs/react/cus
     "tokens": {
       "dark": {
         "colorPrimary": "#000",
-        "borderRadius": "4px",
+        "borderRadius": "4",
       },
       "default": {
         "colorPrimary": "#00b96b",
-        "borderRadius": "4px"
+        "borderRadius": "4"
       }
     },
     "vars": {
@@ -149,51 +149,6 @@ css 变量在切换主题时自动注入到 `head` 下，保证 [antd@5.x](https
   }
 </style>
 ```
-
-警告⚠️： 主题文夹下文件中仅支持 css 变量
-
-<!-- 如果使用`less`, 请安装 [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) 按照下面 👇 代码自行调试。
-
-If using `less`, please install [less-vars-to-js](https://www.npmjs.com/package/less-vars-to-js) According to the following 👇 Code self debugging.
-
-````ts
-import lessToJs from 'less-vars-to-js';
-import { lowerCamel } from '@skax/camel';
-import fs from 'fs';
-
-/**
- * less 变量转成 json 格式 (更改 antd 主题样式更新需要重启)
- * Convert the less variable to JSON format
- *
- * @example
- *
- * ```less
- *   $color-primary: #00b96b;
- *   $border-radius: 2px;
- * ```
- *
- * ```js
- * lessVar2JSON()  //  -> {"colorPrimary": "#00b96b", "borderRadius": "2px"}
- * ```
- *
- * @returns {Object}
- */
-function lessVar2JSON() {
-  // Read the less file in as string
-  const paletteLess = fs.readFileSync('./src/styles/antd-theme.less', 'utf-8');
-  // Pass in file contents
-  const palette = lessToJs(paletteLess, {
-    resolveVariables: true,
-    stripPrefix: true,
-  });
-
-  return Object.keys(palette).reduce((pre, cur) => {
-    pre[lowerCamel(cur, '-')] = palette[cur];
-    return pre;
-  }, {});
-}
-export default lessVar2JSON;
-```` -->
 
 ## Api
 

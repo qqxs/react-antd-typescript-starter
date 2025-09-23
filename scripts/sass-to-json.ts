@@ -14,12 +14,12 @@ import { lowerCamel } from '@skax/camel';
  * ```scss
  * // -> colorPrimary: #000
  * --color-primary: #000;
- * // -> borderRadius: 4px
+ * // -> borderRadius: 4
  * --border-radius: 4px;
  * ```
  *
  * ```ts
- *  sassVar2JSON()  //  -> {"colorPrimary": "#00b96b, borderRadius: '2px'}
+ *  sassVar2JSON()  //  -> {"colorPrimary": "#00b96b", borderRadius: 4}
  * ```
  *
  * @returns {Object}
