@@ -17,11 +17,10 @@ const Home = () => {
 
   return (
     <div className={styles.home}>
-      <div>
+      <div className={styles.logoWrapper}>
         <Popover
           content="This project is built with Vite + React + TypeScript + Redux"
           placement="top"
-          open={true}
         >
           <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
             <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
