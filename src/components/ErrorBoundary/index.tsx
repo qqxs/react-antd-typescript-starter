@@ -12,14 +12,13 @@ function ErrorFallback(props: FallbackProps) {
   );
 }
 
-const ErrorBoundary: React.FC<React.PropsWithChildren> = (props) => {
+const ErrorBoundary: React.FC<React.PropsWithChildren> = props => {
   return (
     <ReactErrorBoundary
       FallbackComponent={ErrorFallback}
       onReset={() => {
         // reset the state of your app so the error doesn't happen again
-      }}
-    >
+      }}>
       {props.children}
     </ReactErrorBoundary>
   );

@@ -13,8 +13,7 @@ const Page = () => {
         cssVar: true,
         hashed: false,
         token: theme,
-      }}
-    >
+      }}>
       <React.Suspense fallback={<Loading />}>
         <RouterProvider
           router={router}

@@ -28,12 +28,7 @@ const config: Config = {
   // Code coverage config
   // https://jestjs.io/docs/configuration#collectcoveragefrom-array
   coverageDirectory: '<rootDir>/coverage/',
-  collectCoverageFrom: [
-    '<rootDir>/src/**/*.{ts,tsx}',
-    '!**/__mocks__/**',
-    '!**/node_modules/**',
-    '!**/*.d.ts',
-  ],
+  collectCoverageFrom: ['<rootDir>/src/**/*.{ts,tsx}', '!**/__mocks__/**', '!**/node_modules/**', '!**/*.d.ts'],
 
   // Important: order matters, specific rules should be defined first
   // https://jestjs.io/fr/docs/configuration#modulenamemapper-objectstring-string--arraystring
