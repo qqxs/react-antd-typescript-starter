@@ -1,7 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { type ActionReducerMapBuilder, type AsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
-
 import { type Draft } from 'immer';
-
 import { ResponseStatus } from '@/constant';
 
 function builder<S>(fetchSync: AsyncThunk<any, any, any>) {
