@@ -26,8 +26,7 @@ const Layout = () => {
           justifyContent: 'center',
           fontSize: '20px',
           color: '#fff',
-        }}
-      >
+        }}>
         Loading
       </div>
     );

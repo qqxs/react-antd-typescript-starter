@@ -34,8 +34,7 @@ const Header = () => {
             setTheme(value);
           }}
           defaultValue={theme}
-          style={{ width: 90 }}
-        >
+          style={{ width: 90 }}>
           <Select.Option value="dark">Dark</Select.Option>
           <Select.Option value="default">default</Select.Option>
         </Select>

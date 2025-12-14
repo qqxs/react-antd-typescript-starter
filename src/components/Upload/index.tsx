@@ -19,7 +19,7 @@ export function getUploadImageList(fileList: any): string[] {
 
 const getBase64 = (img: RcFile, callback: (url: string) => void) => {
   const reader = new FileReader();
-  // eslint-disable-next-line n/no-callback-literal
+
   reader.addEventListener('load', () => callback(reader.result as string));
   reader.readAsDataURL(img);
 };
@@ -53,26 +53,23 @@ const FormUpload = (props: FormUploadProps) => {
   const [loading, setLoading] = useState(false);
   const [imageUrl, setImageUrl] = useState<string>();
 
-  const handleChange: UploadProps['onChange'] = useCallback(
-    (info: UploadChangeParam<UploadFile>) => {
-      if (info.file.status === 'uploading') {
-        setLoading(true);
-        return;
-      }
-      if (info.file.status === 'done') {
-        // console.log(info.file.response)
-        const res = info.file.response;
-        // Get this url from response in real world.
-        getBase64(info.file.originFileObj as RcFile, () => {
-          setLoading(false);
-          if (res.code === 0) {
-            setImageUrl(res.data.urls[0] as string);
-          }
-        });
-      }
-    },
-    [],
-  );
+  const handleChange: UploadProps['onChange'] = useCallback((info: UploadChangeParam<UploadFile>) => {
+    if (info.file.status === 'uploading') {
+      setLoading(true);
+      return;
+    }
+    if (info.file.status === 'done') {
+      // console.log(info.file.response)
+      const res = info.file.response;
+      // Get this url from response in real world.
+      getBase64(info.file.originFileObj as RcFile, () => {
+        setLoading(false);
+        if (res.code === 0) {
+          setImageUrl(res.data.urls[0] as string);
+        }
+      });
+    }
+  }, []);
 
   const uploadButton = (
     <div>
@@ -82,12 +79,7 @@ const FormUpload = (props: FormUploadProps) => {
   );
 
   return (
-    <Form.Item
-      rules={[{ required: true, message: '请上传头像!' }]}
-      getValueFromEvent={getFile}
-      valuePropName="fileList"
-      {...props}
-    >
+    <Form.Item rules={[{ required: true, message: '请上传头像!' }]} getValueFromEvent={getFile} valuePropName="fileList" {...props}>
       <Upload
         name="file"
         listType="picture-card"
@@ -97,8 +89,7 @@ const FormUpload = (props: FormUploadProps) => {
         beforeUpload={beforeUpload}
         onChange={handleChange}
         maxCount={1}
-        accept="image/png,image/jpeg,image/jpg"
-      >
+        accept="image/png,image/jpeg,image/jpg">
         {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : uploadButton}
       </Upload>
     </Form.Item>

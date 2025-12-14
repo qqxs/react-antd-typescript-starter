@@ -67,17 +67,7 @@ export default defineConfig(((env: ConfigEnv) => {
            * 例如 lodash 模块打包成一个 chunk，名称是 lodash
            */
           manualChunks: {
-            dll: [
-              'react',
-              'react-dom',
-              'react-router-dom',
-              'axios',
-              'redux',
-              'react-redux',
-              '@reduxjs/toolkit',
-              'js-cookie',
-              'classnames',
-            ],
+            dll: ['react', 'react-dom', 'react-router-dom', 'axios', 'redux', 'react-redux', '@reduxjs/toolkit', 'js-cookie', 'classnames'],
             sentry: OPEN_SENTRY ? ['@sentry/browser'] : [],
           },
         },

@@ -18,10 +18,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <div className={styles.logoWrapper}>
-        <Popover
-          content="This project is built with Vite + React + TypeScript + Redux"
-          placement="top"
-        >
+        <Popover content="This project is built with Vite + React + TypeScript + Redux" placement="top">
           <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
             <img src="/vite.svg" className={styles.logo} alt="Vite logo" />
           </a>
@@ -31,37 +28,26 @@ const Home = () => {
           <img src={reactLogo} className={cls(styles.logo, 'react')} alt="React logo" />
         </a>
         <a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg"
-            className={cls(styles.logo, 'ts')}
-            alt="typescript logo"
-          />
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" className={cls(styles.logo, 'ts')} alt="typescript logo" />
         </a>
         <a href="https://react-redux.js.org/" target="_blank" rel="noreferrer">
-          <img
-            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg"
-            className={cls(styles.logo, 'redux')}
-            alt="redux logo"
-          />
+          <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/redux/redux-original.svg" className={cls(styles.logo, 'redux')} alt="redux logo" />
         </a>
       </div>
       <h1 className={styles.title}>Vite + React + Ts + Redux</h1>
       <div className={styles.card}>
         <button
           onClick={() => {
-            setCount((count) => count + 1);
+            setCount(count => count + 1);
             dispatch(increment(count + 1));
-          }}
-        >
+          }}>
           count is {count}
         </button>
         <p>
           Edit <code>src/pages/home/home.tsx</code> and save to test HMR
         </p>
       </div>
-      <p className={styles['read-the-docs']}>
-        Click on the Vite、React、 Ts and Redux logos to learn more
-      </p>
+      <p className={styles['read-the-docs']}>Click on the Vite、React、 Ts and Redux logos to learn more</p>
       {/* <Link to="/login">login</Link> */}
     </div>
   );

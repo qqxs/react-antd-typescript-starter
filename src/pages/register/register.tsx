@@ -14,9 +14,8 @@ const Register = () => {
     setLoading(true);
     values.avatar = getUploadImageList(values.avatar)[0];
 
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
     postRegister(values)
-      .then((res) => {
+      .then(res => {
         if (res.code === 0) {
           location.href = '/login';
         } else {
@@ -45,17 +44,13 @@ const Register = () => {
             rules={[
               { required: true, message: '请输入邮箱!' },
               { type: 'email', message: '请输入有效邮箱!' },
-            ]}
-          >
+            ]}>
             <Input placeholder="邮箱" size="large" />
           </Form.Item>
           <Form.Item name="password" rules={[{ required: true, message: '请输入密码!' }]}>
             <Input.Password size="large" placeholder="密码" />
           </Form.Item>
-          <Form.Item
-            name="confirm_password"
-            rules={[{ required: true, message: '请输入确认密码!' }]}
-          >
+          <Form.Item name="confirm_password" rules={[{ required: true, message: '请输入确认密码!' }]}>
             <Input.Password size="large" placeholder="确认密码" />
           </Form.Item>
 

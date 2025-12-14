@@ -15,13 +15,13 @@ const Login = () => {
 
   const handleCaptcha = useCallback(() => {
     getCaptcha()
-      .then((res) => {
+      .then(res => {
         // console.log('res.data', res.data)
-        // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+
         setCodeImg(res.data.image_url);
         setCaptchaID(res.data.captcha_id);
       })
-      .catch((error) => {
+      .catch(error => {
         logger.error(error.response);
         setLoading(false);
       });
@@ -37,9 +37,8 @@ const Login = () => {
       setLoading(true);
       values.captcha_id = captchaID;
 
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       postLogin(values)
-        .then((res) => {
+        .then(res => {
           if (res.code === 0) {
             setToken(res.data);
             location.href = '/';
@@ -49,13 +48,13 @@ const Login = () => {
             handleCaptcha();
           }
         })
-        .catch((error) => {
+        .catch(error => {
           logger.error(error.response);
           setLoading(false);
           handleCaptcha();
         });
     },
-    [captchaID, handleCaptcha],
+    [captchaID, handleCaptcha]
   );
 
   return (
@@ -72,16 +71,11 @@ const Login = () => {
               rules={[
                 { required: true, message: '请输入邮箱!' },
                 { type: 'email', message: '请输入有效邮箱!' },
-              ]}
-            >
+              ]}>
               <Input prefix={<UserOutlined rev={undefined} />} placeholder="邮箱" size="large" />
             </Form.Item>
             <Form.Item name="password" rules={[{ required: true, message: '请输入密码!' }]}>
-              <Input.Password
-                prefix={<LockOutlined rev={undefined} />}
-                size="large"
-                placeholder="密码"
-              />
+              <Input.Password prefix={<LockOutlined rev={undefined} />} size="large" placeholder="密码" />
             </Form.Item>
             <Form.Item className={styles.captcha}>
               <Row justify="space-between">
@@ -93,17 +87,10 @@ const Login = () => {
                       required: true,
                       message: '请输入验证码!',
                     },
-                  ]}
-                >
-                  <Input
-                    size="large"
-                    placeholder="验证码"
-                    prefix={<SafetyOutlined rev={undefined} />}
-                  />
+                  ]}>
+                  <Input size="large" placeholder="验证码" prefix={<SafetyOutlined rev={undefined} />} />
                 </Form.Item>
-                <div className={styles['code-wrapper']}>
-                  {!!codeImg && <img src={codeImg} alt="验证码" onClick={handleCaptcha} />}
-                </div>
+                <div className={styles['code-wrapper']}>{!!codeImg && <img src={codeImg} alt="验证码" onClick={handleCaptcha} />}</div>
               </Row>
             </Form.Item>
 

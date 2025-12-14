@@ -36,12 +36,12 @@ function sassVar2JSON() {
 
     // 按行拆分文件内容
     const lines = paletteSass.split('\n');
-    const vars: string[] = lines.filter((line) => /^--/.test(line.replace(/ /gi, '')));
+    const vars: string[] = lines.filter(line => /^--/.test(line.replace(/ /gi, '')));
     result.vars[name] = vars.join('');
 
     // 处理每一行
     const antdToken = vars
-      .map((line) => convertToSassVariable(line.replace(/ /gi, '')))
+      .map(line => convertToSassVariable(line.replace(/ /gi, '')))
       .reduce((pre, cur) => {
         const kv: string[] = cur.replace(/(\d+)px;/g, '$1;').split(':');
 
@@ -69,7 +69,7 @@ function walkSync(currentDirPath: string, callback) {
 
 // 将 CSS 变量名转换为 SASS 变量名
 function convertToSassVariable(line) {
-  return line.replace(/(--[a-z0-9-]+)/gi, (match) => {
+  return line.replace(/(--[a-z0-9-]+)/gi, match => {
     return `${match.substring(2)}`;
   });
 }

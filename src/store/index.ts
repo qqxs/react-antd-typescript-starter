@@ -12,17 +12,11 @@ const rootReducer = combineReducers({
 
 export const store = configureStore({
   reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => {
-    // eslint-disable-next-line no-undef
+  middleware: getDefaultMiddleware => {
     return !__IS_PRODUCTION__ ? getDefaultMiddleware().concat(logger) : getDefaultMiddleware();
   },
 });
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
-export type AppThunk<ReturnType = void> = ThunkAction<
-  ReturnType,
-  RootState,
-  unknown,
-  Action<string>
->;
+export type AppThunk<ReturnType = void> = ThunkAction<ReturnType, RootState, unknown, Action<string>>;
