@@ -58,7 +58,7 @@ export async function getMe() {
  *
  * @return {Promise} 请求返回
  */
-export function postLogout(): any {
+export function postLogout(): unknown {
   return Axios({
     url: '/api/login_out',
     method: 'post',

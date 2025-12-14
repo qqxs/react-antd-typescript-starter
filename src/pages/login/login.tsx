@@ -33,7 +33,7 @@ const Login = () => {
   }, []);
 
   const onFinish = useCallback(
-    (values: any) => {
+    (values: Request.LoginBody) => {
       setLoading(true);
       values.captcha_id = captchaID;
 
